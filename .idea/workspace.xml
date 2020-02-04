@@ -142,26 +142,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="задача Range* (числовой диапазон)&#10;добавлены и проверены функции пересечения/объединения/разницы диапазонов" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1580801381439">
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1580801518607">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1580801381439" />
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1580801352875">
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1580801518607" />
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1580801523398">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1580801352875" />
-    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1580801352874">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1580801523398" />
+    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1580801523397">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1580801352874" />
-    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1580801352873">
+    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1580801523397" />
+    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1580801523396">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1580801352873" />
-    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1580801352874">
+    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1580801523396" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1580801523397">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1580801352874" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1580801523397" />
     <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1580798779901">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Triangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Rectangle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +53,7 @@
       <recent name="$PROJECT_DIR$/Range*/src/ru/academits/bondyuk/range*" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.range.Main" />
       <module name="Range" />
@@ -98,9 +95,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -117,7 +114,7 @@
       <workItem from="1580619998447" duration="515000" />
       <workItem from="1580787165544" duration="831000" />
       <workItem from="1580789700724" duration="11984000" />
-      <workItem from="1580918912710" duration="1573000" />
+      <workItem from="1580918912710" duration="4070000" />
     </task>
     <task id="LOCAL-00001" summary="Настройка проекта&#10;&#10;Hello world программа">
       <created>1580620399320</created>
@@ -154,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580801578892</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="задача Shapes часть 1:&#10;создан интерфейс Shape,&#10;интерфейс реализован в Circle, Rectangle, Square, Triangle">
+      <created>1580920650686</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1580920650686</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,37 +181,38 @@
     <MESSAGE value="Настройка проекта&#10;&#10;Hello world программа" />
     <MESSAGE value="задача Range* (числовой диапазон)&#10;добавлены и проверены функции пересечения/объединения/разницы диапазонов" />
     <MESSAGE value="задача Range (числовой диапазон)" />
-    <option name="LAST_COMMIT_MESSAGE" value="задача Range (числовой диапазон)" />
+    <MESSAGE value="задача Shapes часть 1:&#10;создан интерфейс Shape,&#10;интерфейс реализован в Circle, Rectangle, Square, Triangle" />
+    <option name="LAST_COMMIT_MESSAGE" value="задача Shapes часть 1:&#10;создан интерфейс Shape,&#10;интерфейс реализован в Circle, Rectangle, Square, Triangle" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="524" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1580920475513">
+    <state x="524" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1580923472620">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="524" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1580920475513" />
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1580801578744">
+    <state x="524" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1580923472620" />
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1580920649846">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1580801578744" />
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1580920649846" />
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog" timestamp="1580808158984">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog/67.27.1299.741@67.27.1299.741" timestamp="1580808158984" />
-    <state width="1253" height="219" key="GridCell.Tab.0.bottom" timestamp="1580830587363">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1580924564960">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="219" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1580830587363" />
-    <state width="1253" height="219" key="GridCell.Tab.0.center" timestamp="1580830587363">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1580924564960" />
+    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1580924564959">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="219" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1580830587363" />
-    <state width="1253" height="219" key="GridCell.Tab.0.left" timestamp="1580830587362">
+    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1580924564959" />
+    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1580924564959">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="219" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1580830587362" />
-    <state width="1253" height="219" key="GridCell.Tab.0.right" timestamp="1580830587363">
+    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1580924564959" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1580924564959">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="219" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1580830587363" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1580924564959" />
     <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1580830587364">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -228,18 +233,18 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1580789641691" />
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1580801621458">
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1580921128845">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1580801621458" />
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1580921128845" />
     <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1580918914644">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1580918914644" />
-    <state x="484" y="316" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580801775184">
+    <state x="484" y="316" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580921204504">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="484" y="316" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1299.741@67.27.1299.741" timestamp="1580801775184" />
+    <state x="484" y="316" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1299.741@67.27.1299.741" timestamp="1580921204504" />
     <state x="67" y="27" width="1289" height="741" key="new project wizard" timestamp="1580790272233">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

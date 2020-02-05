@@ -26,6 +26,6 @@ public class Rectangle implements Shape {
 
     @Override
     public double getPerimeter() {
-        return 0;
+        return 2 * (width + height);
     }
 }

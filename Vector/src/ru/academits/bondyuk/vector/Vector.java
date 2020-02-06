@@ -25,6 +25,63 @@ public class Vector {
         components = Arrays.copyOf(array, n);
     }
 
+    public static Vector add(Vector vector1, Vector vector2) {
+        int vector1Length = vector1.getComponents().length;
+        int vector2Length = vector2.getComponents().length;
+        int newComponentsLength = Math.max(vector1Length, vector2Length);
+        double[] newComponents = new double[newComponentsLength];
+
+        for (int i = 0; i < newComponentsLength; ++i) {
+            double firstTerm = 0;
+            if (i < vector1Length) {
+                firstTerm = vector1.getElement(i);
+            }
+
+            double secondTerm = 0;
+            if (i < vector2Length) {
+                secondTerm = vector2.getElement(i);
+            }
+
+            newComponents[i] = firstTerm + secondTerm;
+        }
+
+        return new Vector(newComponents);
+    }
+
+    public static Vector difference(Vector vector1, Vector vector2) {
+        int vector1Length = vector1.getComponents().length;
+        int vector2Length = vector2.getComponents().length;
+        int newComponentsLength = Math.max(vector1Length, vector2Length);
+        double[] newComponents = new double[newComponentsLength];
+
+        for (int i = 0; i < newComponentsLength; ++i) {
+            double firstTerm = 0;
+            if (i < vector1Length) {
+                firstTerm = vector1.getElement(i);
+            }
+
+            double secondTerm = 0;
+            if (i < vector2Length) {
+                secondTerm = vector2.getElement(i);
+            }
+
+            newComponents[i] = firstTerm - secondTerm;
+        }
+
+        return new Vector(newComponents);
+    }
+
+    public static double multiply(Vector vector1, Vector vector2) {
+        int baseLength = Math.min(vector1.getComponents().length, vector2.getComponents().length);
+        double multiplicationResult = 0;
+
+        for (int i = 0; i < baseLength; ++i) {
+            multiplicationResult += vector1.getElement(i) + vector2.getElement(i);
+        }
+
+        return multiplicationResult;
+    }
+
     public double[] getComponents() {
         return components;
     }
@@ -58,9 +115,9 @@ public class Vector {
         setComponents(newComponents);
     }
 
-
     public void differenceVector(Vector vector) {
-        int newComponentsLength = Math.max(components.length, vector.getComponents().length);
+        int addedVectorLength = vector.getComponents().length;
+        int newComponentsLength = Math.max(components.length, addedVectorLength);
         double[] newComponents = new double[newComponentsLength];
 
         for (int i = 0; i < newComponentsLength; ++i) {
@@ -70,8 +127,8 @@ public class Vector {
             }
 
             double secondTerm = 0;
-            if (i < vector.getComponents().length) {
-                secondTerm = vector.getComponents()[i];
+            if (i < addedVectorLength) {
+                secondTerm = vector.getElement(i);
             }
 
             newComponents[i] = firstTerm - secondTerm;

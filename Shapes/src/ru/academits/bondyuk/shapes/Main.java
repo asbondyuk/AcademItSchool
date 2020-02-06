@@ -16,11 +16,24 @@ public class Main {
         shapes.add(new Circle(3.2));
         shapes.add(new Square(4));
         shapes.add(new Rectangle(60, 4));
-        shapes.add(new Rectangle(4, 4));
+        shapes.add(new Rectangle(4, 6));
+        shapes.add(new Rectangle(4, 6));
 
         for (Shape shape : shapes) {
             System.out.printf("%s площадь составляет: %.2f, периметр: %.2f\n", shape.getClass().getSimpleName(), shape.getArea(), shape.getPerimeter());
         }
+
+        // тест override
+        System.out.println("\n" + shapes.get(1).toString());
+
+        System.out.printf("Сравнение %s и %s : %b\n", shapes.get(2).toString(), shapes.get(4).toString(),
+                shapes.get(2).equals(shapes.get(4)));
+
+        System.out.printf("Сравнение (однодного объекта) %s и %s : %b\n", shapes.get(4).toString(), shapes.get(4).toString(),
+                shapes.get(4).equals(shapes.get(4)));
+
+        System.out.printf("Сравнение (разных объектов) %s и %s : %b\n", shapes.get(4).toString(), shapes.get(5).toString(),
+                shapes.get(4).equals(shapes.get(5)));
 
         // Поверка площади
         Comparator<Shape> areaComparator = Comparator.comparing(Shape::getArea);

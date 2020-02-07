@@ -1,4 +1,6 @@
-package ru.academits.bondyuk.hardrange;
+package ru.academits.bondyuk.main;
+
+import ru.academits.bondyuk.hardrange.Range;
 
 public class Main {
     public static void testAddedFunction(Range range1, Range range2){

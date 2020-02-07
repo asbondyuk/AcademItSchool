@@ -1,4 +1,6 @@
-package ru.academits.bondyuk.range;
+package ru.academits.bondyuk.main;
+
+import ru.academits.bondyuk.range.Range;
 
 public class Main {
     public static void main(String[] args) {

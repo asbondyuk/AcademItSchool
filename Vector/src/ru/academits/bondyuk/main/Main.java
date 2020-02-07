@@ -1,4 +1,6 @@
-package ru.academits.bondyuk.vector;
+package ru.academits.bondyuk.main;
+
+import ru.academits.bondyuk.vector.Vector;
 
 public class Main {
     public static boolean testConstructorArrayLength() {

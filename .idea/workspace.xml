@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vector/src/ru/academits/bondyuk/vector/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/academits/bondyuk/vector/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vector/src/ru/academits/bondyuk/vector/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/academits/bondyuk/vector/Vector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vector/src/ru/academits/bondyuk/vector/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/academits/bondyuk/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,12 +85,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.vector.Main" />
-      <module name="Vector" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.shapes.Main" />
+      <module name="Shapes" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.academits.bondyuk.vector.*" />
+          <option name="PATTERN" value="ru.academits.bondyuk.shapes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,11 +99,11 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.shapes.Main" />
-      <module name="Shapes" />
+      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.main.Main" />
+      <module name="Vector" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.academits.bondyuk.shapes.*" />
+          <option name="PATTERN" value="ru.academits.bondyuk.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,7 +136,7 @@
       <workItem from="1580918912710" duration="17072000" />
       <workItem from="1581005456759" duration="601000" />
       <workItem from="1581059969010" duration="6362000" />
-      <workItem from="1581068771615" duration="1202000" />
+      <workItem from="1581068771615" duration="1954000" />
     </task>
     <task id="LOCAL-00001" summary="Настройка проекта&#10;&#10;Hello world программа">
       <created>1580620399320</created>
@@ -223,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580984841311</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Задача Vector доработки:&#10;добавлены exceptions в методы,&#10;добавлены тесты (в Main)">
+      <created>1581070037003</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1581070037003</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,37 +259,38 @@
     <MESSAGE value="Задача Vector, пункты 1-3:&#10;конструкторы, getSize(), toString" />
     <MESSAGE value="Задача Vector, пункт 4:&#10;реализованы нестатистические методы (без обработки исключений):&#10; прибавление/вычитание вектора,&#10;умножение на скаляр,&#10; разворот, получение длины,&#10; получение/установка элемента по индексу,&#10; переопределены equals и hashCode с учетом размерности векторов" />
     <MESSAGE value="Задача Vector, пункт :&#10;реализованы статистические методы (без обработки исключений):&#10; прибавление/вычитание векторов,&#10;скалярное умножение &#10;&#10;+ поправлен пункт 4 (оптимизация сложения/вычитания)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Задача Vector, пункт :&#10;реализованы статистические методы (без обработки исключений):&#10; прибавление/вычитание векторов,&#10;скалярное умножение &#10;&#10;+ поправлен пункт 4 (оптимизация сложения/вычитания)" />
+    <MESSAGE value="Задача Vector доработки:&#10;добавлены exceptions в методы,&#10;добавлены тесты (в Main)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Задача Vector доработки:&#10;добавлены exceptions в методы,&#10;добавлены тесты (в Main)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="109" width="544" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1580979082337">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="524" y="109" width="544" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1580979082337" />
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1580984841118">
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1581070036482">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1580984841118" />
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1581070036482" />
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog" timestamp="1580808158984">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog/67.27.1299.741@67.27.1299.741" timestamp="1580808158984" />
-    <state width="626" height="175" key="GridCell.Tab.0.bottom" timestamp="1581069902917">
+    <state width="626" height="175" key="GridCell.Tab.0.bottom" timestamp="1581078439127">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="626" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1581069902917" />
-    <state width="626" height="175" key="GridCell.Tab.0.center" timestamp="1581069902916">
+    <state width="626" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1581078439127" />
+    <state width="626" height="175" key="GridCell.Tab.0.center" timestamp="1581078439127">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="626" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1581069902916" />
-    <state width="626" height="175" key="GridCell.Tab.0.left" timestamp="1581069902915">
+    <state width="626" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1581078439127" />
+    <state width="626" height="175" key="GridCell.Tab.0.left" timestamp="1581078439126">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="626" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1581069902915" />
-    <state width="626" height="175" key="GridCell.Tab.0.right" timestamp="1581069902917">
+    <state width="626" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1581078439126" />
+    <state width="626" height="175" key="GridCell.Tab.0.right" timestamp="1581078439127">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="626" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1581069902917" />
+    <state width="626" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1581078439127" />
     <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1580830587364">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -304,10 +311,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1580789641691" />
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1580984846639">
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1581070041529">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1580984846639" />
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1581070041529" />
     <state x="372" y="224" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1581068865269">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

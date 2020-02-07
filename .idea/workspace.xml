@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vector/src/ru/academits/bondyuk/vector/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/academits/bondyuk/vector/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vector/src/ru/academits/bondyuk/vector/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/academits/bondyuk/vector/Vector.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +52,12 @@
       <recent name="$PROJECT_DIR$/Range*/src/ru/academits/bondyuk/range" />
       <recent name="$PROJECT_DIR$/Range*/src/ru/academits/bondyuk/range*" />
     </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="RunManager" selected="Application.Main (3)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -127,7 +134,10 @@
       <workItem from="1580619998447" duration="515000" />
       <workItem from="1580787165544" duration="831000" />
       <workItem from="1580789700724" duration="11984000" />
-      <workItem from="1580918912710" duration="16358000" />
+      <workItem from="1580918912710" duration="17072000" />
+      <workItem from="1581005456759" duration="601000" />
+      <workItem from="1581059969010" duration="6362000" />
+      <workItem from="1581068771615" duration="1202000" />
     </task>
     <task id="LOCAL-00001" summary="Настройка проекта&#10;&#10;Hello world программа">
       <created>1580620399320</created>
@@ -206,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580981888916</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Задача Vector, пункт :&#10;реализованы статистические методы (без обработки исключений):&#10; прибавление/вычитание векторов,&#10;скалярное умножение &#10;&#10;+ поправлен пункт 4 (оптимизация сложения/вычитания)">
+      <created>1580984841311</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1580984841311</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,37 +252,38 @@
     <MESSAGE value="задача Shapes часть 3:&#10;переопределены toString, equals, hashCode для Circle, Rectangle, Triangle, Square&#10;&#10;Добавлено тестовое сравнение в Main (работоспособности переопредленных методов)" />
     <MESSAGE value="Задача Vector, пункты 1-3:&#10;конструкторы, getSize(), toString" />
     <MESSAGE value="Задача Vector, пункт 4:&#10;реализованы нестатистические методы (без обработки исключений):&#10; прибавление/вычитание вектора,&#10;умножение на скаляр,&#10; разворот, получение длины,&#10; получение/установка элемента по индексу,&#10; переопределены equals и hashCode с учетом размерности векторов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Задача Vector, пункт 4:&#10;реализованы нестатистические методы (без обработки исключений):&#10; прибавление/вычитание вектора,&#10;умножение на скаляр,&#10; разворот, получение длины,&#10; получение/установка элемента по индексу,&#10; переопределены equals и hashCode с учетом размерности векторов" />
+    <MESSAGE value="Задача Vector, пункт :&#10;реализованы статистические методы (без обработки исключений):&#10; прибавление/вычитание векторов,&#10;скалярное умножение &#10;&#10;+ поправлен пункт 4 (оптимизация сложения/вычитания)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Задача Vector, пункт :&#10;реализованы статистические методы (без обработки исключений):&#10; прибавление/вычитание векторов,&#10;скалярное умножение &#10;&#10;+ поправлен пункт 4 (оптимизация сложения/вычитания)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="109" width="544" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1580979082337">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="524" y="109" width="544" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1580979082337" />
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1580981888506">
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1580984841118">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1580981888506" />
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1580984841118" />
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog" timestamp="1580808158984">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog/67.27.1299.741@67.27.1299.741" timestamp="1580808158984" />
-    <state width="626" height="175" key="GridCell.Tab.0.bottom" timestamp="1580984120817">
+    <state width="626" height="175" key="GridCell.Tab.0.bottom" timestamp="1581069902917">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="626" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1580984120817" />
-    <state width="626" height="175" key="GridCell.Tab.0.center" timestamp="1580984120816">
+    <state width="626" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1581069902917" />
+    <state width="626" height="175" key="GridCell.Tab.0.center" timestamp="1581069902916">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="626" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1580984120816" />
-    <state width="626" height="175" key="GridCell.Tab.0.left" timestamp="1580984120816">
+    <state width="626" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1581069902916" />
+    <state width="626" height="175" key="GridCell.Tab.0.left" timestamp="1581069902915">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="626" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1580984120816" />
-    <state width="626" height="175" key="GridCell.Tab.0.right" timestamp="1580984120816">
+    <state width="626" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1581069902915" />
+    <state width="626" height="175" key="GridCell.Tab.0.right" timestamp="1581069902917">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="626" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1580984120816" />
+    <state width="626" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1581069902917" />
     <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1580830587364">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -286,14 +304,14 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1580789641691" />
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1580981896448">
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1580984846639">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1580981896448" />
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1580918914644">
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1580984846639" />
+    <state x="372" y="224" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1581068865269">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1580918914644" />
+    <state x="372" y="224" width="688" height="344" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1581068865269" />
     <state x="484" y="316" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580981906252">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -302,9 +320,9 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="67" y="27" width="1289" height="741" key="new project wizard/67.27.1299.741@67.27.1299.741" timestamp="1580971580474" />
-    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1580797421033">
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1581069916545">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1580797421033" />
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1581069916545" />
   </component>
 </project>

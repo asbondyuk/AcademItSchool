@@ -1,4 +1,6 @@
-package ru.academits.bondyuk.shapes;
+package ru.academits.bondyuk.main;
+
+import ru.academits.bondyuk.shapes.*;
 
 import java.util.ArrayList;
 import java.util.Comparator;

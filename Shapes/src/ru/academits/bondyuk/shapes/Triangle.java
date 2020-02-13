@@ -3,33 +3,33 @@ package ru.academits.bondyuk.shapes;
 import java.util.Objects;
 
 public class Triangle implements Shape {
-    private double xCoordinatePoint1;
-    private double yCoordinatePoint1;
-    private double xCoordinatePoint2;
-    private double yCoordinatePoint2;
-    private double xCoordinatePoint3;
-    private double yCoordinatePoint3;
+    private double x1;
+    private double y1;
+    private double x2;
+    private double y2;
+    private double x3;
+    private double y3;
 
-    public Triangle(double xCoordinatePoint1, double yCoordinatePoint1, double xCoordinatePoint2, double yCoordinatePoint2,
+    public Triangle(double x1, double yCoordinatePoint1, double xCoordinatePoint2, double yCoordinatePoint2,
                     double xCoordinatePoint3, double yCoordinatePoint3) {
-        this.xCoordinatePoint1 = xCoordinatePoint1;
-        this.yCoordinatePoint1 = yCoordinatePoint1;
-        this.xCoordinatePoint2 = xCoordinatePoint2;
-        this.yCoordinatePoint2 = yCoordinatePoint2;
-        this.xCoordinatePoint3 = xCoordinatePoint3;
-        this.yCoordinatePoint3 = yCoordinatePoint3;
+        this.x1 = x1;
+        this.y1 = yCoordinatePoint1;
+        this.x2 = xCoordinatePoint2;
+        this.y2 = yCoordinatePoint2;
+        this.x3 = xCoordinatePoint3;
+        this.y3 = yCoordinatePoint3;
     }
 
     @Override
     public double getWidth() {
-        return Math.max(Math.max(xCoordinatePoint1, xCoordinatePoint2), xCoordinatePoint3)
-                - Math.min(Math.min(xCoordinatePoint1, xCoordinatePoint2), xCoordinatePoint3);
+        return Math.max(Math.max(x1, x2), x3)
+                - Math.min(Math.min(x1, x2), x3);
     }
 
     @Override
     public double getHeight() {
-        return Math.max(Math.max(yCoordinatePoint1, yCoordinatePoint2), yCoordinatePoint3)
-                - Math.min(Math.min(yCoordinatePoint1, yCoordinatePoint2), yCoordinatePoint3);
+        return Math.max(Math.max(y1, y2), y3)
+                - Math.min(Math.min(y1, y2), y3);
     }
 
     @Override
@@ -39,9 +39,9 @@ public class Triangle implements Shape {
 
     @Override
     public double getPerimeter() {
-        double side12 = Math.sqrt(Math.pow(xCoordinatePoint1 - xCoordinatePoint2, 2) + Math.pow(yCoordinatePoint1 - yCoordinatePoint2, 2));
-        double side23 = Math.sqrt(Math.pow(xCoordinatePoint2 - xCoordinatePoint3, 2) + Math.pow(yCoordinatePoint2 - yCoordinatePoint3, 2));
-        double side13 = Math.sqrt(Math.pow(xCoordinatePoint1 - xCoordinatePoint3, 2) + Math.pow(yCoordinatePoint1 - yCoordinatePoint3, 2));
+        double side12 = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+        double side23 = Math.sqrt(Math.pow(x2 - x3, 2) + Math.pow(y2 - y3, 2));
+        double side13 = Math.sqrt(Math.pow(x1 - x3, 2) + Math.pow(y1 - y3, 2));
 
         return side12 + side23 + side13;
     }
@@ -49,12 +49,12 @@ public class Triangle implements Shape {
     @Override
     public String toString() {
         return "Triangle{" +
-                "xCoordinatePoint1=" + xCoordinatePoint1 +
-                ", yCoordinatePoint1=" + yCoordinatePoint1 +
-                ", xCoordinatePoint2=" + xCoordinatePoint2 +
-                ", yCoordinatePoint2=" + yCoordinatePoint2 +
-                ", xCoordinatePoint3=" + xCoordinatePoint3 +
-                ", yCoordinatePoint3=" + yCoordinatePoint3 +
+                "xCoordinatePoint1=" + x1 +
+                ", yCoordinatePoint1=" + y1 +
+                ", xCoordinatePoint2=" + x2 +
+                ", yCoordinatePoint2=" + y2 +
+                ", xCoordinatePoint3=" + x3 +
+                ", yCoordinatePoint3=" + y3 +
                 ", perimeter=" + getPerimeter() +
                 ", area=" + getArea() +
                 '}';
@@ -71,16 +71,16 @@ public class Triangle implements Shape {
         }
 
         Triangle triangle = (Triangle) o;
-        return (triangle.xCoordinatePoint1 == xCoordinatePoint1) &&
-                (triangle.yCoordinatePoint1 == yCoordinatePoint1) &&
-                (triangle.xCoordinatePoint2 == xCoordinatePoint2) &&
-                (triangle.yCoordinatePoint1 == yCoordinatePoint1) &&
-                (triangle.xCoordinatePoint3 == xCoordinatePoint3) &&
-                (triangle.yCoordinatePoint3 == yCoordinatePoint3);
+        return (triangle.x1 == x1) &&
+                (triangle.y1 == y1) &&
+                (triangle.x2 == x2) &&
+                (triangle.y1 == y1) &&
+                (triangle.x3 == x3) &&
+                (triangle.y3 == y3);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(xCoordinatePoint1, yCoordinatePoint1, xCoordinatePoint2, yCoordinatePoint2, xCoordinatePoint3, yCoordinatePoint3);
+        return Objects.hash(x1, y1, x2, y2, x3, y3);
     }
 }

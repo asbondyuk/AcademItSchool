@@ -20,6 +20,10 @@ public class Triangle implements Shape {
         this.y3 = yCoordinatePoint3;
     }
 
+    private double getSideLength(double x1, double y1, double x2, double y2) {
+        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+    }
+
     @Override
     public double getWidth() {
         return Math.max(Math.max(x1, x2), x3)
@@ -39,9 +43,9 @@ public class Triangle implements Shape {
 
     @Override
     public double getPerimeter() {
-        double side12 = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
-        double side23 = Math.sqrt(Math.pow(x2 - x3, 2) + Math.pow(y2 - y3, 2));
-        double side13 = Math.sqrt(Math.pow(x1 - x3, 2) + Math.pow(y1 - y3, 2));
+        double side12 = getSideLength(x1, y1, x2, y2);
+        double side23 = getSideLength(x2, y2, x3, y3);
+        double side13 = getSideLength(x1, y1, x3, y3);
 
         return side12 + side23 + side13;
     }

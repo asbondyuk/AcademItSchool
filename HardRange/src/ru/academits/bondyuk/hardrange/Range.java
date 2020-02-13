@@ -33,20 +33,20 @@ public class Range {
         return (number >= from) && (to >= number);
     }
 
-    public static boolean isNotIntersection(Range range1, Range range2) {
+    public static boolean isIntersection(Range range1, Range range2) {
         if (range1.getTo() < range2.getFrom()) {
-            return true;
+            return false;
         }
 
         if (range2.getTo() < range1.getFrom()) {
-            return true;
+            return false;
         }
 
-        return false;
+        return true;
     }
 
     public static Range getIntersectionRange(Range range1, Range range2) {
-        if (isNotIntersection(range1, range2)) {
+        if (!isIntersection(range1, range2)) {
             return null;
         }
 
@@ -57,7 +57,7 @@ public class Range {
     }
 
     public static Range[] getUnionRange(Range range1, Range range2) {
-        if (isNotIntersection(range1, range2)) {
+        if (!isIntersection(range1, range2)) {
             Range[] ranges = new Range[2];
             ranges[0] = range1;
             ranges[1] = range2;
@@ -75,7 +75,7 @@ public class Range {
     }
 
     public static Range[] getDifferenceRange(Range range1, Range range2) {
-        if (isNotIntersection(range1, range2)) {
+        if (!isIntersection(range1, range2)) {
             Range[] ranges = new Range[2];
             ranges[0] = range1;
 

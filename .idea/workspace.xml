@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="Выделение Main в отдельный пакет">
+    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="HardRange: упрощение сравнения Circle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HardRange/src/ru/academits/bondyuk/hardrange/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/HardRange/src/ru/academits/bondyuk/hardrange/Range.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Circle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Rectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Square.java" afterDir="false" />
@@ -139,7 +138,7 @@
       <workItem from="1581059969010" duration="6362000" />
       <workItem from="1581068771615" duration="2678000" />
       <workItem from="1581145440361" duration="2229000" />
-      <workItem from="1581591766178" duration="465000" />
+      <workItem from="1581591766178" duration="878000" />
     </task>
     <task id="LOCAL-00001" summary="Настройка проекта&#10;&#10;Hello world программа">
       <created>1580620399320</created>
@@ -260,7 +259,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581078634683</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Shape: исправление форматирования ({} у веток if)">
+      <created>1581592298896</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1581592298896</updated>
+    </task>
+    <task id="LOCAL-00019" summary="HardRange: исправление именования флага (убран Not, теперь isIntersection)">
+      <created>1581592416443</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1581592416443</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,17 +305,19 @@
     <MESSAGE value="Задача Vector, пункт :&#10;реализованы статистические методы (без обработки исключений):&#10; прибавление/вычитание векторов,&#10;скалярное умножение &#10;&#10;+ поправлен пункт 4 (оптимизация сложения/вычитания)" />
     <MESSAGE value="Задача Vector доработки:&#10;добавлены exceptions в методы,&#10;добавлены тесты (в Main)" />
     <MESSAGE value="Выделение Main в отдельный пакет" />
-    <option name="LAST_COMMIT_MESSAGE" value="Выделение Main в отдельный пакет" />
+    <MESSAGE value="Shape: исправление форматирования ({} у веток if)" />
+    <MESSAGE value="HardRange: исправление именования флага (убран Not, теперь isIntersection)" />
+    <option name="LAST_COMMIT_MESSAGE" value="HardRange: исправление именования флага (убран Not, теперь isIntersection)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="109" width="544" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1581078859343">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="524" y="109" width="544" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1581078859343" />
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1581592403716">
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1581592514727">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1581592403716" />
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1581592514727" />
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog" timestamp="1580808158984">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

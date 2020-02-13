@@ -71,12 +71,12 @@ public class Triangle implements Shape {
         }
 
         Triangle triangle = (Triangle) o;
-        return Double.compare(triangle.xCoordinatePoint1, xCoordinatePoint1) == 0 &&
-                Double.compare(triangle.yCoordinatePoint1, yCoordinatePoint1) == 0 &&
-                Double.compare(triangle.xCoordinatePoint2, xCoordinatePoint2) == 0 &&
-                Double.compare(triangle.yCoordinatePoint2, yCoordinatePoint2) == 0 &&
-                Double.compare(triangle.xCoordinatePoint3, xCoordinatePoint3) == 0 &&
-                Double.compare(triangle.yCoordinatePoint3, yCoordinatePoint3) == 0;
+        return (triangle.xCoordinatePoint1 == xCoordinatePoint1) &&
+                (triangle.yCoordinatePoint1 == yCoordinatePoint1) &&
+                (triangle.xCoordinatePoint2 == xCoordinatePoint2) &&
+                (triangle.yCoordinatePoint1 == yCoordinatePoint1) &&
+                (triangle.xCoordinatePoint3 == xCoordinatePoint3) &&
+                (triangle.yCoordinatePoint3 == yCoordinatePoint3);
     }
 
     @Override

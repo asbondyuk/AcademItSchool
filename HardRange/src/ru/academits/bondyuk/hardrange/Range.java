@@ -1,5 +1,6 @@
 package ru.academits.bondyuk.hardrange;
 
+// TODO из письма пункты: 3, 4, 6,
 public class Range {
     private double from;
     private double to;
@@ -38,16 +39,8 @@ public class Range {
         return (number >= from) && (to >= number);
     }
 
-    public boolean isIntersection(Range range) {
-        if (this.getTo() < range.getFrom()) {
-            return false;
-        }
-
-        if (range.getTo() < this.getFrom()) {
-            return false;
-        }
-
-        return true;
+    private boolean isIntersection(Range range) {
+        return (!(this.getTo() < range.getFrom())) && (!(range.getTo() < this.getFrom()));
     }
 
     public Range getIntersection(Range range) {

@@ -40,7 +40,7 @@ public class Range {
     }
 
     private boolean isIntersection(Range range) {
-        return (!(this.getTo() < range.getFrom())) && (!(range.getTo() < this.getFrom()));
+        return (!(this.to < range.getFrom())) && (!(range.getTo() < this.from));
     }
 
     public Range getIntersection(Range range) {
@@ -48,8 +48,8 @@ public class Range {
             return null;
         }
 
-        double intersectionRangeFrom = Math.max(this.getFrom(), range.getFrom());
-        double intersectionRangeTo = Math.min(this.getTo(), range.getTo());
+        double intersectionRangeFrom = Math.max(this.from, range.getFrom());
+        double intersectionRangeTo = Math.min(this.to, range.getTo());
 
         return new Range(intersectionRangeFrom, intersectionRangeTo);
     }
@@ -63,8 +63,8 @@ public class Range {
             return ranges;
         }
 
-        double unionRangeFrom = Math.min(this.getFrom(), range.getFrom());
-        double unionRangeTo = Math.max(this.getTo(), range.getTo());
+        double unionRangeFrom = Math.min(this.from, range.getFrom());
+        double unionRangeTo = Math.max(this.to, range.getTo());
 
         return new Range[]{new Range(unionRangeFrom, unionRangeTo)};
     }
@@ -74,18 +74,18 @@ public class Range {
             return new Range[]{new Range(this)};
         }
 
-        if (this.getFrom() < range.getFrom() && this.getTo() < range.getTo()) {
-            return new Range[]{new Range(this.getFrom(), range.getFrom())};
+        if (this.from < range.getFrom() && this.to < range.getTo()) {
+            return new Range[]{new Range(this.from, range.getFrom())};
         }
 
-        if (range.getFrom() < this.getFrom() && range.getFrom() < this.getTo()) {
-            return new Range[]{new Range(range.getTo(), this.getTo())};
+        if (range.getFrom() < this.from && range.getFrom() < this.to) {
+            return new Range[]{new Range(range.getTo(), this.to)};
         }
 
-        if (this.getFrom() < range.getFrom() && range.getTo() < this.getTo()) {
+        if (this.from < range.getFrom() && range.getTo() < this.to) {
             Range[] ranges = new Range[2];
-            ranges[0] = new Range(this.getFrom(), range.getFrom());
-            ranges[1] = new Range(range.getTo(), this.getTo());
+            ranges[0] = new Range(this.from, range.getFrom());
+            ranges[1] = new Range(range.getTo(), this.to);
 
             return ranges;
         }

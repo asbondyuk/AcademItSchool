@@ -7,7 +7,7 @@ import java.util.Comparator;
 
 public class Main {
     public static void printShapeInformation(Shape shape) {
-        System.out.printf("%s\nПлощадь: %f, \nПериметр: %f, \nВысота: %f, \nШирина: %f \n",
+        System.out.printf("%s%nПлощадь: %f, %nПериметр: %f, %nВысота: %f, %nШирина: %f %n",
                 shape.getClass().getSimpleName(), shape.getArea(), shape.getPerimeter(), shape.getHeight(), shape.getWidth());
     }
 
@@ -22,19 +22,19 @@ public class Main {
         shapes.add(new Rectangle(4, 6));
 
         for (Shape shape : shapes) {
-            System.out.printf("%s площадь составляет: %.2f, периметр: %.2f\n", shape.getClass().getSimpleName(), shape.getArea(), shape.getPerimeter());
+            System.out.printf("%s площадь составляет: %.2f, периметр: %.2f%n", shape.getClass().getSimpleName(), shape.getArea(), shape.getPerimeter());
         }
 
         // тест override
-        System.out.println("\n" + shapes.get(1).toString());
+        System.out.printf("%n" + shapes.get(1));
 
-        System.out.printf("Сравнение %s и %s : %b\n", shapes.get(2).toString(), shapes.get(4).toString(),
+        System.out.printf("Сравнение %s и %s : %b%n", shapes.get(2), shapes.get(4),
                 shapes.get(2).equals(shapes.get(4)));
 
-        System.out.printf("Сравнение (однодного объекта) %s и %s : %b\n", shapes.get(4).toString(), shapes.get(4).toString(),
+        System.out.printf("Сравнение (однодного объекта) %s и %s : %b%n", shapes.get(4), shapes.get(4),
                 shapes.get(4).equals(shapes.get(4)));
 
-        System.out.printf("Сравнение (разных объектов) %s и %s : %b\n", shapes.get(4).toString(), shapes.get(5).toString(),
+        System.out.printf("Сравнение (разных объектов) %s и %s : %b%n", shapes.get(4), shapes.get(5),
                 shapes.get(4).equals(shapes.get(5)));
 
         // Поверка площади
@@ -42,7 +42,7 @@ public class Main {
 
         shapes.sort(areaComparator);
 
-        System.out.println("\nМаксимальная площадь у фигуры: ");
+        System.out.printf("%nМаксимальная площадь у фигуры: ");
 
         int maxAreaShapeIndex = shapes.size() - 1;
         printShapeInformation(shapes.get(maxAreaShapeIndex));
@@ -52,7 +52,7 @@ public class Main {
 
         shapes.sort(perimeterComparator);
 
-        System.out.println("\nВторой по величине периметр у фигуры: ");
+        System.out.printf("%nВторой по величине периметр у фигуры: ");
 
         int secondMaxPerimeterShapeIndex = shapes.size() - 2;
         printShapeInformation(shapes.get(secondMaxPerimeterShapeIndex));

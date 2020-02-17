@@ -166,7 +166,7 @@
       <workItem from="1581145440361" duration="2229000" />
       <workItem from="1581591766178" duration="1943000" />
       <workItem from="1581606225561" duration="9000" />
-      <workItem from="1581904679411" duration="2571000" />
+      <workItem from="1581904679411" duration="3594000" />
     </task>
     <task id="LOCAL-00001" summary="Настройка проекта&#10;&#10;Hello world программа">
       <created>1580620399320</created>
@@ -329,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581906994590</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="HardRange: переименование методов (устранение постфикса Range из getUnionRange, getDifferenceRange, getIntersectionRange)">
+      <created>1581907547979</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1581907547979</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +375,8 @@
     <MESSAGE value="HardRange: вынесение метода расчета стороны Triangle(уменьшение дублирования кода)" />
     <MESSAGE value="HardRange: методы объединения, пересечения, разности сделаны нестатическими" />
     <MESSAGE value="HardRange: создание новых объектов в качестве результатов методов объединения, пересечения, разности + новый конструктор (создание копии Range)" />
-    <option name="LAST_COMMIT_MESSAGE" value="HardRange: создание новых объектов в качестве результатов методов объединения, пересечения, разности + новый конструктор (создание копии Range)" />
+    <MESSAGE value="HardRange: переименование методов (устранение постфикса Range из getUnionRange, getDifferenceRange, getIntersectionRange)" />
+    <option name="LAST_COMMIT_MESSAGE" value="HardRange: переименование методов (устранение постфикса Range из getUnionRange, getDifferenceRange, getIntersectionRange)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="109" width="544" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1581078859343">
@@ -379,30 +387,30 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="183" y="27" width="1056" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1299.741@67.27.1299.741" timestamp="1581592776736" />
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1581906994073">
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1581907547839">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1581906994073" />
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1581907547839" />
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog" timestamp="1580808158984">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog/67.27.1299.741@67.27.1299.741" timestamp="1580808158984" />
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1581906868339">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1581908446785">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1581906868339" />
-    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1581906868338">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1581908446785" />
+    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1581908446785">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1581906868338" />
-    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1581906868338">
+    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1581908446785" />
+    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1581908446784">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1581906868338" />
-    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1581906868338">
+    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1581908446784" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1581908446785">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1581906868338" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1581908446785" />
     <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1580830587364">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

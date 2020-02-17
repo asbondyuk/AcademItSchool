@@ -26,7 +26,7 @@ public class Main {
     public static void testUnionRanges(Range range1, Range range2) {
         Range[] unionRanges = range1.getUnion(range2);
 
-        if (unionRanges[1] != null) {
+        if (unionRanges.length > 1) {
             System.out.printf("Объединение диапазонов (%.2f , %.2f) и (%.2f , %.2f) : (%.2f , %.2f) и (%.2f , %.2f) \n", range1.getFrom(), range1.getTo(),
                     range2.getFrom(), range2.getTo(), unionRanges[0].getFrom(), unionRanges[0].getTo(), unionRanges[0].getFrom(), unionRanges[0].getTo());
         } else {
@@ -41,7 +41,7 @@ public class Main {
         if (differenceRanges == null) {
             System.out.printf("Разница диапазонов (%.2f , %.2f) и (%.2f , %.2f) : пустой диапазон \n", range1.getFrom(), range1.getTo(),
                     range2.getFrom(), range2.getTo());
-        } else if (differenceRanges[1] != null) {
+        } else if (differenceRanges.length > 1) {
             System.out.printf("Разница диапазонов (%.2f , %.2f) и (%.2f , %.2f) : (%.2f , %.2f) и (%.2f , %.2f) \n", range1.getFrom(), range1.getTo(),
                     range2.getFrom(), range2.getTo(), differenceRanges[0].getFrom(), differenceRanges[0].getTo(), differenceRanges[1].getFrom(), differenceRanges[1].getTo());
         } else {

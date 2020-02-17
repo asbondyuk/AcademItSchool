@@ -73,32 +73,20 @@ public class Range {
         double unionRangeFrom = Math.min(this.getFrom(), range.getFrom());
         double unionRangeTo = Math.max(this.getTo(), range.getTo());
 
-        Range[] ranges = new Range[2];
-        ranges[0] = new Range(unionRangeFrom, unionRangeTo);
-
-        return ranges;
+        return new Range[]{new Range(unionRangeFrom, unionRangeTo)};
     }
 
     public Range[] getDifference(Range range) {
         if (!isIntersection(range)) {
-            Range[] ranges = new Range[2];
-            ranges[0] = new Range(this);
-
-            return ranges;
+            return new Range[]{new Range(this)};
         }
 
         if (this.getFrom() < range.getFrom() && this.getTo() < range.getTo()) {
-            Range[] ranges = new Range[2];
-            ranges[0] = new Range(this.getFrom(), range.getFrom());
-
-            return ranges;
+            return new Range[]{new Range(this.getFrom(), range.getFrom())};
         }
 
         if (range.getFrom() < this.getFrom() && range.getFrom() < this.getTo()) {
-            Range[] ranges = new Range[2];
-            ranges[0] = new Range(range.getTo(), this.getTo());
-
-            return ranges;
+            return new Range[]{new Range(range.getTo(), this.getTo())};
         }
 
         if (this.getFrom() < range.getFrom() && range.getTo() < this.getTo()) {

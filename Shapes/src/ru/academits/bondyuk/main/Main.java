@@ -1,5 +1,7 @@
 package ru.academits.bondyuk.main;
 
+import ru.academits.bondyuk.comparators.AreaComparator;
+import ru.academits.bondyuk.comparators.PerimeterComparator;
 import ru.academits.bondyuk.shapes.*;
 
 import java.util.ArrayList;
@@ -31,30 +33,49 @@ public class Main {
         System.out.printf("Сравнение %s и %s : %b%n", shapes.get(2), shapes.get(4),
                 shapes.get(2).equals(shapes.get(4)));
 
-        System.out.printf("Сравнение (однодного объекта) %s и %s : %b%n", shapes.get(4), shapes.get(4),
+        System.out.printf("Сравнение (одного объекта) %s и %s : %b%n", shapes.get(4), shapes.get(4),
                 shapes.get(4).equals(shapes.get(4)));
 
         System.out.printf("Сравнение (разных объектов) %s и %s : %b%n", shapes.get(4), shapes.get(5),
                 shapes.get(4).equals(shapes.get(5)));
 
-        // Поверка площади
-        Comparator<Shape> areaComparator = Comparator.comparing(Shape::getArea);
+        // Поверка площади v1
+        Comparator<Shape> areaComparator1 = Comparator.comparing(Shape::getArea);
 
-        shapes.sort(areaComparator);
+        shapes.sort(areaComparator1);
 
         System.out.printf("%nМаксимальная площадь у фигуры: ");
 
         int maxAreaShapeIndex = shapes.size() - 1;
         printShapeInformation(shapes.get(maxAreaShapeIndex));
 
-        // Проверка периметра
-        Comparator<Shape> perimeterComparator = Comparator.comparing(Shape::getPerimeter);
 
-        shapes.sort(perimeterComparator);
+        // Поверка площади v2
+        AreaComparator areaComparator2 = new AreaComparator();
+
+        shapes.sort(areaComparator2);
+
+        System.out.printf("%nМаксимальная площадь у фигуры: ");
+
+        printShapeInformation(shapes.get(maxAreaShapeIndex));
+
+        // Проверка периметра v1
+        Comparator<Shape> perimeterComparator1 = Comparator.comparing(Shape::getPerimeter);
+
+        shapes.sort(perimeterComparator1);
 
         System.out.printf("%nВторой по величине периметр у фигуры: ");
 
         int secondMaxPerimeterShapeIndex = shapes.size() - 2;
+        printShapeInformation(shapes.get(secondMaxPerimeterShapeIndex));
+
+        // Проверка периметра v2
+        PerimeterComparator perimeterComparator2 = new PerimeterComparator();
+
+        shapes.sort(perimeterComparator2);
+
+        System.out.printf("%nВторой по величине периметр у фигуры: ");
+
         printShapeInformation(shapes.get(secondMaxPerimeterShapeIndex));
     }
 }

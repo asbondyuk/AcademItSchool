@@ -3,7 +3,7 @@ package ru.academits.bondyuk.main;
 import ru.academits.bondyuk.hardrange.Range;
 
 public class Main {
-    public static void testAddedFunction(Range range1, Range range2){
+    public static void testAddedFunction(Range range1, Range range2) {
         System.out.printf("\nПроверка с (%.2f , %.2f) \n", range2.getFrom(), range2.getTo());
 
         testIntersectionRanges(range1, range2);
@@ -12,7 +12,7 @@ public class Main {
     }
 
     public static void testIntersectionRanges(Range range1, Range range2) {
-        Range intersectionRange = Range.getIntersectionRange(range1, range2);
+        Range intersectionRange = range1.getIntersectionRange(range2);
 
         if (intersectionRange != null) {
             System.out.printf("Пересечения диапазонов (%.2f , %.2f) и (%.2f , %.2f) : (%.2f , %.2f) \n", range1.getFrom(), range1.getTo(),
@@ -24,7 +24,7 @@ public class Main {
     }
 
     public static void testUnionRanges(Range range1, Range range2) {
-        Range[] unionRanges = Range.getUnionRange(range1, range2);
+        Range[] unionRanges = range1.getUnionRange(range2);
 
         if (unionRanges[1] != null) {
             System.out.printf("Объединение диапазонов (%.2f , %.2f) и (%.2f , %.2f) : (%.2f , %.2f) и (%.2f , %.2f) \n", range1.getFrom(), range1.getTo(),
@@ -36,7 +36,7 @@ public class Main {
     }
 
     public static void testDifferenceRanges(Range range1, Range range2) {
-        Range[] differenceRanges = Range.getDifferenceRange(range1, range2);
+        Range[] differenceRanges = range1.getDifferenceRange(range2);
 
         if (differenceRanges == null) {
             System.out.printf("Разница диапазонов (%.2f , %.2f) и (%.2f , %.2f) : пустой диапазон \n", range1.getFrom(), range1.getTo(),

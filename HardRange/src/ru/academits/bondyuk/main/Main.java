@@ -12,7 +12,7 @@ public class Main {
     }
 
     public static void testIntersectionRanges(Range range1, Range range2) {
-        Range intersectionRange = range1.getIntersectionRange(range2);
+        Range intersectionRange = range1.getIntersection(range2);
 
         if (intersectionRange != null) {
             System.out.printf("Пересечения диапазонов (%.2f , %.2f) и (%.2f , %.2f) : (%.2f , %.2f) \n", range1.getFrom(), range1.getTo(),
@@ -24,7 +24,7 @@ public class Main {
     }
 
     public static void testUnionRanges(Range range1, Range range2) {
-        Range[] unionRanges = range1.getUnionRange(range2);
+        Range[] unionRanges = range1.getUnion(range2);
 
         if (unionRanges[1] != null) {
             System.out.printf("Объединение диапазонов (%.2f , %.2f) и (%.2f , %.2f) : (%.2f , %.2f) и (%.2f , %.2f) \n", range1.getFrom(), range1.getTo(),
@@ -36,7 +36,7 @@ public class Main {
     }
 
     public static void testDifferenceRanges(Range range1, Range range2) {
-        Range[] differenceRanges = range1.getDifferenceRange(range2);
+        Range[] differenceRanges = range1.getDifference(range2);
 
         if (differenceRanges == null) {
             System.out.printf("Разница диапазонов (%.2f , %.2f) и (%.2f , %.2f) : пустой диапазон \n", range1.getFrom(), range1.getTo(),

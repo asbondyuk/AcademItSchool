@@ -50,7 +50,7 @@ public class Range {
         return true;
     }
 
-    public Range getIntersectionRange(Range range) {
+    public Range getIntersection(Range range) {
         if (!isIntersection(range)) {
             return null;
         }
@@ -61,7 +61,7 @@ public class Range {
         return new Range(intersectionRangeFrom, intersectionRangeTo);
     }
 
-    public Range[] getUnionRange(Range range) {
+    public Range[] getUnion(Range range) {
         if (!isIntersection(range)) {
             Range[] ranges = new Range[2];
             ranges[0] = new Range(this);
@@ -79,7 +79,7 @@ public class Range {
         return ranges;
     }
 
-    public Range[] getDifferenceRange(Range range) {
+    public Range[] getDifference(Range range) {
         if (!isIntersection(range)) {
             Range[] ranges = new Range[2];
             ranges[0] = new Range(this);

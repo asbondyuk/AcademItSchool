@@ -12,11 +12,11 @@ public class Main {
     }
 
     public static void testIntersectionRanges(Range range1, Range range2) {
-        Range intersectionRange = range1.getIntersection(range2);
+        Range[] intersectionRange = range1.getIntersection(range2);
 
-        if (intersectionRange != null) {
+        if (intersectionRange.length > 1) {
             System.out.printf("Пересечения диапазонов (%.2f , %.2f) и (%.2f , %.2f) : (%.2f , %.2f) \n", range1.getFrom(), range1.getTo(),
-                    range2.getFrom(), range2.getTo(), intersectionRange.getFrom(), intersectionRange.getTo());
+                    range2.getFrom(), range2.getTo(), intersectionRange[0].getFrom(), intersectionRange[0].getTo());
         } else {
             System.out.printf("Пересечение диапазонов (%.2f , %.2f) и (%.2f , %.2f) отсутствует \n", range1.getFrom(), range1.getTo(),
                     range2.getFrom(), range2.getTo());
@@ -38,7 +38,7 @@ public class Main {
     public static void testDifferenceRanges(Range range1, Range range2) {
         Range[] differenceRanges = range1.getDifference(range2);
 
-        if (differenceRanges == null) {
+        if (differenceRanges.length == 0) {
             System.out.printf("Разница диапазонов (%.2f , %.2f) и (%.2f , %.2f) : пустой диапазон \n", range1.getFrom(), range1.getTo(),
                     range2.getFrom(), range2.getTo());
         } else if (differenceRanges.length > 1) {

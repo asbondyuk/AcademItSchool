@@ -1,6 +1,5 @@
 package ru.academits.bondyuk.hardrange;
 
-// TODO из письма пункты: 3, 4, 6,
 public class Range {
     private double from;
     private double to;
@@ -43,15 +42,27 @@ public class Range {
         return (!(this.to < range.getFrom())) && (!(range.getTo() < this.from));
     }
 
-    public Range getIntersection(Range range) {
-        if (!isIntersection(range)) {
-            return null;
+    private boolean isIntersectionInternal(Range range) {
+        return (range.getFrom() < this.from) && (this.to < range.getTo());
+    }
+
+    private boolean isIntersectionExternal(Range range) {
+        return (this.from < range.getFrom()) && (range.getTo() < this.to);
+    }
+
+    private boolean isIntersectionNested(Range range) {
+        return isIntersectionInternal(range) || isIntersectionExternal(range);
+    }
+
+    public Range[] getIntersection(Range range) {
+        if (!isIntersectionNested(range)) {
+            return new Range[]{};
         }
 
         double intersectionRangeFrom = Math.max(this.from, range.getFrom());
         double intersectionRangeTo = Math.min(this.to, range.getTo());
 
-        return new Range(intersectionRangeFrom, intersectionRangeTo);
+        return new Range[]{new Range(intersectionRangeFrom, intersectionRangeTo)};
     }
 
     public Range[] getUnion(Range range) {
@@ -70,19 +81,15 @@ public class Range {
     }
 
     public Range[] getDifference(Range range) {
-        if (!isIntersection(range)) {
+        if (!isIntersectionNested(range)) {
             return new Range[]{new Range(this)};
         }
 
-        if (this.from < range.getFrom() && this.to < range.getTo()) {
-            return new Range[]{new Range(this.from, range.getFrom())};
+        if (isIntersectionInternal(range)) {
+            return new Range[]{};
         }
 
-        if (range.getFrom() < this.from && range.getFrom() < this.to) {
-            return new Range[]{new Range(range.getTo(), this.to)};
-        }
-
-        if (this.from < range.getFrom() && range.getTo() < this.to) {
+        if (isIntersectionExternal(range)) {
             Range[] ranges = new Range[2];
             ranges[0] = new Range(this.from, range.getFrom());
             ranges[1] = new Range(range.getTo(), this.to);

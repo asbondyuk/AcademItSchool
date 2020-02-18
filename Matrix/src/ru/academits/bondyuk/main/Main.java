@@ -23,5 +23,13 @@ public class Main {
         System.out.println(Arrays.toString(matrix4.getVectors()));
 
         System.out.println(Arrays.toString(matrix4.getSize()));
+
+        int index = 1;
+        System.out.println(matrix4.getVector(index));
+
+        Vector vector = new Vector(new double[]{5, 5, 5});
+        matrix4.setVector(vector, index);
+
+        System.out.println(matrix4);
     }
 }

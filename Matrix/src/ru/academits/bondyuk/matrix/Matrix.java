@@ -2,6 +2,7 @@ package ru.academits.bondyuk.matrix;
 
 import ru.academits.bondyuk.vector.Vector;
 
+// TODO добавить выравнивание размерности векторов (max Vector размер, добивание 0 до max размера др векторов, при потребности
 public class Matrix {
     private Vector[] vectors;
 
@@ -47,6 +48,14 @@ public class Matrix {
         int n = vectors[0].getSize();
 
         return new int[]{n, m};
+    }
+
+    public Vector getVector(int index) {
+        return vectors[index];
+    }
+
+    public void setVector(Vector vector, int index) {
+        vectors[index] = vector;
     }
 
     @Override

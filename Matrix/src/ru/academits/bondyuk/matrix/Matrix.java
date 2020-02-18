@@ -103,7 +103,7 @@ public class Matrix {
     }
 
 
-    public void multiplyByNumber(double number) {
+    public void multiply(double number) {
         int m = vectors.length;
         int n = vectors[0].getSize();
 
@@ -112,6 +112,23 @@ public class Matrix {
                 vector.setElement(j, vector.getElement(j) * number);
             }
         }
+    }
+
+    public Vector multiply(Vector vector) {
+        int n = vector.getSize();
+        Vector result = new Vector(n);
+
+        for (int i = 0; i < n; ++i) {
+            double sum = 0;
+
+            for (int j = 0; j < vectors[0].getSize(); ++j) {
+                sum += vectors[i].getElement(j) * vector.getElement(i);
+            }
+
+            result.setElement(i, sum);
+        }
+
+        return result;
     }
 
     @Override

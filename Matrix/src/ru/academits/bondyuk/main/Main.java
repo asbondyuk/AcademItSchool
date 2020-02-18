@@ -39,9 +39,12 @@ public class Main {
         matrix4.transpose();
         System.out.println(Arrays.toString(matrix4.getVectors()));
 
-        matrix4.multiplyByNumber(2);
+        matrix4.multiply(2);
         System.out.println(Arrays.toString(matrix4.getVectors()));
 
+        Vector vector2 = new Vector(new double[]{1, 1});
+
+        System.out.println(matrix4.multiply(vector2));
 
     }
 }

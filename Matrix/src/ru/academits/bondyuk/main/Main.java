@@ -27,10 +27,21 @@ public class Main {
         int index = 1;
         System.out.println(matrix4.getVector(index));
 
-        Vector vector = new Vector(new double[]{5, 5, 5});
+        Vector vector = new Vector(new double[]{5, 6, 7});
 
         System.out.println(matrix4);
         matrix4.setVector(vector, index);
         System.out.println(matrix4);
+
+        System.out.println(matrix4.getColumn(2));
+
+        System.out.println(matrix4);
+        matrix4.transpose();
+        System.out.println(Arrays.toString(matrix4.getVectors()));
+
+        matrix4.multiplyByNumber(2);
+        System.out.println(Arrays.toString(matrix4.getVectors()));
+
+
     }
 }

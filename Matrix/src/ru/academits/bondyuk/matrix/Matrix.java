@@ -2,7 +2,7 @@ package ru.academits.bondyuk.matrix;
 
 import ru.academits.bondyuk.vector.Vector;
 
-// TODO 2: c,d,e,f,h,i,j
+// TODO 2: f,h,i,j
 public class Matrix {
     private Vector[] vectors;
 
@@ -80,8 +80,38 @@ public class Matrix {
         }
     }
 
-    public void multiplyByNumber(double number) {
+    public Vector getColumn(int columnIndex) {
+        Vector vector = new Vector(vectors.length);
 
+        for (int i = 0; i < vectors.length; ++i) {
+            vector.setElement(i, vectors[i].getElement(columnIndex));
+        }
+
+        return vector;
+    }
+
+    public void transpose() {
+        int n = vectors[0].getSize();
+
+        Vector[] transposedVector = new Vector[n];
+
+        for (int i = 0; i < n; ++i) {
+            transposedVector[i] = getColumn(i);
+        }
+
+        vectors = transposedVector;
+    }
+
+
+    public void multiplyByNumber(double number) {
+        int m = vectors.length;
+        int n = vectors[0].getSize();
+
+        for (Vector vector : vectors) {
+            for (int j = 0; j < n; ++j) {
+                vector.setElement(j, vector.getElement(j) * number);
+            }
+        }
     }
 
     @Override

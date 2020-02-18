@@ -2,7 +2,7 @@ package ru.academits.bondyuk.matrix;
 
 import ru.academits.bondyuk.vector.Vector;
 
-// TODO добавить выравнивание размерности векторов (max Vector размер, добивание 0 до max размера др векторов, при потребности
+// TODO 2: c,d,e,f,h,i,j
 public class Matrix {
     private Vector[] vectors;
 
@@ -27,8 +27,24 @@ public class Matrix {
         int m = arrays.length;
         vectors = new Vector[m];
 
+        int nestedArrayMaxLength = arrays[0].length;
+
+        for (int i = 1; i < m; ++i) {
+            if (nestedArrayMaxLength < arrays[i].length) {
+                nestedArrayMaxLength = arrays[i].length;
+            }
+        }
+
         for (int i = 0; i < m; ++i) {
-            vectors[i] = new Vector(arrays[i]);
+            vectors[i] = new Vector(arrays[nestedArrayMaxLength]);
+
+            for (int j = 0; j < nestedArrayMaxLength; ++j) {
+                if (arrays[i].length > j) {
+                    vectors[i].setElement(j, arrays[i][j]);
+                } else {
+                    vectors[i].setElement(j, 0);
+                }
+            }
         }
     }
 
@@ -55,7 +71,17 @@ public class Matrix {
     }
 
     public void setVector(Vector vector, int index) {
-        vectors[index] = vector;
+        for (int j = 0; j < vectors[0].getSize(); ++j) {
+            if (vector.getSize() > j) {
+                vectors[index].setElement(j, vector.getElement(j));
+            } else {
+                vectors[index].setElement(j, 0);
+            }
+        }
+    }
+
+    public void multiplyByNumber(double number) {
+
     }
 
     @Override

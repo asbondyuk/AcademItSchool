@@ -25,6 +25,7 @@ public class Vector {
         if (n <= 0) {
             throw new IllegalArgumentException("Размерность вектора (n) должна быть больше нуля!");
         }
+
         components = Arrays.copyOf(array, n);
     }
 
@@ -97,7 +98,7 @@ public class Vector {
         return components.length;
     }
 
-    public void addVector(Vector vector) {
+    public void add(Vector vector) {
         int newComponentsLength = Math.max(components.length, vector.getComponents().length);
         double[] newComponents = new double[newComponentsLength];
 
@@ -118,7 +119,7 @@ public class Vector {
         setComponents(newComponents);
     }
 
-    public void differenceVector(Vector vector) {
+    public void difference(Vector vector) {
         int addedVectorLength = vector.getComponents().length;
         int newComponentsLength = Math.max(components.length, addedVectorLength);
         double[] newComponents = new double[newComponentsLength];
@@ -140,7 +141,7 @@ public class Vector {
         setComponents(newComponents);
     }
 
-    public void increaseByNumber(double number) {
+    public void multiplyByNumber(double number) {
         double[] newComponents = new double[components.length];
 
         for (int i = 0; i < components.length; ++i) {
@@ -151,7 +152,7 @@ public class Vector {
     }
 
     public void reverse() {
-        increaseByNumber(-1);
+        multiplyByNumber(-1);
     }
 
     public double getLength() {
@@ -189,8 +190,14 @@ public class Vector {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
         Vector vector = (Vector) o;
 
         return Arrays.equals(components, vector.components) && (components.length == vector.getComponents().length);

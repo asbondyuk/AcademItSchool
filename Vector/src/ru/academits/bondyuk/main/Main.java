@@ -33,7 +33,7 @@ public class Main {
     }
 
 
-    public static boolean testAdd() {
+    public static boolean testStaticAdd() {
         Vector vector1 = new Vector(new double[]{1, 2});
         Vector vector2 = new Vector(new double[]{1, 2, 3, 4});
 
@@ -42,7 +42,7 @@ public class Main {
         return vector.equals(new Vector(new double[]{2, 4, 3, 4}));
     }
 
-    public static boolean testDifference() {
+    public static boolean testStaticDifference() {
         Vector vector1 = new Vector(new double[]{1, 2});
         Vector vector2 = new Vector(new double[]{1, 2, 3, 4});
 
@@ -51,7 +51,7 @@ public class Main {
         return vector.equals(new Vector(new double[]{0, 0, -3, -4}));
     }
 
-    public static boolean testMultiply() {
+    public static boolean testStaticMultiply() {
         Vector vector1 = new Vector(new double[]{1, 2});
         Vector vector2 = new Vector(new double[]{1, 2, 3, 4});
 
@@ -77,28 +77,28 @@ public class Main {
         return vector.getSize() == 4;
     }
 
-    public static boolean testAddVector() {
+    public static boolean testAdd() {
         Vector vector1 = new Vector(new double[]{1, 2, 3, 4});
         Vector vector2 = new Vector(new double[]{1, 2});
 
-        vector1.addVector(vector2);
+        vector1.add(vector2);
 
         return vector1.equals(new Vector(new double[]{2, 4, 3, 4}));
     }
 
-    public static boolean testDifferenceVector() {
+    public static boolean testDifference() {
         Vector vector1 = new Vector(new double[]{1, 2, 3, 4});
         Vector vector2 = new Vector(new double[]{1, 2});
 
-        vector1.differenceVector(vector2);
+        vector1.difference(vector2);
 
         return vector1.equals(new Vector(new double[]{0, 0, 3, 4}));
     }
 
-    public static boolean testIncreaseByNumber() {
+    public static boolean testMultiplyByNumber() {
         Vector vector = new Vector(new double[]{1, 2, 3, 4});
 
-        vector.increaseByNumber(5);
+        vector.multiplyByNumber(5);
 
         return vector.equals(new Vector(new double[]{5, 10, 15, 20}));
     }
@@ -129,7 +129,7 @@ public class Main {
         System.out.println(vector2.toString());
         System.out.printf("Длина вектора: %.2f\n", vector2.getLength());
 
-        vector2.increaseByNumber(5.5);
+        vector2.multiplyByNumber(5.5);
         System.out.println(vector2.toString());
 
         vector2.reverse();
@@ -142,28 +142,28 @@ public class Main {
 
         Vector vector3 = new Vector(vector2);
 
-        vector2.addVector(vector3);
+        vector2.add(vector3);
         System.out.println(vector2.toString());
 
-        vector3.differenceVector(vector2);
+        vector3.difference(vector2);
         System.out.println(vector3.toString());
 
-        System.out.println("\nПроверка работоспособности функций:\n");
+        System.out.printf("%nПроверка работоспособности функций:%n");
 
-        System.out.println("Конструктор n: " + testConstructorArrayLength());
-        System.out.println("Конструктор n (отрицательное): " + testConstructorArrayLengthException());
-        System.out.println("Копирование вектора: " + testConstructorCopyVector());
-        System.out.println("Конструктор n и массив: " + testConstructorArrayLengthAndArray());
-        System.out.println("Сложение векторов (стат): " + testAdd());
-        System.out.println("Вычитание векторов (стат): " + testDifference());
-        System.out.println("Умножение векторов (стат): " + testMultiply());
-        System.out.println("Получение элемента вектора: " + testGetElement());
-        System.out.println("Установка элемента вектора: " + testSetElement());
-        System.out.println("Получение размерности вектора: " + testGetSize());
-        System.out.println("Сложение векторов: " + testAddVector());
-        System.out.println("Вычитание векторов: " + testDifferenceVector());
-        System.out.println("Умножение векторан на скаляр: " + testIncreaseByNumber());
-        System.out.println("Разворот вектора: " + testReverse());
-        System.out.println("Получение длины вектора: " + testGetLength());
+        System.out.printf("%b : Конструктор n%n", testConstructorArrayLength());
+        System.out.printf("%b : Конструктор n (отрицательное)%n", testConstructorArrayLengthException());
+        System.out.printf("%b : Копирование вектора%n", testConstructorCopyVector());
+        System.out.printf("%b : Конструктор n и массив%n", testConstructorArrayLengthAndArray());
+        System.out.printf("%b : Сложение векторов (стат)%n", testStaticAdd());
+        System.out.printf("%b : Вычитание векторов (стат)%n", testStaticDifference());
+        System.out.printf("%b : Умножение векторов (стат)%n", testStaticMultiply());
+        System.out.printf("%b : Получение элемента вектора%n", testGetElement());
+        System.out.printf("%b : Установка элемента вектора%n", testSetElement());
+        System.out.printf("%b : Получение размерности вектора%n", testGetSize());
+        System.out.printf("%b : Сложение векторов%n", testAdd());
+        System.out.printf("%b : Вычитание векторов%n", testDifference());
+        System.out.printf("%b : Умножение векторан на скаляр%n", testMultiplyByNumber());
+        System.out.printf("%b : Разворот вектора%n", testReverse());
+        System.out.printf("%b : Получение длины вектора%n", testGetLength());
     }
 }

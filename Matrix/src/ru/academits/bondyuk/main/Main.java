@@ -43,8 +43,18 @@ public class Main {
         System.out.println(Arrays.toString(matrix4.getVectors()));
 
         Vector vector2 = new Vector(new double[]{1, 1});
-
         System.out.println(matrix4.multiply(vector2));
 
+        Matrix matrix5 = new Matrix(new Vector[]{new Vector(new double[]{3, 3, 3}), new Vector(new double[]{4, 4, 4})});
+        Matrix matrix6 = new Matrix(new Vector[]{new Vector(new double[]{3, 3, 3}), new Vector(new double[]{4, 4, 4})});
+
+        System.out.println();
+        System.out.println(matrix4);
+        matrix4.add(matrix5);
+        System.out.println(matrix4);
+
+        System.out.println();
+        System.out.println(matrix1);
+        System.out.println(matrix4);
     }
 }

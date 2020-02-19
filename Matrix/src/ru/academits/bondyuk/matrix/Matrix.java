@@ -2,43 +2,43 @@ package ru.academits.bondyuk.matrix;
 
 import ru.academits.bondyuk.vector.Vector;
 
-// TODO 2: f,h,i,j
+// TODO 2: f, i, j
 public class Matrix {
     private Vector[] vectors;
 
-    public Matrix(int n, int m) {
-        vectors = new Vector[m];
+    public Matrix(int matrixVectorSize, int vectorsCount) {
+        vectors = new Vector[vectorsCount];
 
-        for (int i = 0; i < m; ++i) {
-            vectors[i] = new Vector(n);
+        for (int i = 0; i < vectorsCount; ++i) {
+            vectors[i] = new Vector(matrixVectorSize);
         }
     }
 
     public Matrix(Matrix matrix) {
-        int m = matrix.getVectors().length;
-        vectors = new Vector[m];
+        int vectorsCount = matrix.getVectors().length;
+        vectors = new Vector[vectorsCount];
 
-        for (int i = 0; i < m; ++i) {
+        for (int i = 0; i < vectorsCount; ++i) {
             vectors[i] = new Vector(matrix.getVectors()[i]);
         }
     }
 
     public Matrix(double[][] arrays) {
-        int m = arrays.length;
-        vectors = new Vector[m];
+        int vectorsCount = arrays.length;
+        vectors = new Vector[vectorsCount];
 
-        int nestedArrayMaxLength = arrays[0].length;
+        int matrixVectorMaxSize = arrays[0].length;
 
-        for (int i = 1; i < m; ++i) {
-            if (nestedArrayMaxLength < arrays[i].length) {
-                nestedArrayMaxLength = arrays[i].length;
+        for (int i = 1; i < vectorsCount; ++i) {
+            if (matrixVectorMaxSize < arrays[i].length) {
+                matrixVectorMaxSize = arrays[i].length;
             }
         }
 
-        for (int i = 0; i < m; ++i) {
-            vectors[i] = new Vector(arrays[nestedArrayMaxLength]);
+        for (int i = 0; i < vectorsCount; ++i) {
+            vectors[i] = new Vector(arrays[matrixVectorMaxSize]);
 
-            for (int j = 0; j < nestedArrayMaxLength; ++j) {
+            for (int j = 0; j < matrixVectorMaxSize; ++j) {
                 if (arrays[i].length > j) {
                     vectors[i].setElement(j, arrays[i][j]);
                 } else {
@@ -49,10 +49,10 @@ public class Matrix {
     }
 
     public Matrix(Vector[] vectors) {
-        int m = vectors.length;
-        this.vectors = new Vector[m];
+        int vectorsCount = vectors.length;
+        this.vectors = new Vector[vectorsCount];
 
-        System.arraycopy(vectors, 0, this.vectors, 0, m);
+        System.arraycopy(vectors, 0, this.vectors, 0, vectorsCount);
     }
 
     public Vector[] getVectors() {
@@ -60,10 +60,10 @@ public class Matrix {
     }
 
     public int[] getSize() {
-        int m = vectors.length;
-        int n = vectors[0].getSize();
+        int vectorsCount = vectors.length;
+        int matrixVectorSize = vectors[0].getSize();
 
-        return new int[]{n, m};
+        return new int[]{matrixVectorSize, vectorsCount};
     }
 
     public Vector getVector(int index) {
@@ -71,7 +71,9 @@ public class Matrix {
     }
 
     public void setVector(Vector vector, int index) {
-        for (int j = 0; j < vectors[0].getSize(); ++j) {
+        int matrixVectorSize = vectors[0].getSize();
+
+        for (int j = 0; j < matrixVectorSize; ++j) {
             if (vector.getSize() > j) {
                 vectors[index].setElement(j, vector.getElement(j));
             } else {
@@ -91,11 +93,11 @@ public class Matrix {
     }
 
     public void transpose() {
-        int n = vectors[0].getSize();
+        int matrixVectorSize = vectors[0].getSize();
 
-        Vector[] transposedVector = new Vector[n];
+        Vector[] transposedVector = new Vector[matrixVectorSize];
 
-        for (int i = 0; i < n; ++i) {
+        for (int i = 0; i < matrixVectorSize; ++i) {
             transposedVector[i] = getColumn(i);
         }
 
@@ -104,31 +106,64 @@ public class Matrix {
 
 
     public void multiply(double number) {
-        int m = vectors.length;
-        int n = vectors[0].getSize();
+        int matrixVectorSize = vectors[0].getSize();
 
         for (Vector vector : vectors) {
-            for (int j = 0; j < n; ++j) {
+            for (int j = 0; j < matrixVectorSize; ++j) {
                 vector.setElement(j, vector.getElement(j) * number);
             }
         }
     }
 
     public Vector multiply(Vector vector) {
-        int n = vector.getSize();
-        Vector result = new Vector(n);
+        int vectorSize = vector.getSize();
+        Vector multiplyResult = new Vector(vectorSize);
+        int matrixVectorSize = vectors[0].getSize();
 
-        for (int i = 0; i < n; ++i) {
+        for (int i = 0; i < vectorSize; ++i) {
             double sum = 0;
 
-            for (int j = 0; j < vectors[0].getSize(); ++j) {
+            for (int j = 0; j < matrixVectorSize; ++j) {
                 sum += vectors[i].getElement(j) * vector.getElement(i);
             }
 
-            result.setElement(i, sum);
+            multiplyResult.setElement(i, sum);
         }
 
-        return result;
+        return multiplyResult;
+    }
+
+    public void add(Matrix matrix) {
+        int m = Math.max(vectors.length, matrix.getVectors().length);
+        int n = Math.max(vectors[0].getSize(), matrix.getVectors()[0].getSize());
+
+        Vector[] result = new Vector[m];
+
+        for (int i = 0; i < m; ++i) {
+            result[i] = new Vector(n);
+
+            for (int j = 0; j < n; ++j) {
+
+                double term1 = 0;
+                double term2 = 0;
+
+                if (vectors.length > i) {
+                    if (vectors[i].getLength() > j) {
+                        term1 = vectors[i].getElement(j);
+                    }
+                }
+
+                if (matrix.getVectors().length > i) {
+                    if (matrix.getVectors()[i].getLength() > j) {
+                        term2 = matrix.getVectors()[i].getElement(j);
+                    }
+                }
+
+                result[i].setElement(j, term1 + term2);
+            }
+        }
+
+        vectors = result;
     }
 
     @Override

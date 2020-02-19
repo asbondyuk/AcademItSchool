@@ -55,6 +55,72 @@ public class Matrix {
         System.arraycopy(vectors, 0, this.vectors, 0, vectorsCount);
     }
 
+    public static Matrix add(Matrix matrix1, Matrix matrix2) {
+        int vectorsCount = Math.max(matrix1.getVectors().length, matrix2.getVectors().length);
+        int matrixVectorSize = Math.max(matrix1.getVectors()[0].getSize(), matrix2.getVectors()[0].getSize());
+
+        Matrix sumMatrix = new Matrix(matrixVectorSize, vectorsCount);
+
+        for (int i = 0; i < vectorsCount; ++i) {
+            sumMatrix.vectors[i] = new Vector(matrixVectorSize);
+
+            for (int j = 0; j < matrixVectorSize; ++j) {
+
+                double term1 = 0;
+                double term2 = 0;
+
+                if (matrix1.getVectors().length > i) {
+                    if (matrix1.getVectors()[i].getSize() > j) {
+                        term1 = matrix1.getVectors()[i].getElement(j);
+                    }
+                }
+
+                if (matrix2.getVectors().length > i) {
+                    if (matrix2.getVectors()[i].getSize() > j) {
+                        term2 = matrix2.getVectors()[i].getElement(j);
+                    }
+                }
+
+                sumMatrix.vectors[i].setElement(j, term1 + term2);
+            }
+        }
+
+        return sumMatrix;
+    }
+
+    public static Matrix difference(Matrix matrix1, Matrix matrix2) {
+        int vectorsCount = Math.max(matrix1.getVectors().length, matrix2.getVectors().length);
+        int matrixVectorSize = Math.max(matrix1.getVectors()[0].getSize(), matrix2.getVectors()[0].getSize());
+
+        Matrix differenceMatrix = new Matrix(matrixVectorSize, vectorsCount);
+
+        for (int i = 0; i < vectorsCount; ++i) {
+            differenceMatrix.vectors[i] = new Vector(matrixVectorSize);
+
+            for (int j = 0; j < matrixVectorSize; ++j) {
+
+                double term1 = 0;
+                double term2 = 0;
+
+                if (matrix1.getVectors().length > i) {
+                    if (matrix1.getVectors()[i].getSize() > j) {
+                        term1 = matrix1.getVectors()[i].getElement(j);
+                    }
+                }
+
+                if (matrix2.getVectors().length > i) {
+                    if (matrix2.getVectors()[i].getSize() > j) {
+                        term2 = matrix2.getVectors()[i].getElement(j);
+                    }
+                }
+
+                differenceMatrix.vectors[i].setElement(j, term1 - term2);
+            }
+        }
+
+        return differenceMatrix;
+    }
+
     public Vector[] getVectors() {
         return vectors;
     }
@@ -134,36 +200,38 @@ public class Matrix {
     }
 
     public void add(Matrix matrix) {
-        int m = Math.max(vectors.length, matrix.getVectors().length);
-        int n = Math.max(vectors[0].getSize(), matrix.getVectors()[0].getSize());
+        int vectorsCount = Math.max(vectors.length, matrix.getVectors().length);
+        int matrixVectorSize = Math.max(vectors[0].getSize(), matrix.getVectors()[0].getSize());
 
-        Vector[] result = new Vector[m];
+        Vector[] addResult = new Vector[vectorsCount];
 
-        for (int i = 0; i < m; ++i) {
-            result[i] = new Vector(n);
+        for (int i = 0; i < vectorsCount; ++i) {
+            addResult[i] = new Vector(matrixVectorSize);
+            System.out.println("i = " + i);
 
-            for (int j = 0; j < n; ++j) {
+            for (int j = 0; j < matrixVectorSize; ++j) {
 
                 double term1 = 0;
                 double term2 = 0;
 
                 if (vectors.length > i) {
-                    if (vectors[i].getLength() > j) {
+                    if (vectors[i].getSize() > j) {
+                        System.out.println("j = " + j);
                         term1 = vectors[i].getElement(j);
                     }
                 }
 
                 if (matrix.getVectors().length > i) {
-                    if (matrix.getVectors()[i].getLength() > j) {
+                    if (matrix.getVectors()[i].getSize() > j) {
                         term2 = matrix.getVectors()[i].getElement(j);
                     }
                 }
 
-                result[i].setElement(j, term1 + term2);
+                addResult[i].setElement(j, term1 + term2);
             }
         }
 
-        vectors = result;
+        vectors = addResult;
     }
 
     @Override

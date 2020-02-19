@@ -48,13 +48,17 @@ public class Main {
         Matrix matrix5 = new Matrix(new Vector[]{new Vector(new double[]{3, 3, 3}), new Vector(new double[]{4, 4, 4})});
         Matrix matrix6 = new Matrix(new Vector[]{new Vector(new double[]{3, 3, 3}), new Vector(new double[]{4, 4, 4})});
 
-        System.out.println();
         System.out.println(matrix4);
+
         matrix4.add(matrix5);
         System.out.println(matrix4);
 
-        System.out.println();
-        System.out.println(matrix1);
+        System.out.println(matrix6);
         System.out.println(matrix4);
+
+        System.out.println();
+
+        System.out.println(Matrix.add(matrix6, matrix4));
+        System.out.println(Matrix.difference(matrix6, matrix4));
     }
 }

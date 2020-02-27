@@ -1,4 +1,4 @@
-package ru.academits.bondyuk.hardrange;
+package ru.academits.bondyuk.hard_range;
 
 public class Range {
     private double from;
@@ -10,8 +10,8 @@ public class Range {
     }
 
     public Range(Range range) {
-        this.from = range.getFrom();
-        this.to = range.getTo();
+        from = range.getFrom();
+        to = range.getTo();
     }
 
     public double getFrom() {
@@ -39,15 +39,15 @@ public class Range {
     }
 
     private boolean isIntersection(Range range) {
-        return (!(this.to < range.getFrom())) && (!(range.getTo() < this.from));
+        return (!(to < range.getFrom())) && (!(range.getTo() < from));
     }
 
     private boolean isIntersectionInternal(Range range) {
-        return (range.getFrom() < this.from) && (this.to < range.getTo());
+        return (range.getFrom() < from) && (to < range.getTo());
     }
 
     private boolean isIntersectionExternal(Range range) {
-        return (this.from < range.getFrom()) && (range.getTo() < this.to);
+        return (from < range.getFrom()) && (range.getTo() < to);
     }
 
     private boolean isIntersectionNested(Range range) {
@@ -59,8 +59,8 @@ public class Range {
             return new Range[]{};
         }
 
-        double intersectionRangeFrom = Math.max(this.from, range.getFrom());
-        double intersectionRangeTo = Math.min(this.to, range.getTo());
+        double intersectionRangeFrom = Math.max(from, range.getFrom());
+        double intersectionRangeTo = Math.min(to, range.getTo());
 
         return new Range[]{new Range(intersectionRangeFrom, intersectionRangeTo)};
     }
@@ -74,8 +74,8 @@ public class Range {
             return ranges;
         }
 
-        double unionRangeFrom = Math.min(this.from, range.getFrom());
-        double unionRangeTo = Math.max(this.to, range.getTo());
+        double unionRangeFrom = Math.min(from, range.getFrom());
+        double unionRangeTo = Math.max(to, range.getTo());
 
         return new Range[]{new Range(unionRangeFrom, unionRangeTo)};
     }
@@ -91,12 +91,19 @@ public class Range {
 
         if (isIntersectionExternal(range)) {
             Range[] ranges = new Range[2];
-            ranges[0] = new Range(this.from, range.getFrom());
-            ranges[1] = new Range(range.getTo(), this.to);
+            ranges[0] = new Range(from, range.getFrom());
+            ranges[1] = new Range(range.getTo(), to);
 
             return ranges;
         }
 
         return null;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + from +
+                "; " + to +
+                ')';
     }
 }

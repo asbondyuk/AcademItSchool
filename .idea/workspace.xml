@@ -4,7 +4,6 @@
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csvParser/CSVParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csvParser/CSVParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,13 +76,13 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.Main (3)">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.main.Main" />
-      <module name="HardRange" />
+      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.range_main.Main" />
+      <module name="Range" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.academits.bondyuk.main.*" />
+          <option name="PATTERN" value="ru.academits.bondyuk.range_main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,6 +119,45 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.main.Main" />
       <module name="Shapes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.academits.bondyuk.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.main.Main" />
+      <module name="HardRange" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.academits.bondyuk.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.main.Main" />
+      <module name="Vector" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.academits.bondyuk.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.main.Main" />
+      <module name="Matrix" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.academits.bondyuk.main.*" />
@@ -171,6 +209,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
@@ -200,7 +239,8 @@
       <workItem from="1581606225561" duration="9000" />
       <workItem from="1581904679411" duration="36896000" />
       <workItem from="1582079157892" duration="2642000" />
-      <workItem from="1582086603797" duration="4259000" />
+      <workItem from="1582086603797" duration="5968000" />
+      <workItem from="1582770502125" duration="756000" />
     </task>
     <task id="LOCAL-00001" summary="Настройка проекта&#10;&#10;Hello world программа">
       <created>1580620399320</created>
@@ -461,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582079961675</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Matrix: &#10;исправление add&#10;добавлены статический add, статический difference">
+      <created>1582092298509</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1582092298509</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +528,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Задача Vector, пункт 4:&#10;реализованы нестатистические методы (без обработки исключений):&#10; прибавление/вычитание вектора,&#10;умножение на скаляр,&#10; разворот, получение длины,&#10; получение/установка элемента по индексу,&#10; переопределены equals и hashCode с учетом размерности векторов" />
     <MESSAGE value="Задача Vector, пункт :&#10;реализованы статистические методы (без обработки исключений):&#10; прибавление/вычитание векторов,&#10;скалярное умножение &#10;&#10;+ поправлен пункт 4 (оптимизация сложения/вычитания)" />
     <MESSAGE value="Задача Vector доработки:&#10;добавлены exceptions в методы,&#10;добавлены тесты (в Main)" />
     <MESSAGE value="Выделение Main в отдельный пакет" />
@@ -506,7 +552,8 @@
     <MESSAGE value="Matrix: добавлено &#10;1) получение вектора-столбца по индексу, &#10;2) транспонирование матрицы,&#10;3) умножение на скаляр" />
     <MESSAGE value="Matrix: добавлено умножение на вектор" />
     <MESSAGE value="Matrix: форматирование именований" />
-    <option name="LAST_COMMIT_MESSAGE" value="Matrix: форматирование именований" />
+    <MESSAGE value="Matrix: &#10;исправление add&#10;добавлены статический add, статический difference" />
+    <option name="LAST_COMMIT_MESSAGE" value="Matrix: &#10;исправление add&#10;добавлены статический add, статический difference" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -529,30 +576,30 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="183" y="27" width="1056" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1299.741@67.27.1299.741" timestamp="1581592776736" />
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1582079960801">
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1582092297433">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1582079960801" />
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1582092297433" />
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog" timestamp="1580808158984">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog/67.27.1299.741@67.27.1299.741" timestamp="1580808158984" />
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1582092086808">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1582771372972">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1582092086808" />
-    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1582092086807">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1582771372972" />
+    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1582771372971">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1582092086807" />
-    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1582092086806">
+    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1582771372971" />
+    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1582771372970">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1582092086806" />
-    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1582092086807">
+    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1582771372970" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1582771372971">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1582092086807" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1582771372971" />
     <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1580830587364">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -577,14 +624,14 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1580789641691" />
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1582030881693">
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1582119686161">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1582030881693" />
-    <state x="372" y="224" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1582086602527">
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1582119686161" />
+    <state x="372" y="224" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1582770612056">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="372" y="224" width="688" height="344" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1582086602527" />
+    <state x="372" y="224" width="688" height="344" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1582770612056" />
     <state x="484" y="316" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582029033381">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

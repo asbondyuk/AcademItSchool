@@ -1,4 +1,4 @@
-package ru.academits.bondyuk.main;
+package ru.academits.bondyuk.hardrange_main;
 
 import ru.academits.bondyuk.hardrange.Range;
 

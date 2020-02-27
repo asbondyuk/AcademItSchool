@@ -2,77 +2,57 @@ package ru.academits.bondyuk.vector;
 
 import java.util.Arrays;
 
+import static java.util.Arrays.copyOf;
+
 public class Vector {
     private double[] components;
 
-    public Vector(int n) {
-        if (n <= 0) {
+    public Vector(int vectorDimension) {
+        if (vectorDimension <= 0) {
             throw new IllegalArgumentException("Размерность вектора (n) должна быть больше нуля!");
         }
 
-        components = new double[n];
+        components = new double[vectorDimension];
     }
 
     public Vector(Vector vector) {
-        components = vector.getComponents();
+        components = Arrays.copyOf(vector.getComponents(), vector.getComponents().length);
     }
 
     public Vector(double[] array) {
-        components = Arrays.copyOf(array, array.length);
-    }
-
-    public Vector(int n, double[] array) {
-        if (n <= 0) {
+        if (array.length <= 0) {
             throw new IllegalArgumentException("Размерность вектора (n) должна быть больше нуля!");
         }
 
-        components = Arrays.copyOf(array, n);
+        components = copyOf(array, array.length);
     }
 
-    public static Vector add(Vector vector1, Vector vector2) {
-        int vector1Length = vector1.getComponents().length;
-        int vector2Length = vector2.getComponents().length;
-        int newComponentsLength = Math.max(vector1Length, vector2Length);
-        double[] newComponents = new double[newComponentsLength];
-
-        for (int i = 0; i < newComponentsLength; ++i) {
-            double firstTerm = 0;
-            if (i < vector1Length) {
-                firstTerm = vector1.getElement(i);
-            }
-
-            double secondTerm = 0;
-            if (i < vector2Length) {
-                secondTerm = vector2.getElement(i);
-            }
-
-            newComponents[i] = firstTerm + secondTerm;
+    public Vector(int vectorDimension, double[] array) {
+        if (vectorDimension <= 0) {
+            throw new IllegalArgumentException("Размерность вектора (n) должна быть больше нуля!");
         }
 
-        return new Vector(newComponents);
+        components = copyOf(array, vectorDimension);
     }
 
-    public static Vector difference(Vector vector1, Vector vector2) {
-        int vector1Length = vector1.getComponents().length;
-        int vector2Length = vector2.getComponents().length;
-        int newComponentsLength = Math.max(vector1Length, vector2Length);
-        double[] newComponents = new double[newComponentsLength];
+    public static Vector getAdd(Vector vector1, Vector vector2) {
+        int newVectorLength = Math.max(vector1.getComponents().length, vector2.getComponents().length);
+        Vector vector = new Vector(new double[newVectorLength]);
 
-        for (int i = 0; i < newComponentsLength; ++i) {
-            double firstTerm = 0;
-            if (i < vector1Length) {
-                firstTerm = vector1.getElement(i);
-            }
+        vector.add(vector1);
+        vector.add(vector2);
 
-            double secondTerm = 0;
-            if (i < vector2Length) {
-                secondTerm = vector2.getElement(i);
-            }
+        return vector;
+    }
 
-            newComponents[i] = firstTerm - secondTerm;
-        }
+    public static Vector getSubtract(Vector vector1, Vector vector2) {
+        int newVectorLength = Math.max(vector1.getComponents().length, vector2.getComponents().length);
+        Vector vector = new Vector(new double[newVectorLength]);
 
-        return new Vector(newComponents);
+        vector.add(vector1);
+        vector.subtract(vector2);
+
+        return vector;
     }
 
     public static double multiply(Vector vector1, Vector vector2) {
@@ -86,11 +66,11 @@ public class Vector {
         return multiplicationResult;
     }
 
-    public double[] getComponents() {
+    private double[] getComponents() {
         return components;
     }
 
-    public void setComponents(double[] components) {
+    private void setComponents(double[] components) {
         this.components = components;
     }
 
@@ -99,10 +79,15 @@ public class Vector {
     }
 
     public void add(Vector vector) {
-        int newComponentsLength = Math.max(components.length, vector.getComponents().length);
-        double[] newComponents = new double[newComponentsLength];
+        double[] newComponents;
 
-        for (int i = 0; i < newComponentsLength; ++i) {
+        if (components.length >= vector.getComponents().length) {
+            newComponents = components;
+        } else {
+            newComponents = new double[vector.getComponents().length];
+        }
+
+        for (int i = 0; i < newComponents.length; ++i) {
             double firstTerm = 0;
             if (i < components.length) {
                 firstTerm = components[i];
@@ -119,19 +104,23 @@ public class Vector {
         setComponents(newComponents);
     }
 
-    public void difference(Vector vector) {
-        int addedVectorLength = vector.getComponents().length;
-        int newComponentsLength = Math.max(components.length, addedVectorLength);
-        double[] newComponents = new double[newComponentsLength];
+    public void subtract(Vector vector) {
+        double[] newComponents;
 
-        for (int i = 0; i < newComponentsLength; ++i) {
+        if (components.length >= vector.getComponents().length) {
+            newComponents = components;
+        } else {
+            newComponents = new double[vector.getComponents().length];
+        }
+
+        for (int i = 0; i < newComponents.length; ++i) {
             double firstTerm = 0;
             if (i < components.length) {
                 firstTerm = components[i];
             }
 
             double secondTerm = 0;
-            if (i < addedVectorLength) {
+            if (i < vector.getComponents().length) {
                 secondTerm = vector.getElement(i);
             }
 
@@ -142,13 +131,9 @@ public class Vector {
     }
 
     public void multiplyByNumber(double number) {
-        double[] newComponents = new double[components.length];
-
         for (int i = 0; i < components.length; ++i) {
-            newComponents[i] = components[i] * number;
+            components[i] = components[i] * number;
         }
-
-        setComponents(newComponents);
     }
 
     public void reverse() {
@@ -200,13 +185,13 @@ public class Vector {
 
         Vector vector = (Vector) o;
 
-        return Arrays.equals(components, vector.components) && (components.length == vector.getComponents().length);
+        return Arrays.equals(components, vector.components);
     }
 
     @Override
     public int hashCode() {
         int componentsHash = Arrays.hashCode(components);
 
-        return 31 * componentsHash + components.length;
+        return 31 * componentsHash;
     }
 }

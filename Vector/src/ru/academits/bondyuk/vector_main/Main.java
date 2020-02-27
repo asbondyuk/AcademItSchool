@@ -1,4 +1,4 @@
-package ru.academits.bondyuk.main;
+package ru.academits.bondyuk.vector_main;
 
 import ru.academits.bondyuk.vector.Vector;
 
@@ -37,7 +37,7 @@ public class Main {
         Vector vector1 = new Vector(new double[]{1, 2});
         Vector vector2 = new Vector(new double[]{1, 2, 3, 4});
 
-        Vector vector = Vector.add(vector1, vector2);
+        Vector vector = Vector.getAdd(vector1, vector2);
 
         return vector.equals(new Vector(new double[]{2, 4, 3, 4}));
     }
@@ -46,7 +46,7 @@ public class Main {
         Vector vector1 = new Vector(new double[]{1, 2});
         Vector vector2 = new Vector(new double[]{1, 2, 3, 4});
 
-        Vector vector = Vector.difference(vector1, vector2);
+        Vector vector = Vector.getSubtract(vector1, vector2);
 
         return vector.equals(new Vector(new double[]{0, 0, -3, -4}));
     }
@@ -90,7 +90,7 @@ public class Main {
         Vector vector1 = new Vector(new double[]{1, 2, 3, 4});
         Vector vector2 = new Vector(new double[]{1, 2});
 
-        vector1.difference(vector2);
+        vector1.subtract(vector2);
 
         return vector1.equals(new Vector(new double[]{0, 0, 3, 4}));
     }
@@ -145,7 +145,7 @@ public class Main {
         vector2.add(vector3);
         System.out.println(vector2.toString());
 
-        vector3.difference(vector2);
+        vector3.subtract(vector2);
         System.out.println(vector3.toString());
 
         System.out.printf("%nПроверка работоспособности функций:%n");

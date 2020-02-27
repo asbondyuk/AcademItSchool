@@ -21,10 +21,8 @@ public class Parser {
                 String line = scanner.nextLine();
                 String[] array = line.split(defaultDelimiter);
 
-                if (array.length > 0) {
-                    for (String string : array) {
-                        printWriter.println("<td>" + string + "</td>");
-                    }
+                for (String string : array) {
+                    printWriter.println("<td>" + string + "</td>");
                 }
 
                 printWriter.println("</tr>");

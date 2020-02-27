@@ -7,8 +7,28 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Parser {
+    static final String defaultDelimiter = ",";
+
+    private static String getRaw(Scanner scanner) {
+        StringBuilder stringBuilder = new StringBuilder();
+        String line = scanner.nextLine();
+
+        while (true) {
+            stringBuilder.append(line);
+
+            if (line.contains("\"" + defaultDelimiter)) {
+                line = stringBuilder.toString();
+                break;
+            }
+
+            line = scanner.nextLine();
+        }
+
+        return line;
+    }
+
     public static void parseCSV(String inputFileName, String outputFileName) {
-        String defaultDelimiter = ",";
+
 
         try (Scanner scanner = new Scanner(new FileInputStream(inputFileName));
              PrintWriter printWriter = new PrintWriter(new File(outputFileName))) {
@@ -18,22 +38,7 @@ public class Parser {
             while (scanner.hasNext()) {
                 printWriter.println("<tr>");
 
-                String line = scanner.nextLine();
-
-                if (line.contains("\"")) {
-                    StringBuilder stringBuilder = new StringBuilder();
-
-                    while (true) {
-                        stringBuilder.append(line);
-
-                        if (line.contains("\"" + defaultDelimiter)) {
-                            line = stringBuilder.toString();
-                            break;
-                        }
-
-                        line = scanner.nextLine();
-                    }
-                }
+                String line = getRaw(scanner);
 
                 String[] array = line.split(defaultDelimiter);
 

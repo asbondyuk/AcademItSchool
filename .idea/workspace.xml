@@ -263,7 +263,7 @@
       <workItem from="1582079157892" duration="2642000" />
       <workItem from="1582086603797" duration="5968000" />
       <workItem from="1582770502125" duration="13479000" />
-      <workItem from="1582793605030" duration="1864000" />
+      <workItem from="1582793605030" duration="2885000" />
     </task>
     <task id="LOCAL-00001" summary="Настройка проекта&#10;&#10;Hello world программа">
       <created>1580620399320</created>
@@ -566,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582790770471</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="CSV : оптимизация простой формы csv">
+      <created>1582795496470</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1582795496470</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +593,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="HardRange: упрощение реализации сравнения объектов" />
     <MESSAGE value="HardRange: переименование параметров Triangle" />
     <MESSAGE value="HardRange: вынесение метода расчета стороны Triangle(уменьшение дублирования кода)" />
     <MESSAGE value="HardRange: методы объединения, пересечения, разности сделаны нестатическими" />
@@ -611,7 +617,8 @@
     <MESSAGE value="Shapes: форматирование" />
     <MESSAGE value="Vector:&#10;1) Исправление конструктора от вектора (теперь создается новый вектор)&#10;2) Исправление конструктора от массива (обработка массива длины 0)&#10;3) Ограничение видимости getter и setter&#10;4) оптимизация нестатич. суммы и разности: если длины исходного вектора достаточно - новый, промежуточный массив не создается&#10;5) Rename: difference -&gt; subtract&#10;6) Исправление статических суммы и разности: логика (через передаваемые инстансы) + переименование (добавление префикса get)&#10;7) оптимизация multiplyByNumber - устранение промежуточного массива &#10;8) оптимизация equals и hashCode (убрано дублирование кода)&#10;9) переименование пакета" />
     <MESSAGE value="CSV : разбор простой формы csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSV : разбор простой формы csv" />
+    <MESSAGE value="CSV : оптимизация простой формы csv" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSV : оптимизация простой формы csv" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -638,30 +645,30 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741@67.27.1299.741" timestamp="1582787061743" />
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1582790770055">
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1582795495548">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1582790770055" />
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1582795495548" />
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog" timestamp="1580808158984">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog/67.27.1299.741@67.27.1299.741" timestamp="1580808158984" />
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1582795239549">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1582796478329">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1582795239549" />
-    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1582795239549">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1582796478329" />
+    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1582796478328">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1582795239549" />
-    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1582795239548">
+    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1582796478328" />
+    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1582796478328">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1582795239548" />
-    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1582795239549">
+    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1582796478328" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1582796478329">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1582795239549" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1582796478329" />
     <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1580830587364">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

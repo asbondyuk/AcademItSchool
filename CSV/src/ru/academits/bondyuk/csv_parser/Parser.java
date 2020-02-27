@@ -19,6 +19,22 @@ public class Parser {
                 printWriter.println("<tr>");
 
                 String line = scanner.nextLine();
+
+                if (line.contains("\"")) {
+                    StringBuilder stringBuilder = new StringBuilder();
+
+                    while (true) {
+                        stringBuilder.append(line);
+
+                        if (line.contains("\"" + defaultDelimiter)) {
+                            line = stringBuilder.toString();
+                            break;
+                        }
+
+                        line = scanner.nextLine();
+                    }
+                }
+
                 String[] array = line.split(defaultDelimiter);
 
                 for (String string : array) {

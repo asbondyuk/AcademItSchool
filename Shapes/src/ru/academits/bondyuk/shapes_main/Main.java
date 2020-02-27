@@ -1,4 +1,4 @@
-package ru.academits.bondyuk.main;
+package ru.academits.bondyuk.shapes_main;
 
 import ru.academits.bondyuk.comparators.AreaComparator;
 import ru.academits.bondyuk.comparators.PerimeterComparator;
@@ -49,7 +49,6 @@ public class Main {
         int maxAreaShapeIndex = shapes.size() - 1;
         printShapeInformation(shapes.get(maxAreaShapeIndex));
 
-
         // Поверка площади v2
         AreaComparator areaComparator2 = new AreaComparator();
 
@@ -70,9 +69,7 @@ public class Main {
         printShapeInformation(shapes.get(secondMaxPerimeterShapeIndex));
 
         // Проверка периметра v2
-        PerimeterComparator perimeterComparator2 = new PerimeterComparator();
-
-        shapes.sort(perimeterComparator2);
+        shapes.sort(new PerimeterComparator());
 
         System.out.printf("%nВторой по величине периметр у фигуры: ");
 

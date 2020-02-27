@@ -49,7 +49,7 @@ public class Square implements Shape {
         }
 
         Square square = (Square) o;
-        return (square.side == side);
+        return square.side == side;
     }
 
     @Override

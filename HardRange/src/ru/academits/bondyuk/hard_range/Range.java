@@ -66,7 +66,7 @@ public class Range {
     }
 
     public Range[] getDifference(Range range) {
-        if ((from < range.getFrom() || range.getTo() < to) || (range.getFrom() < from || to < range.getTo())) {
+        if (!isIntersection(range)) {
             return new Range[]{new Range(this)};
         }
 

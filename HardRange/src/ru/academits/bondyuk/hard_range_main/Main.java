@@ -21,9 +21,9 @@ public class Main {
         Range[] unionRanges = range1.getUnion(range2);
 
         if (unionRanges.length > 1) {
-            System.out.printf("Объединение диапазонов %s и %s : %s%n", range1, range2, unionRanges[0]);
+            System.out.printf("Объединение диапазонов %s и %s : [%s, %s]%n", range1, range2, unionRanges[0], unionRanges[1]);
         } else {
-            System.out.printf("Объединение диапазонов %s и %s: %s%n", range1, range2, unionRanges[0]);
+            System.out.printf("Объединение диапазонов %s и %s: [%s]%n", range1, range2, unionRanges[0]);
         }
     }
 
@@ -31,11 +31,11 @@ public class Main {
         Range[] differenceRanges = range1.getDifference(range2);
 
         if (differenceRanges.length == 0) {
-            System.out.printf("Разница диапазонов %s и %s : пустой диапазон %n", range1, range2);
+            System.out.printf("Разница диапазонов %s и %s : [] %n", range1, range2);
         } else if (differenceRanges.length > 1) {
-            System.out.printf("Разница диапазонов %s и %s :  %s и %s %n", range1, range2, differenceRanges[0], differenceRanges[1]);
+            System.out.printf("Разница диапазонов %s и %s :  [%s, %s] %n", range1, range2, differenceRanges[0], differenceRanges[1]);
         } else {
-            System.out.printf("Разница диапазонов %s и %s: %s %n", range1, range2, differenceRanges[0]);
+            System.out.printf("Разница диапазонов %s и %s: [%s] %n", range1, range2, differenceRanges[0]);
         }
     }
 

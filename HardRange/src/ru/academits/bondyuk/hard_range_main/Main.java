@@ -14,7 +14,7 @@ public class Main {
     public static void testIntersectionRanges(Range range1, Range range2) {
         Range[] intersectionRange = range1.getIntersection(range2);
 
-        if (intersectionRange.length > 1) {
+        if (intersectionRange.length > 0) {
             System.out.printf("Пересечения диапазонов (%.2f , %.2f) и (%.2f , %.2f) : (%.2f , %.2f) \n", range1.getFrom(), range1.getTo(),
                     range2.getFrom(), range2.getTo(), intersectionRange[0].getFrom(), intersectionRange[0].getTo());
         } else {

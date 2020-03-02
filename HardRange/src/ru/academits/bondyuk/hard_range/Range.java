@@ -39,23 +39,12 @@ public class Range {
     }
 
     private boolean isIntersection(Range range) {
-        return (!(to < range.getFrom())) && (!(range.getTo() < from));
+        return (from < range.getFrom() && range.getTo() < to) || (range.getFrom() < from && to < range.getTo());
     }
 
-    private boolean isIntersectionInternal(Range range) {
-        return (range.getFrom() < from) && (to < range.getTo());
-    }
-
-    private boolean isIntersectionExternal(Range range) {
-        return (from < range.getFrom()) && (range.getTo() < to);
-    }
-
-    private boolean isIntersectionNested(Range range) {
-        return isIntersectionInternal(range) || isIntersectionExternal(range);
-    }
 
     public Range[] getIntersection(Range range) {
-        if (!isIntersectionNested(range)) {
+        if (!isIntersection(range)) {
             return new Range[]{};
         }
 
@@ -81,15 +70,15 @@ public class Range {
     }
 
     public Range[] getDifference(Range range) {
-        if (!isIntersectionNested(range)) {
+        if (!(range.getFrom() < from && to < range.getTo()) || !(from < range.getFrom() && range.getTo() < to)) {
             return new Range[]{new Range(this)};
         }
 
-        if (isIntersectionInternal(range)) {
+        if (range.getFrom() < from && to < range.getTo()) {
             return new Range[]{};
         }
 
-        if (isIntersectionExternal(range)) {
+        if (from < range.getFrom() && range.getTo() < to) {
             Range[] ranges = new Range[2];
             ranges[0] = new Range(from, range.getFrom());
             ranges[1] = new Range(range.getTo(), to);

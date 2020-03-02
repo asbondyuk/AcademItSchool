@@ -56,11 +56,7 @@ public class Range {
 
     public Range[] getUnion(Range range) {
         if (!isIntersection(range)) {
-            Range[] ranges = new Range[2];
-            ranges[0] = new Range(this);
-            ranges[1] = new Range(range);
-
-            return ranges;
+            return new Range[]{new Range(this), new Range(range)};
         }
 
         double unionRangeFrom = Math.min(from, range.getFrom());
@@ -70,7 +66,7 @@ public class Range {
     }
 
     public Range[] getDifference(Range range) {
-        if (!(range.getFrom() < from && to < range.getTo()) || !(from < range.getFrom() && range.getTo() < to)) {
+        if ((from < range.getFrom() || range.getTo() < to) || (range.getFrom() < from || to < range.getTo())) {
             return new Range[]{new Range(this)};
         }
 
@@ -79,11 +75,7 @@ public class Range {
         }
 
         if (from < range.getFrom() && range.getTo() < to) {
-            Range[] ranges = new Range[2];
-            ranges[0] = new Range(from, range.getFrom());
-            ranges[1] = new Range(range.getTo(), to);
-
-            return ranges;
+            return new Range[]{new Range(from, range.getFrom()), new Range(range.getTo(), to)};
         }
 
         return null;

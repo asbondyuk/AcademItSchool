@@ -6,7 +6,7 @@
       <change afterPath="$PROJECT_DIR$/in2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HardRange/src/ru/academits/bondyuk/hard_range_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/HardRange/src/ru/academits/bondyuk/hard_range_main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HardRange/src/ru/academits/bondyuk/hard_range/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/HardRange/src/ru/academits/bondyuk/hard_range/Range.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix_main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/vector/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/vector/Vector.java" afterDir="false" />
@@ -266,7 +266,7 @@
       <workItem from="1582793605030" duration="5126000" />
       <workItem from="1582818516958" duration="2253000" />
       <workItem from="1583036367815" duration="22000" />
-      <workItem from="1583120764811" duration="2630000" />
+      <workItem from="1583120764811" duration="2897000" />
     </task>
     <task id="LOCAL-00001" summary="Настройка проекта&#10;&#10;Hello world программа">
       <created>1580620399320</created>
@@ -597,7 +597,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583122385485</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="HardRange:&#10;форматирование вывода">
+      <created>1583123439676</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1583123439676</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,7 +624,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="HardRange: создание новых объектов в качестве результатов методов объединения, пересечения, разности + новый конструктор (создание копии Range)" />
     <MESSAGE value="HardRange: переименование методов (устранение постфикса Range из getUnionRange, getDifferenceRange, getIntersectionRange)" />
     <MESSAGE value="HardRange: рефакторинг: форматирование ответов методов" />
     <MESSAGE value="HardRange: рефакторинг isIntersection" />
@@ -642,7 +648,8 @@
     <MESSAGE value="CSV : добавлено считывание ячейки с нескольких строк ( при наличии '&quot;' на строке)" />
     <MESSAGE value="CSV : рефакторинг&#10;1) вынос в отдельный метод процесс получения строки&#10;2) перевод разделителя в константу" />
     <MESSAGE value="HardRange : &#10;1)исправление логики isIntersection&#10;2) убраны методы типов пересечения (isIntersectionInternal/External/Nested)" />
-    <option name="LAST_COMMIT_MESSAGE" value="HardRange : &#10;1)исправление логики isIntersection&#10;2) убраны методы типов пересечения (isIntersectionInternal/External/Nested)" />
+    <MESSAGE value="HardRange:&#10;форматирование вывода" />
+    <option name="LAST_COMMIT_MESSAGE" value="HardRange:&#10;форматирование вывода" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -669,30 +676,30 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741@67.27.1299.741" timestamp="1582787061743" />
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1583122384618">
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1583123439522">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1583122384618" />
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1583123439522" />
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog" timestamp="1580808158984">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog/67.27.1299.741@67.27.1299.741" timestamp="1580808158984" />
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1583123382050">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1583123728735">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1583123382050" />
-    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1583123382050">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1583123728735" />
+    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1583123728735">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1583123382050" />
-    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1583123382049">
+    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1583123728735" />
+    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1583123728735">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1583123382049" />
-    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1583123382050">
+    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1583123728735" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1583123728735">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1583123382050" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1583123728735" />
     <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1580830587364">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -717,10 +724,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1582789486042" />
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1582818545847">
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1583123451245">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1582818545847" />
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1583123451245" />
     <state x="372" y="224" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1583120766356">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

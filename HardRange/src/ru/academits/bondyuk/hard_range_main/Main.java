@@ -12,13 +12,9 @@ public class Main {
     }
 
     public static void testIntersectionRanges(Range range1, Range range2) {
-        Range[] intersectionRange = range1.getIntersection(range2);
+        Range intersectionRange = range1.getIntersection(range2);
 
-        if (intersectionRange.length > 0) {
-            System.out.printf("Пересечение диапазонов %s и %s : %s \n", range1, range2, intersectionRange[0]);
-        } else {
-            System.out.printf("Пересечение диапазонов %s и %s отсутствует \n", range1, range2);
-        }
+        System.out.printf("Пересечение диапазонов %s и %s : %s \n", range1, range2, intersectionRange);
     }
 
     public static void testUnionRanges(Range range1, Range range2) {

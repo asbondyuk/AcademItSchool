@@ -43,15 +43,15 @@ public class Range {
     }
 
 
-    public Range[] getIntersection(Range range) {
+    public Range getIntersection(Range range) {
         if (!isIntersection(range)) {
-            return new Range[]{};
+            return this;
         }
 
         double intersectionRangeFrom = Math.max(from, range.getFrom());
         double intersectionRangeTo = Math.min(to, range.getTo());
 
-        return new Range[]{new Range(intersectionRangeFrom, intersectionRangeTo)};
+        return new Range(intersectionRangeFrom, intersectionRangeTo);
     }
 
     public Range[] getUnion(Range range) {

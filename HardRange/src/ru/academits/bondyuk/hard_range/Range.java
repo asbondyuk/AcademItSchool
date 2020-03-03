@@ -55,7 +55,7 @@ public class Range {
     }
 
     public Range[] getUnion(Range range) {
-        if (!isIntersection(range)) {
+        if (from > range.getTo() || to < range.getFrom()) {
             return new Range[]{new Range(this), new Range(range)};
         }
 

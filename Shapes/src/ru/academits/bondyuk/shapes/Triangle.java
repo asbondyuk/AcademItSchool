@@ -80,7 +80,7 @@ public class Triangle implements Shape {
         return (triangle.x1 == x1) &&
                 (triangle.y1 == y1) &&
                 (triangle.x2 == x2) &&
-                (triangle.y1 == y1) &&
+                (triangle.y2 == y2) &&
                 (triangle.x3 == x3) &&
                 (triangle.y3 == y3);
     }

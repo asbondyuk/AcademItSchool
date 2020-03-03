@@ -11,13 +11,12 @@
       <change afterPath="$PROJECT_DIR$/HashTable/HashTable.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/in1.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/in2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HardRange/src/ru/academits/bondyuk/hard_range/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/HardRange/src/ru/academits/bondyuk/hard_range/Range.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix_main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/vector/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/vector/Vector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Triangle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,14 +262,7 @@
       <workItem from="1582818516958" duration="2253000" />
       <workItem from="1583036367815" duration="22000" />
       <workItem from="1583120764811" duration="8718000" />
-      <workItem from="1583159177568" duration="2543000" />
-    </task>
-    <task id="LOCAL-00003" summary="задача Range* (числовой диапазон)&#10;добавлены и проверены функции пересечения/объединения/разницы диапазонов">
-      <created>1580801382077</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1580801382077</updated>
+      <workItem from="1583159177568" duration="3286000" />
     </task>
     <task id="LOCAL-00004" summary="задача Range* (числовой диапазон)&#10;добавлены и проверены функции пересечения/объединения/разницы диапазонов">
       <created>1580801491610</created>
@@ -608,7 +600,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583126079979</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="HardRange: исправление логики объединения для пересекающихся по одной границе диапазонов">
+      <created>1583203401866</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1583203401867</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -628,7 +627,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="HardRange: рефакторинг использование внутри класса полей, вместо геттеров класса ранее" />
     <MESSAGE value="HardRange: добавление флагов по типу пересечения, изменение логики расчета difference" />
     <MESSAGE value="Shape: исправление расчета площади треугольника + &#10;рефакторинг Main (исправление формата переноса строки в выводе)" />
     <MESSAGE value="Shape: реализация компораторов отдельными классами (без comparing)" />
@@ -653,7 +651,8 @@
     <MESSAGE value="HardRange:&#10;исправление сигнатуры getIntersection (объект вместо массива объектов)" />
     <MESSAGE value="HardRange : форматирование&#10;1) исправление именований тестов&#10;2) исправление формата вывода (\n -&gt; %n)&#10;3) раскрытие отрицания от скобок" />
     <MESSAGE value="HardRange: исправление отображения массивов (для объединения и разности)" />
-    <option name="LAST_COMMIT_MESSAGE" value="HardRange: исправление отображения массивов (для объединения и разности)" />
+    <MESSAGE value="HardRange: исправление логики объединения для пересекающихся по одной границе диапазонов" />
+    <option name="LAST_COMMIT_MESSAGE" value="HardRange: исправление логики объединения для пересекающихся по одной границе диапазонов" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -684,10 +683,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741@67.27.1299.741" timestamp="1582787061743" />
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1583129544903">
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1583203400187">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1583129544903" />
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1583203400187" />
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog" timestamp="1580808158984">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="CSV : рефакторинг&#10;1) вынос в отдельный метод процесс получения строки&#10;2) перевод разделителя в константу">
-      <change afterPath="$PROJECT_DIR$/ArrayList/ArrayList.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArrayList/src/ru/academits/bondyuk/array_list/ArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArrayList/src/ru/academits/bondyuk/array_list_main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArrayListHome/ArrayListHome.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home_main/ArrayListHome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HashTable/HashTable.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/in1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/in2.csv" afterDir="false" />
+    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix_main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,14 +250,7 @@
       <workItem from="1582818516958" duration="2253000" />
       <workItem from="1583036367815" duration="22000" />
       <workItem from="1583120764811" duration="8718000" />
-      <workItem from="1583159177568" duration="14399000" />
-    </task>
-    <task id="LOCAL-00006" summary="задача Shapes часть 1:&#10;создан интерфейс Shape,&#10;интерфейс реализован в Circle, Rectangle, Square, Triangle">
-      <created>1580920650686</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1580920650686</updated>
+      <workItem from="1583159177568" duration="15628000" />
     </task>
     <task id="LOCAL-00007" summary="задача Shapes часть 1:&#10;доработка Rectangle (getPerimeter)&#10;&#10;задача Shapes часть 2:&#10;первое приближение: созданы компараторы + первоначальное отображение результатов (отображение требует доработки)">
       <created>1580924737367</created>
@@ -603,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583226801269</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="синхронизация структуры проекта">
+      <created>1583227178149</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1583227178149</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -623,7 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Shape: реализация компораторов отдельными классами (без comparing)" />
     <MESSAGE value="Vector: форматирование" />
     <MESSAGE value="Matrix: созданы конструкторы" />
     <MESSAGE value="Matrix: геттер/сеттер вектора матрицы" />
@@ -648,7 +639,8 @@
     <MESSAGE value="HardRange: исправление логики объединения для пересекающихся по одной границе диапазонов" />
     <MESSAGE value="Shapes: исправление опечатки в equals Triangle" />
     <MESSAGE value="Matrix:&#10;1) обновление пакета Vector&#10;2) добавление тестов (причесывание main)&#10;3) форматирование именований, изменение сигнатурыы getSize(порядок аргументов)&#10;4) изменение логики статических методов (работают через нестатические)&#10;5) добавление multiply векторов (static)&#10;6) добавление валидации операций (предварительная проверка размерности векторов)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Matrix:&#10;1) обновление пакета Vector&#10;2) добавление тестов (причесывание main)&#10;3) форматирование именований, изменение сигнатурыы getSize(порядок аргументов)&#10;4) изменение логики статических методов (работают через нестатические)&#10;5) добавление multiply векторов (static)&#10;6) добавление валидации операций (предварительная проверка размерности векторов)" />
+    <MESSAGE value="синхронизация структуры проекта" />
+    <option name="LAST_COMMIT_MESSAGE" value="синхронизация структуры проекта" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -679,30 +671,30 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741@67.27.1299.741" timestamp="1582787061743" />
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1583227121102">
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1583227177922">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1583227121102" />
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1583227177922" />
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog" timestamp="1580808158984">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog/67.27.1299.741@67.27.1299.741" timestamp="1580808158984" />
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1583217912981">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1583228439971">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1583217912981" />
-    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1583217912980">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1583228439971" />
+    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1583228439971">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1583217912980" />
-    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1583217912980">
+    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1583228439971" />
+    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1583228439970">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1583217912980" />
-    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1583217912981">
+    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1583228439970" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1583228439971">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1583217912981" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1583228439971" />
     <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1580830587364">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -727,10 +719,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1582789486042" />
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1583155190150">
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1583227185068">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1583155190150" />
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1583227185068" />
     <state x="372" y="224" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1583160776870">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

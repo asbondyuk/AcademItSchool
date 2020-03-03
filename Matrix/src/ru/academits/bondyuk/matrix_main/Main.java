@@ -54,7 +54,11 @@ public class Main {
         matrix6.subtract(matrix5);
         System.out.printf("Результат вычитания из 2-го суммы (1 и 2): %s%n", matrix6);
 
-        Matrix matrix7 = new Matrix(new Vector[]{new Vector(new double[]{3, 3, 3}), new Vector(new double[]{4, 4, 4}), new Vector(new double[]{5, 5, 5})});
-        System.out.printf("Результат перемножения: %s%n", Matrix.multiply(matrix7, matrix5));
+        Matrix matrix7 = new Matrix(new Vector[]{new Vector(new double[]{3, 3, 3}), new Vector(new double[]{4, 4, 4})});
+        Matrix matrix8 = new Matrix(new Vector[]{new Vector(new double[]{6, 8}), new Vector(new double[]{6, 8}), new Vector(new double[]{6, 8})});
+        System.out.println(matrix7);
+        System.out.println(matrix8);
+
+//        System.out.printf("Результат перемножения: %s%n", Matrix.multiply(matrix7, matrix8));
     }
 }

@@ -81,36 +81,48 @@ public class Matrix {
         return matrix;
     }
 
-    public static Matrix multiply(Matrix matrix1, Matrix matrix2) {
-        int[] matrix1Size = matrix1.getSize();
-        int[] matrix2Size = matrix2.getSize();
-
-        int matrix1LinesCount = matrix1Size[1];
-        int matrix2ColumnsCount = matrix1Size[0];
-
-        if (matrix1LinesCount != matrix2ColumnsCount) {
-            throw new IllegalArgumentException("Для выполнения умножения число столбцов матрицы 1 должно быть равно числу строк матрицы 2");
-        }
-
-        int multiplyMatrixLinesCount = matrix1Size[0];
-        int multiplyMatrixColumnsCount = matrix2Size[1];
-
-        Matrix multiplyMatrix = new Matrix(multiplyMatrixLinesCount, multiplyMatrixColumnsCount);
-
-        for (int i = 0; i < multiplyMatrixLinesCount; ++i) {
-            for (int j = 0; j < multiplyMatrixColumnsCount; ++j) {
-                int sum = 0;
-
-                for (int k = 0; k < matrix1LinesCount; ++k) {
-                    sum += matrix1.getVectors()[i].getElement(k) * matrix2.getVectors()[k].getElement(j);
-                }
-
-                multiplyMatrix.vectors[i].setElement(j, sum);
-            }
-        }
-
-        return multiplyMatrix;
-    }
+//    public static Matrix multiply(Matrix matrix1, Matrix matrix2) {
+//        int[] matrix1Size = matrix1.getSize();
+//        int[] matrix2Size = matrix2.getSize();
+//
+//        int matrix1LinesCount = matrix1Size[1];
+//        int matrix2ColumnsCount = matrix1Size[0];
+//
+//        if (matrix1LinesCount != matrix2ColumnsCount) {
+//            throw new IllegalArgumentException("Для выполнения умножения число столбцов матрицы 1 должно быть равно числу строк матрицы 2");
+//        }
+//
+//        int multiplyMatrixLinesCount = matrix1Size[1];
+//        int multiplyMatrixColumnsCount = matrix2Size[0];
+//
+//        Matrix multiplyMatrix = new Matrix(multiplyMatrixLinesCount, multiplyMatrixColumnsCount);
+//
+//        for (int i = 0; i < multiplyMatrixLinesCount; ++i) {
+//            for (int j = 0; j < multiplyMatrixColumnsCount; ++j) {
+//                int sum = 0;
+//
+//                for (int k = 0; k < matrix1LinesCount; ++k) {
+//                    double temp1 = 0;
+//                    double temp2 = 0;
+//
+//                    if (matrix1.getVectors()[i].getSize() < k) {
+//                        temp1 = matrix1.getVectors()[i].getElement(k);
+//                    }
+//
+//                    if (matrix2.getVectors().length < k) {
+//                        temp2 = matrix2.getVectors()[k].getElement(j);
+//                    }
+//
+//                    System.out.println(temp1 + ", " + temp2);
+//                    sum += (temp1 + temp2);
+//                }
+//
+//                multiplyMatrix.vectors[i].setElement(j, sum);
+//            }
+//        }
+//
+//        return multiplyMatrix;
+//    }
 
     public Vector[] getVectors() {
         return vectors;

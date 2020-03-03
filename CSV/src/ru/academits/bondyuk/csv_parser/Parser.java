@@ -21,15 +21,19 @@ public class Parser {
                 break;
             }
 
-            line = scanner.nextLine();
+            if (scanner.hasNext()) {
+                line = scanner.nextLine();
+            } else {
+                break;
+            }
+
+            stringBuilder.append(" ");
         }
 
         return line;
     }
 
     public static void parseCSV(String inputFileName, String outputFileName) {
-
-
         try (Scanner scanner = new Scanner(new FileInputStream(inputFileName));
              PrintWriter printWriter = new PrintWriter(new File(outputFileName))) {
 
@@ -46,8 +50,7 @@ public class Parser {
                     printWriter.println("<td>" + string + "</td>");
                 }
 
-                printWriter.println("</tr>");
-                printWriter.println("</br>");
+                printWriter.println("</tr>" + "</br>");
             }
 
             printWriter.println("</table>");

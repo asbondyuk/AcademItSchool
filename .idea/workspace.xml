@@ -16,7 +16,6 @@
       <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix_main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/vector/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/vector/Vector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes/src/ru/academits/bondyuk/shapes/Triangle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +92,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.Main (2)">
+  <component name="RunManager" selected="Application.Main (5)">
     <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.hard_range_main.Main" />
       <module name="HardRange" />
@@ -226,11 +225,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (5)" />
+        <item itemvalue="Application.Main (3)" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Parser" />
-        <item itemvalue="Application.Main (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -262,14 +261,7 @@
       <workItem from="1582818516958" duration="2253000" />
       <workItem from="1583036367815" duration="22000" />
       <workItem from="1583120764811" duration="8718000" />
-      <workItem from="1583159177568" duration="3286000" />
-    </task>
-    <task id="LOCAL-00004" summary="задача Range* (числовой диапазон)&#10;добавлены и проверены функции пересечения/объединения/разницы диапазонов">
-      <created>1580801491610</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1580801491610</updated>
+      <workItem from="1583159177568" duration="13217000" />
     </task>
     <task id="LOCAL-00005" summary="задача Range (числовой диапазон)">
       <created>1580801578892</created>
@@ -607,7 +599,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583203401867</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Shapes: исправление опечатки в equals Triangle">
+      <created>1583204081632</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1583204081632</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -627,7 +626,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="HardRange: добавление флагов по типу пересечения, изменение логики расчета difference" />
     <MESSAGE value="Shape: исправление расчета площади треугольника + &#10;рефакторинг Main (исправление формата переноса строки в выводе)" />
     <MESSAGE value="Shape: реализация компораторов отдельными классами (без comparing)" />
     <MESSAGE value="Vector: форматирование" />
@@ -652,7 +650,8 @@
     <MESSAGE value="HardRange : форматирование&#10;1) исправление именований тестов&#10;2) исправление формата вывода (\n -&gt; %n)&#10;3) раскрытие отрицания от скобок" />
     <MESSAGE value="HardRange: исправление отображения массивов (для объединения и разности)" />
     <MESSAGE value="HardRange: исправление логики объединения для пересекающихся по одной границе диапазонов" />
-    <option name="LAST_COMMIT_MESSAGE" value="HardRange: исправление логики объединения для пересекающихся по одной границе диапазонов" />
+    <MESSAGE value="Shapes: исправление опечатки в equals Triangle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shapes: исправление опечатки в equals Triangle" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -683,30 +682,30 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741@67.27.1299.741" timestamp="1582787061743" />
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1583203400187">
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1583204081306">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1583203400187" />
+    <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1583204081306" />
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog" timestamp="1580808158984">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog/67.27.1299.741@67.27.1299.741" timestamp="1580808158984" />
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1583203291016">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1583217912981">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1583203291016" />
-    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1583203291015">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1583217912981" />
+    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1583217912980">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1583203291015" />
-    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1583203291014">
+    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1583217912980" />
+    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1583217912980">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1583203291014" />
-    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1583203291015">
+    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1583217912980" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1583217912981">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1583203291015" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1583217912981" />
     <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1580830587364">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

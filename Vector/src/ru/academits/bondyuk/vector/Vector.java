@@ -69,55 +69,25 @@ public class Vector {
     }
 
     public void add(Vector vector) {
-        double[] newComponents;
+        int newComponentsLength = Math.max(components.length, vector.getSize());
+        components = Arrays.copyOf(components, newComponentsLength);
 
-        if (components.length >= vector.getSize()) {
-            newComponents = components;
-        } else {
-            newComponents = new double[vector.getSize()];
-        }
-
-        for (int i = 0; i < newComponents.length; ++i) {
-            double firstTerm = 0;
-            if (i < components.length) {
-                firstTerm = components[i];
-            }
-
-            double secondTerm = 0;
+        for (int i = 0; i < newComponentsLength; ++i) {
             if (i < vector.getSize()) {
-                secondTerm = vector.components[i];
+                components[i] += vector.components[i];
             }
-
-            newComponents[i] = firstTerm + secondTerm;
         }
-
-        components = newComponents;
     }
 
     public void subtract(Vector vector) {
-        double[] newComponents;
+        int newComponentsLength = Math.max(components.length, vector.getSize());
+        components = Arrays.copyOf(components, newComponentsLength);
 
-        if (components.length >= vector.getSize()) {
-            newComponents = components;
-        } else {
-            newComponents = new double[vector.getSize()];
-        }
-
-        for (int i = 0; i < newComponents.length; ++i) {
-            double firstTerm = 0;
-            if (i < components.length) {
-                firstTerm = components[i];
-            }
-
-            double secondTerm = 0;
+        for (int i = 0; i < newComponentsLength; ++i) {
             if (i < vector.getSize()) {
-                secondTerm = vector.components[i];
+                components[i] -= vector.components[i];
             }
-
-            newComponents[i] = firstTerm - secondTerm;
         }
-
-        components = newComponents;
     }
 
     public void multiply(double number) {

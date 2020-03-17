@@ -37,7 +37,7 @@ public class Main {
         Vector vector1 = new Vector(new double[]{1, 2});
         Vector vector2 = new Vector(new double[]{1, 2, 3, 4});
 
-        Vector vector = Vector.getAdd(vector1, vector2);
+        Vector vector = Vector.getSum(vector1, vector2);
 
         return vector.equals(new Vector(new double[]{2, 4, 3, 4}));
     }
@@ -46,7 +46,7 @@ public class Main {
         Vector vector1 = new Vector(new double[]{1, 2});
         Vector vector2 = new Vector(new double[]{1, 2, 3, 4});
 
-        Vector vector = Vector.getSubtract(vector1, vector2);
+        Vector vector = Vector.getDifference(vector1, vector2);
 
         return vector.equals(new Vector(new double[]{0, 0, -3, -4}));
     }
@@ -98,7 +98,7 @@ public class Main {
     public static boolean testMultiplyByNumber() {
         Vector vector = new Vector(new double[]{1, 2, 3, 4});
 
-        vector.multiplyByNumber(5);
+        vector.multiply(5);
 
         return vector.equals(new Vector(new double[]{5, 10, 15, 20}));
     }
@@ -129,7 +129,7 @@ public class Main {
         System.out.println(vector2.toString());
         System.out.printf("Длина вектора: %.2f\n", vector2.getLength());
 
-        vector2.multiplyByNumber(5.5);
+        vector2.multiply(5.5);
         System.out.println(vector2.toString());
 
         vector2.reverse();

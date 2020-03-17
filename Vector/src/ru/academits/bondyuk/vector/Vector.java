@@ -2,14 +2,12 @@ package ru.academits.bondyuk.vector;
 
 import java.util.Arrays;
 
-import static java.util.Arrays.copyOf;
-
 public class Vector {
     private double[] components;
 
     public Vector(int vectorDimension) {
         if (vectorDimension <= 0) {
-            throw new IllegalArgumentException("Размерность вектора (n) должна быть больше нуля!");
+            throw new IllegalArgumentException("Размерность вектора должна быть больше нуля!");
         }
 
         components = new double[vectorDimension];
@@ -21,21 +19,21 @@ public class Vector {
 
     public Vector(double[] array) {
         if (array.length <= 0) {
-            throw new IllegalArgumentException("Размерность вектора (n) должна быть больше нуля!");
+            throw new IllegalArgumentException("Размерность вектора должна быть больше нуля!");
         }
 
-        components = copyOf(array, array.length);
+        components = Arrays.copyOf(array, array.length);
     }
 
     public Vector(int vectorDimension, double[] array) {
         if (vectorDimension <= 0) {
-            throw new IllegalArgumentException("Размерность вектора (n) должна быть больше нуля!");
+            throw new IllegalArgumentException("Размерность вектора должна быть больше нуля!");
         }
 
-        components = copyOf(array, vectorDimension);
+        components = Arrays.copyOf(array, vectorDimension);
     }
 
-    public static Vector getAdd(Vector vector1, Vector vector2) {
+    public static Vector getSum(Vector vector1, Vector vector2) {
         int newVectorLength = Math.max(vector1.getComponents().length, vector2.getComponents().length);
         Vector vector = new Vector(new double[newVectorLength]);
 
@@ -45,7 +43,7 @@ public class Vector {
         return vector;
     }
 
-    public static Vector getSubtract(Vector vector1, Vector vector2) {
+    public static Vector getDifference(Vector vector1, Vector vector2) {
         int newVectorLength = Math.max(vector1.getComponents().length, vector2.getComponents().length);
         Vector vector = new Vector(new double[newVectorLength]);
 
@@ -130,21 +128,23 @@ public class Vector {
         setComponents(newComponents);
     }
 
-    public void multiplyByNumber(double number) {
+    public void multiply(double number) {
         for (int i = 0; i < components.length; ++i) {
             components[i] = components[i] * number;
         }
     }
 
     public void reverse() {
-        multiplyByNumber(-1);
+        multiply(-1);
     }
 
     public double getLength() {
         double componentsSquaredSum = 0;
+
         for (double component : components) {
             componentsSquaredSum += Math.pow(component, 2);
         }
+
         return Math.sqrt(componentsSquaredSum);
     }
 

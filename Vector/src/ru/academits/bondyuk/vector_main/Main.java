@@ -13,7 +13,7 @@ public class Main {
         try {
             Vector vector1 = new Vector(-1);
         } catch (IllegalArgumentException e) {
-            return e.getMessage().equals("Размерность вектора (n) должна быть больше нуля!");
+            return true;
         }
 
         return false;

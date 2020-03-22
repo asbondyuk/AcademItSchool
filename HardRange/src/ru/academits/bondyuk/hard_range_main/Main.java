@@ -8,40 +8,30 @@ public class Main {
     public static void testAddedFunctions(Range range1, Range range2) {
         System.out.printf("%nПроверка с %s%n", range2);
 
-        testIntersectionRanges(range1, range2);
-        testUnionRanges(range1, range2);
-        testDifferenceRanges(range1, range2);
+        testRangesIntersection(range1, range2);
+        testRangesUnion(range1, range2);
+        testRangesDifference(range1, range2);
     }
 
-    public static void testIntersectionRanges(Range range1, Range range2) {
+    public static void testRangesIntersection(Range range1, Range range2) {
         Range intersectionRange = range1.getIntersection(range2);
 
         System.out.printf("Пересечение диапазонов %s и %s : %s%n", range1, range2, intersectionRange);
     }
 
-    public static void testUnionRanges(Range range1, Range range2) {
+    public static void testRangesUnion(Range range1, Range range2) {
         Range[] unionRanges = range1.getUnion(range2);
 
-        if (unionRanges.length > 1) {
-            System.out.printf("Объединение диапазонов %s и %s : %s%n", range1, range2, printRangesArray(unionRanges));
-        } else {
-            System.out.printf("Объединение диапазонов %s и %s: %s%n", range1, range2, printRangesArray(unionRanges));
-        }
+        System.out.printf("Объединение диапазонов %s и %s: %s%n", range1, range2, getRangesArrayAsString(unionRanges));
     }
 
-    public static void testDifferenceRanges(Range range1, Range range2) {
+    public static void testRangesDifference(Range range1, Range range2) {
         Range[] differenceRanges = range1.getDifference(range2);
 
-        if (differenceRanges.length == 0) {
-            System.out.printf("Разница диапазонов %s и %s : [] %n", range1, range2);
-        } else if (differenceRanges.length > 1) {
-            System.out.printf("Разница диапазонов %s и %s :  %s%n", range1, range2, printRangesArray(differenceRanges));
-        } else {
-            System.out.printf("Разница диапазонов %s и %s: %s %n", range1, range2, printRangesArray(differenceRanges));
-        }
+        System.out.printf("Разница диапазонов %s и %s: %s %n", range1, range2, getRangesArrayAsString(differenceRanges));
     }
 
-    public static String printRangesArray(Range[] ranges) {
+    public static String getRangesArrayAsString(Range[] ranges) {
         return Arrays.toString(ranges);
     }
 

@@ -32,7 +32,7 @@ public class Main {
     public static void testDifferenceRanges(Range range1, Range range2) {
         Range[] differenceRanges = range1.getDifference(range2);
 
-        if (differenceRanges[0] == null) {
+        if (differenceRanges.length == 0) {
             System.out.printf("Разница диапазонов %s и %s : [] %n", range1, range2);
         } else if (differenceRanges.length > 1) {
             System.out.printf("Разница диапазонов %s и %s :  %s%n", range1, range2, printRangesArray(differenceRanges));
@@ -88,5 +88,21 @@ public class Main {
         Range range9 = new Range(1, 5);
         Range range10 = new Range(3, 7);
         testAddedFunctions(range9, range10);
+
+        // Пример 7
+        Range range11 = new Range(1, 3);
+        Range range12 = new Range(1, 5);
+        testAddedFunctions(range11, range12);
+        testAddedFunctions(range12, range11);
+
+        // Пример 8
+        Range range13 = new Range(1, 7);
+        Range range14 = new Range(1, 7);
+        testAddedFunctions(range13, range14);
+
+        // Пример 9
+        Range range15 = new Range(3, 5);
+        Range range16 = new Range(1, 7);
+        testAddedFunctions(range15, range16);
     }
 }

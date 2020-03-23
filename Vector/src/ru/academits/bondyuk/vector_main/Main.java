@@ -55,7 +55,7 @@ public class Main {
         Vector vector1 = new Vector(new double[]{1, 2});
         Vector vector2 = new Vector(new double[]{1, 2, 3, 4});
 
-        return Vector.multiply(vector1, vector2) == 6;
+        return Vector.multiply(vector1, vector2) == 5;
     }
 
     public static boolean testGetElement() {

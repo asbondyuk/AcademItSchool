@@ -34,20 +34,16 @@ public class Vector {
     }
 
     public static Vector getSum(Vector vector1, Vector vector2) {
-        int newVectorLength = Math.max(vector1.getSize(), vector2.getSize());
-        Vector vector = new Vector(new double[newVectorLength]);
+        Vector vector = new Vector(vector1);
 
-        vector.add(vector1);
         vector.add(vector2);
 
         return vector;
     }
 
     public static Vector getDifference(Vector vector1, Vector vector2) {
-        int newVectorLength = Math.max(vector1.getSize(), vector2.getSize());
-        Vector vector = new Vector(new double[newVectorLength]);
+        Vector vector = new Vector(vector1);
 
-        vector.add(vector1);
         vector.subtract(vector2);
 
         return vector;
@@ -58,7 +54,7 @@ public class Vector {
         double multiplicationResult = 0;
 
         for (int i = 0; i < baseLength; ++i) {
-            multiplicationResult += vector1.components[i] + vector2.components[i];
+            multiplicationResult += vector1.components[i] * vector2.components[i];
         }
 
         return multiplicationResult;
@@ -69,30 +65,28 @@ public class Vector {
     }
 
     public void add(Vector vector) {
-        int newComponentsLength = Math.max(components.length, vector.getSize());
-        components = Arrays.copyOf(components, newComponentsLength);
+        if (components.length < vector.getSize()) {
+            components = Arrays.copyOf(components, vector.getSize());
+        }
 
-        for (int i = 0; i < newComponentsLength; ++i) {
-            if (i < vector.getSize()) {
-                components[i] += vector.components[i];
-            }
+        for (int i = 0; i < vector.getSize(); ++i) {
+            components[i] += vector.components[i];
         }
     }
 
     public void subtract(Vector vector) {
-        int newComponentsLength = Math.max(components.length, vector.getSize());
-        components = Arrays.copyOf(components, newComponentsLength);
+        if (components.length < vector.getSize()) {
+            components = Arrays.copyOf(components, vector.getSize());
+        }
 
-        for (int i = 0; i < newComponentsLength; ++i) {
-            if (i < vector.getSize()) {
-                components[i] -= vector.components[i];
-            }
+        for (int i = 0; i < vector.getSize(); ++i) {
+            components[i] -= vector.components[i];
         }
     }
 
     public void multiply(double number) {
         for (int i = 0; i < components.length; ++i) {
-            components[i] = components[i] * number;
+            components[i] *= number;
         }
     }
 

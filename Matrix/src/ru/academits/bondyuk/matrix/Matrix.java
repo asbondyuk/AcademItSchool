@@ -14,11 +14,11 @@ public class Matrix {
     }
 
     public Matrix(Matrix matrix) {
-        int rowCount = matrix.getRows().length;
+        int rowCount = matrix.rows.length;
         rows = new Vector[rowCount];
 
         for (int i = 0; i < rowCount; ++i) {
-            rows[i] = new Vector(matrix.getRows()[i]);
+            rows[i] = new Vector(matrix.rows[i]);
         }
     }
 
@@ -175,7 +175,7 @@ public class Matrix {
             addMatrix[i] = new Vector(columnsCount);
 
             for (int j = 0; j < columnsCount; ++j) {
-                addMatrix[i].setElement(j, rows[i].getElement(j) + matrix.getRows()[i].getElement(j));
+                addMatrix[i].setElement(j, rows[i].getElement(j) + matrix.rows[i].getElement(j));
             }
         }
 
@@ -199,7 +199,7 @@ public class Matrix {
             subtractMatrix[i] = new Vector(columnsCount);
 
             for (int j = 0; j < columnsCount; ++j) {
-                subtractMatrix[i].setElement(j, rows[i].getElement(j) - matrix.getRows()[i].getElement(j));
+                subtractMatrix[i].setElement(j, rows[i].getElement(j) - matrix.rows[i].getElement(j));
             }
         }
 
@@ -247,12 +247,12 @@ public class Matrix {
 //                    double temp1 = 0;
 //                    double temp2 = 0;
 //
-//                    if (matrix1.getRows()[i].getSize() < k) {
-//                        temp1 = matrix1.getRows()[i].getElement(k);
+//                    if (matrix1.rows[i].getSize() < k) {
+//                        temp1 = matrix1.rows[i].getElement(k);
 //                    }
 //
-//                    if (matrix2.getRows().length < k) {
-//                        temp2 = matrix2.getRows()[k].getElement(j);
+//                    if (matrix2.rows.length < k) {
+//                        temp2 = matrix2.rows[k].getElement(j);
 //                    }
 //
 //                    System.out.println(temp1 + ", " + temp2);

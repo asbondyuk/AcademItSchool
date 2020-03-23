@@ -252,6 +252,7 @@
       <workItem from="1584556419756" duration="8396000" />
       <workItem from="1584910694090" duration="4837000" />
       <workItem from="1584922110858" duration="3466000" />
+      <workItem from="1584930090871" duration="149000" />
     </task>
     <task id="LOCAL-00016" summary="Выделение Main в отдельный пакет">
       <created>1581078590239</created>
@@ -742,10 +743,10 @@
     </state>
     <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584923355370" />
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584417938514" />
-    <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1584922110027">
+    <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1584930094082">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="323" y="180" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584922110027" />
+    <state x="323" y="180" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584930094082" />
     <state x="374" y="210" width="688" height="344" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1584419150525" />
     <state x="439" y="284" width="478" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584911408222">
       <screen x="0" y="0" width="1366" height="728" />

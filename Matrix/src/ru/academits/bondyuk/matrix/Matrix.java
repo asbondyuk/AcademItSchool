@@ -70,30 +70,6 @@ public class Matrix {
         System.arraycopy(rows, 0, this.rows, 0, rowsCount);
     }
 
-    public static Matrix add(Matrix matrix1, Matrix matrix2) {
-        int rowsCount = matrix1.getRowsCount();
-        int columnsCount = matrix1.getColumnsCount();
-
-        Matrix matrix = new Matrix(rowsCount, columnsCount);
-
-        matrix.add(matrix1);
-        matrix.add(matrix2);
-
-        return matrix;
-    }
-
-    public static Matrix subtract(Matrix matrix1, Matrix matrix2) {
-        int rowsCount = matrix1.getRowsCount();
-        int columnsCount = matrix1.getColumnsCount();
-
-        Matrix matrix = new Matrix(rowsCount, columnsCount);
-
-        matrix.add(matrix1);
-        matrix.subtract(matrix2);
-
-        return matrix;
-    }
-
     public int getRowsCount() {
         return rows.length;
     }
@@ -179,8 +155,8 @@ public class Matrix {
     // ToDo выяснить в чем проблема
     public Vector multiply(Vector vector) {
         if (rows[0].getSize() != vector.getSize()) {
-            throw new IllegalArgumentException("Для умножени вектора на матрицу число столбцов матрицы должно совпадать с размерностью вектора. Число столбцов: "
-                    + rows[0].getSize() + ", размерность вектора: " + vector.getSize());
+            throw new IllegalArgumentException("Для умножени вектора на матрицу число столбцов матрицы должно совпадать " +
+                    "с размерностью вектора. Число столбцов: " + rows[0].getSize() + ", размерность вектора: " + vector.getSize());
         }
 
         int rowSize = vector.getSize();
@@ -207,23 +183,16 @@ public class Matrix {
         int addedMatrixColumnsCount = matrix.getColumnsCount();
 
         if (rowsCount != addedMatrixRowsCount || columnsCount != addedMatrixColumnsCount) {
-            throw new IllegalArgumentException("Для выполнения сложения размерность матриц должна совпадать");
+            throw new IllegalArgumentException("Для выполнения разности размерность матриц должна совпадать. " +
+                    "Начальная матрица: строк: " + rowsCount + "столбцов: " + columnsCount +
+                    ". Вычитаемая матрица: строк: " + addedMatrixRowsCount + "столбцов: " + addedMatrixColumnsCount);
         }
 
-        int resultMatrixRowsCount = rowsCount;
-        int resultMatrixColumnsCount = addedMatrixRowsCount;
-
-        Vector[] resultMatrix = new Vector[resultMatrixRowsCount];
-
-        for (int i = 0; i < resultMatrixRowsCount; ++i) {
-            resultMatrix[i] = new Vector(resultMatrixColumnsCount);
-
-            for (int j = 0; j < resultMatrixColumnsCount; ++j) {
-                resultMatrix[i].setElement(j, rows[i].getElement(j) + matrix.rows[i].getElement(j));
+        for (int i = 0; i < rowsCount; ++i) {
+            for (int j = 0; j < addedMatrixRowsCount; ++j) {
+                rows[i].setElement(j, rows[i].getElement(j) + matrix.rows[i].getElement(j));
             }
         }
-
-        rows = resultMatrix;
     }
 
     public void subtract(Matrix matrix) {
@@ -233,20 +202,16 @@ public class Matrix {
         int addedMatrixColumnsCount = matrix.getColumnsCount();
 
         if (rowsCount != addedMatrixRowsCount || columnsCount != addedMatrixColumnsCount) {
-            throw new IllegalArgumentException("Для выполнения разности размерность матриц должна совпадать");
+            throw new IllegalArgumentException("Для выполнения разности размерность матриц должна совпадать. " +
+                    "Начальная матрица: строк: " + rowsCount + "столбцов: " + columnsCount +
+                    ". Вычитаемая матрица: строк: " + addedMatrixRowsCount + "столбцов: " + addedMatrixColumnsCount);
         }
-
-        Vector[] resultMatrix = new Vector[rowsCount];
 
         for (int i = 0; i < rowsCount; ++i) {
-            resultMatrix[i] = new Vector(addedMatrixRowsCount);
-
             for (int j = 0; j < addedMatrixRowsCount; ++j) {
-                resultMatrix[i].setElement(j, rows[i].getElement(j) - matrix.rows[i].getElement(j));
+                rows[i].setElement(j, rows[i].getElement(j) + matrix.rows[i].getElement(j));
             }
         }
-
-        rows = resultMatrix;
     }
 
     @Override
@@ -264,6 +229,22 @@ public class Matrix {
         stringBuilder.append("}");
 
         return stringBuilder.toString();
+    }
+
+    public static Matrix add(Matrix matrix1, Matrix matrix2) {
+        Matrix matrix = new Matrix(matrix1);
+
+        matrix.add(matrix2);
+
+        return matrix;
+    }
+
+    public static Matrix subtract(Matrix matrix1, Matrix matrix2) {
+        Matrix matrix = new Matrix(matrix1);
+
+        matrix.subtract(matrix2);
+
+        return matrix;
     }
 
 //    public static Matrix multiply(Matrix matrix1, Matrix matrix2) {

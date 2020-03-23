@@ -18,7 +18,7 @@ public class Main {
         Vector[] vectors = new Vector[]{vector1, vector2};
         Matrix matrix4 = new Matrix(vectors);
         System.out.printf("Матрица из векторов %s и %s: %s%n", vector1, vector2, matrix4);
-        System.out.printf("Размерность вектора: %s%n", Arrays.toString(matrix4.getSize()));
+        System.out.printf("Размерность вектора: (%d, %d)%n", matrix4.getRowsCount(), matrix4.getColumnsCount());
 
         int index = 1;
         System.out.printf("Получение вектора матрицы по индексу %d: %s%n%n", index, matrix4.getRow(index));
@@ -37,9 +37,9 @@ public class Main {
         matrix4.transpose();
         System.out.printf("Вектор после траспонирования: %s%n", matrix4);
 
-        int multiplyNumber = 2;
-        matrix4.multiply(multiplyNumber);
-        System.out.printf("Умножаем на число %d: %s%n", multiplyNumber, matrix4);
+        int number = 2;
+        matrix4.multiply(number);
+        System.out.printf("Умножаем на число %d: %s%n", number, matrix4);
 
         Vector vector4 = new Vector(new double[]{10, 0.5});
         System.out.printf("Умножаем на вектор %s: %s%n%n", vector4, matrix4.multiply(vector4));

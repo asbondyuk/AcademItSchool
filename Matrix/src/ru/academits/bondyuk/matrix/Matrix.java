@@ -67,9 +67,8 @@ public class Matrix {
     }
 
     public static Matrix add(Matrix matrix1, Matrix matrix2) {
-        int[] matrixSize = matrix1.getSize();
-        int rowsCount = matrixSize[0];
-        int columnsCount = matrixSize[1];
+        int rowsCount = matrix1.getRowsCount();
+        int columnsCount = matrix1.getColumnsCount();
 
         Matrix matrix = new Matrix(rowsCount, columnsCount);
 

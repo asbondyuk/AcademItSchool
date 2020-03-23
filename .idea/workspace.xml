@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="Range*: &#10;1) переименование printRangesArray в getRangesArrayAsString&#10;2) переименование test -методов (порядок слов)&#10;3) убраны лишние проверки в union и difference&#10;4) форматирование вывода">
+    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vector/src/ru/academits/bondyuk/vector/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vector/src/ru/academits/bondyuk/vector/Vector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,14 +251,7 @@
       <workItem from="1584555579337" duration="388000" />
       <workItem from="1584556419756" duration="8396000" />
       <workItem from="1584910694090" duration="4837000" />
-      <workItem from="1584922110858" duration="956000" />
-    </task>
-    <task id="LOCAL-00015" summary="Выделение Main в отдельный пакет">
-      <created>1581078513955</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1581078513955</updated>
+      <workItem from="1584922110858" duration="3466000" />
     </task>
     <task id="LOCAL-00016" summary="Выделение Main в отдельный пакет">
       <created>1581078590239</created>
@@ -596,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584914618832</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Vector: &#10;1) исправлен метод multiply (расчет результата)&#10;2) оптимизация add, subtract&#10;3) упрощение getSum, getDifference&#10;4) упрощение multiply(int number)">
+      <created>1584923346294</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1584923346294</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,7 +616,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Range и HardRange: исправление именования пакета, содержащего main" />
     <MESSAGE value="HardRange: &#10;1) исправление именования пакета&#10;2) устранено лишнее использование this&#10;3) добавлен toString" />
     <MESSAGE value="Shapes: форматирование" />
     <MESSAGE value="Vector:&#10;1) Исправление конструктора от вектора (теперь создается новый вектор)&#10;2) Исправление конструктора от массива (обработка массива длины 0)&#10;3) Ограничение видимости getter и setter&#10;4) оптимизация нестатич. суммы и разности: если длины исходного вектора достаточно - новый, промежуточный массив не создается&#10;5) Rename: difference -&gt; subtract&#10;6) Исправление статических суммы и разности: логика (через передаваемые инстансы) + переименование (добавление префикса get)&#10;7) оптимизация multiplyByNumber - устранение промежуточного массива &#10;8) оптимизация equals и hashCode (убрано дублирование кода)&#10;9) переименование пакета" />
@@ -641,7 +640,8 @@
     <MESSAGE value="Matrix: экспорт модуля Vector" />
     <MESSAGE value="Range*:&#10;1) inline перемернные intersectionRange в return&#10;2) убран null из ответов (возврат [])&#10;3) Изменение обработки граничных условий для intersection, difference, union" />
     <MESSAGE value="Range*: &#10;1) переименование printRangesArray в getRangesArrayAsString&#10;2) переименование test -методов (порядок слов)&#10;3) убраны лишние проверки в union и difference&#10;4) форматирование вывода" />
-    <option name="LAST_COMMIT_MESSAGE" value="Range*: &#10;1) переименование printRangesArray в getRangesArrayAsString&#10;2) переименование test -методов (порядок слов)&#10;3) убраны лишние проверки в union и difference&#10;4) форматирование вывода" />
+    <MESSAGE value="Vector: &#10;1) исправлен метод multiply (расчет результата)&#10;2) оптимизация add, subtract&#10;3) упрощение getSum, getDifference&#10;4) упрощение multiply(int number)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vector: &#10;1) исправлен метод multiply (расчет результата)&#10;2) оптимизация add, subtract&#10;3) упрощение getSum, getDifference&#10;4) упрощение multiply(int number)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -669,23 +669,24 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="484" y="226" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/67.27.1299.741@67.27.1299.741" timestamp="1581912958788" />
-    <state x="122" y="0" width="1056" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584517989673">
+    <state x="122" y="0" width="1056" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584929431612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="122" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1584517989673" />
+    <state x="122" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1584929431612" />
     <state x="183" y="27" width="1056" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1299.741@67.27.1299.741" timestamp="1582782870148" />
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582787061743">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741@67.27.1299.741" timestamp="1582787061743" />
-    <state x="182" y="0" width="860" height="741" key="CommitChangelistDialog2" timestamp="1584914743483">
+    <state x="182" y="0" width="860" height="741" key="CommitChangelistDialog2" timestamp="1584923343032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584914743483" />
+    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584923343032" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
-    <state x="167" y="125" width="1099" height="543" key="DiffContextDialog" timestamp="1580808158984">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="105" y="96" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1584923314966" />
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog/67.27.1299.741@67.27.1299.741" timestamp="1580808158984" />
     <state x="445" y="117" key="FileChooserDialogImpl" timestamp="1584556794485">
       <screen x="0" y="0" width="1366" height="728" />
@@ -736,10 +737,10 @@
     </state>
     <state x="145" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584556824157" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1582789486042" />
-    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584914737205">
+    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584923355370">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584914737205" />
+    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584923355370" />
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584417938514" />
     <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1584922110027">
       <screen x="0" y="0" width="1366" height="728" />

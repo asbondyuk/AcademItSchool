@@ -26,33 +26,33 @@ public class Matrix {
         }
     }
 
-    public Matrix(double[][] arrays) {
-        if (arrays.length == 0) {
-            throw new IllegalArgumentException("Размер матрицы должен быть больше нуля");
-        }
-
-        int rowsCount = arrays.length;
-        rows = new Vector[rowsCount];
-
-        int matrixVectorMaxSize = arrays[0].length;
-
-        for (int i = 1; i < rowsCount; ++i) {
-            if (matrixVectorMaxSize < arrays[i].length) {
-                matrixVectorMaxSize = arrays[i].length;
-            }
-        }
-
-        for (int i = 0; i < rowsCount; ++i) {
-            rows[i] = new Vector(arrays[matrixVectorMaxSize]);
-
-            for (int j = 0; j < matrixVectorMaxSize; ++j) {
-                if (arrays[i].length > j) {
-                    rows[i].setElement(j, arrays[i][j]);
-                } else {
-                    rows[i].setElement(j, 0);
-                }
-            }
-        }
+    public Matrix(int vectorDimension, double[] array) {
+//        if (vectorDimension == 0) {
+//            throw new IllegalArgumentException("Размер матрицы должен быть больше нуля");
+//        }
+//
+//        int rowsCount = arrays.length;
+//        rows = new Vector[rowsCount];
+//
+//        int matrixVectorMaxSize = arrays[0].length;
+//
+//        for (int i = 1; i < rowsCount; ++i) {
+//            if (matrixVectorMaxSize < arrays[i].length) {
+//                matrixVectorMaxSize = arrays[i].length;
+//            }
+//        }
+//
+//        for (int i = 0; i < rowsCount; ++i) {
+//            rows[i] = new Vector(arrays[matrixVectorMaxSize]);
+//
+//            for (int j = 0; j < matrixVectorMaxSize; ++j) {
+//                if (arrays[i].length > j) {
+//                    rows[i].setElement(j, arrays[i][j]);
+//                } else {
+//                    rows[i].setElement(j, 0);
+//                }
+//            }
+//        }
     }
 
     public Matrix(Vector[] rows) {
@@ -80,9 +80,8 @@ public class Matrix {
     }
 
     public static Matrix subtract(Matrix matrix1, Matrix matrix2) {
-        int[] matrixSize = matrix1.getSize();
-        int rowsCount = matrixSize[0];
-        int columnsCount = matrixSize[1];
+        int rowsCount = matrix1.getRowsCount();
+        int columnsCount = matrix1.getColumnsCount();
 
         Matrix matrix = new Matrix(rowsCount, columnsCount);
 
@@ -92,15 +91,12 @@ public class Matrix {
         return matrix;
     }
 
-    public Vector[] getRows() {
-        return rows;
+    public int getRowsCount() {
+        return rows.length;
     }
 
-    public int[] getSize() {
-        int rowsCount = rows.length;
-        int columnsCount = rows[0].getSize();
-
-        return new int[]{rowsCount, columnsCount};
+    public int getColumnsCount() {
+        return rows.length > 0 ? rows[0].getSize() : 0;
     }
 
     public Vector getVector(int index) {
@@ -171,51 +167,52 @@ public class Matrix {
     }
 
     public void add(Matrix matrix) {
-        int[] matrixSize = getSize();
-        int[] addedMatrixSize = matrix.getSize();
+        int rowsCount = getRowsCount();
+        int columnsCount = getColumnsCount();
+        int addedMatrixRowsCount = matrix.getRowsCount();
+        int addedMatrixColumnsCount = matrix.getColumnsCount();
 
-        if (matrixSize[0] != addedMatrixSize[0] || matrixSize[1] != addedMatrixSize[1]) {
+        if (rowsCount != addedMatrixRowsCount || columnsCount != addedMatrixColumnsCount) {
             throw new IllegalArgumentException("Для выполнения сложения размерность матриц должна совпадать");
         }
 
-        int rowsCount = matrixSize[0];
-        int columnsCount = matrixSize[1];
+        int resultMatrixRowsCount = rowsCount;
+        int resultMatrixColumnsCount = addedMatrixRowsCount;
 
-        Vector[] addMatrix = new Vector[rowsCount];
+        Vector[] resultMatrix = new Vector[resultMatrixRowsCount];
 
-        for (int i = 0; i < rowsCount; ++i) {
-            addMatrix[i] = new Vector(columnsCount);
+        for (int i = 0; i < resultMatrixRowsCount; ++i) {
+            resultMatrix[i] = new Vector(resultMatrixColumnsCount);
 
-            for (int j = 0; j < columnsCount; ++j) {
-                addMatrix[i].setElement(j, rows[i].getElement(j) + matrix.rows[i].getElement(j));
+            for (int j = 0; j < resultMatrixColumnsCount; ++j) {
+                resultMatrix[i].setElement(j, rows[i].getElement(j) + matrix.rows[i].getElement(j));
             }
         }
 
-        rows = addMatrix;
+        rows = resultMatrix;
     }
 
     public void subtract(Matrix matrix) {
-        int[] matrixSize = getSize();
-        int[] addedMatrixSize = matrix.getSize();
+        int rowsCount = getRowsCount();
+        int columnsCount = getColumnsCount();
+        int addedMatrixRowsCount = matrix.getRowsCount();
+        int addedMatrixColumnsCount = matrix.getColumnsCount();
 
-        if (matrixSize[0] != addedMatrixSize[0] || matrixSize[1] != addedMatrixSize[1]) {
+        if (rowsCount != addedMatrixRowsCount || columnsCount != addedMatrixColumnsCount) {
             throw new IllegalArgumentException("Для выполнения разности размерность матриц должна совпадать");
         }
 
-        int rowsCount = matrixSize[0];
-        int columnsCount = matrixSize[1];
-
-        Vector[] subtractMatrix = new Vector[rowsCount];
+        Vector[] resultMatrix = new Vector[rowsCount];
 
         for (int i = 0; i < rowsCount; ++i) {
-            subtractMatrix[i] = new Vector(columnsCount);
+            resultMatrix[i] = new Vector(addedMatrixRowsCount);
 
-            for (int j = 0; j < columnsCount; ++j) {
-                subtractMatrix[i].setElement(j, rows[i].getElement(j) - matrix.rows[i].getElement(j));
+            for (int j = 0; j < addedMatrixRowsCount; ++j) {
+                resultMatrix[i].setElement(j, rows[i].getElement(j) - matrix.rows[i].getElement(j));
             }
         }
 
-        rows = subtractMatrix;
+        rows = resultMatrix;
     }
 
     @Override

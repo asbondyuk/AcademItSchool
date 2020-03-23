@@ -133,8 +133,7 @@ public class Matrix {
     }
 
     public void transpose() {
-        int columnsCount = rows[0].getSize();
-
+        int columnsCount = getColumnsCount();
         Vector[] transposedVectors = new Vector[columnsCount];
 
         for (int i = 0; i < columnsCount; ++i) {
@@ -187,7 +186,7 @@ public class Matrix {
         }
 
         for (int i = 0; i < rowsCount; ++i) {
-            for (int j = 0; j < addedMatrixRowsCount; ++j) {
+            for (int j = 0; j <= addedMatrixRowsCount; ++j) {
                 rows[i].setElement(j, rows[i].getElement(j) + matrix.rows[i].getElement(j));
             }
         }
@@ -206,8 +205,8 @@ public class Matrix {
         }
 
         for (int i = 0; i < rowsCount; ++i) {
-            for (int j = 0; j < addedMatrixRowsCount; ++j) {
-                rows[i].setElement(j, rows[i].getElement(j) + matrix.rows[i].getElement(j));
+            for (int j = 0; j <= addedMatrixRowsCount; ++j) {
+                rows[i].setElement(j, rows[i].getElement(j) - matrix.rows[i].getElement(j));
             }
         }
     }

@@ -257,14 +257,7 @@
       <workItem from="1584947435206" duration="3428000" />
       <workItem from="1584987388541" duration="64000" />
       <workItem from="1584987481477" duration="24000" />
-      <workItem from="1584987525690" duration="2749000" />
-    </task>
-    <task id="LOCAL-00023" summary="HardRange: создание новых объектов в качестве результатов методов объединения, пересечения, разности + новый конструктор (создание копии Range)">
-      <created>1581906994590</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1581906994590</updated>
+      <workItem from="1584987525690" duration="4717000" />
     </task>
     <task id="LOCAL-00024" summary="HardRange: переименование методов (устранение постфикса Range из getUnionRange, getDifferenceRange, getIntersectionRange)">
       <created>1581907547979</created>
@@ -602,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584952064041</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Matrix: &#10;1) добавлено умножение матрицы&#10;2) откат к старой версии конструктора Matrix(double[][] arrays)">
+      <created>1584990374123</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1584990374124</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -622,8 +622,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CSV : рефакторинг&#10;1) вынос в отдельный метод процесс получения строки&#10;2) перевод разделителя в константу" />
-    <MESSAGE value="HardRange : &#10;1)исправление логики isIntersection&#10;2) убраны методы типов пересечения (isIntersectionInternal/External/Nested)" />
     <MESSAGE value="HardRange:&#10;форматирование вывода" />
     <MESSAGE value="HardRange:&#10;исправление сигнатуры getIntersection (объект вместо массива объектов)" />
     <MESSAGE value="HardRange : форматирование&#10;1) исправление именований тестов&#10;2) исправление формата вывода (\n -&gt; %n)&#10;3) раскрытие отрицания от скобок" />
@@ -647,7 +645,9 @@
     <MESSAGE value="Matrix:&#10;1) добавлена обработка поступающих в методы значений (индексов)&#10;2) переименование get/setVector-&gt;get/setRow&#10;3) оптимизация multiply(double number)" />
     <MESSAGE value="Matrix: Добавление валидации multiply(Vector vector)" />
     <MESSAGE value="Matrix: &#10;1) форматирование (перенос static методов после non-static)&#10;2) Расширение описания ошибок&#10;3) Оптимизация методов (устранение лишних переменных)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Matrix: &#10;1) форматирование (перенос static методов после non-static)&#10;2) Расширение описания ошибок&#10;3) Оптимизация методов (устранение лишних переменных)" />
+    <MESSAGE value="Matrix: &#10;1) добавлено умножение матрицы&#10;2) откат к старой версии конструктора Matrix(double[][] arrays)" />
+    <MESSAGE value="Matrix: &#10;1) переименование в main: vector в row &#10;2) багфикс расчета последнего элемента в add и subtract&#10;3) форматирование transpose" />
+    <option name="LAST_COMMIT_MESSAGE" value="Matrix: &#10;1) переименование в main: vector в row &#10;2) багфикс расчета последнего элемента в add и subtract&#10;3) форматирование transpose" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -684,10 +684,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741@67.27.1299.741" timestamp="1582787061743" />
-    <state x="182" y="0" width="860" height="741" key="CommitChangelistDialog2" timestamp="1584990323617">
+    <state x="182" y="0" width="860" height="741" key="CommitChangelistDialog2" timestamp="1584992482523">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584990323617" />
+    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584992482523" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -698,25 +698,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584556794485" />
-    <state width="1322" height="134" key="GridCell.Tab.0.bottom" timestamp="1584990296238">
+    <state width="1322" height="134" key="GridCell.Tab.0.bottom" timestamp="1584992328403">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="134" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584990296238" />
+    <state width="1322" height="134" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584992328403" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
-    <state width="1322" height="134" key="GridCell.Tab.0.center" timestamp="1584990296238">
+    <state width="1322" height="134" key="GridCell.Tab.0.center" timestamp="1584992328403">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="134" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584990296238" />
+    <state width="1322" height="134" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584992328403" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="134" key="GridCell.Tab.0.left" timestamp="1584990296238">
+    <state width="1322" height="134" key="GridCell.Tab.0.left" timestamp="1584992328403">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="134" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584990296238" />
+    <state width="1322" height="134" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584992328403" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="134" key="GridCell.Tab.0.right" timestamp="1584990296238">
+    <state width="1322" height="134" key="GridCell.Tab.0.right" timestamp="1584992328403">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="134" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584990296238" />
+    <state width="1322" height="134" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584992328403" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
     <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1580830587364">
       <screen x="67" y="27" width="1299" height="741" />

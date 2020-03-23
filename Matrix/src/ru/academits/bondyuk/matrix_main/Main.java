@@ -21,13 +21,13 @@ public class Main {
         System.out.printf("Размерность вектора: %s%n", Arrays.toString(matrix4.getSize()));
 
         int index = 1;
-        System.out.printf("Получение вектора матрицы по индексу %d: %s%n%n", index, matrix4.getVector(index));
+        System.out.printf("Получение вектора матрицы по индексу %d: %s%n%n", index, matrix4.getRow(index));
 
         Vector vector3 = new Vector(new double[]{5, 6, 7, 8});
 
         System.out.printf("Проверим операции.%nНапомню текущее состояние вектора: %s%n", matrix4);
         System.out.printf("Заменим %d элемент вектором %s%n", index, vector3);
-        matrix4.setVector(vector3, index);
+        matrix4.setRow(vector3, index);
         System.out.printf("Проверяем замену: %s%n", matrix4);
 
         int columnIndex = 2;

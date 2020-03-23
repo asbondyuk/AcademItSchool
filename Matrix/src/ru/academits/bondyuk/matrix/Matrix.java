@@ -6,8 +6,12 @@ public class Matrix {
     private Vector[] rows;
 
     public Matrix(int rowsCount, int columnsCount) {
-        if (rowsCount == 0) {
-            throw new IllegalArgumentException("Размер матрицы должен быть больше нуля");
+        if (rowsCount <= 0) {
+            throw new IllegalArgumentException("Количество строк должно быть больше нуля, получено: " + rowsCount);
+        }
+
+        if (columnsCount < 0) {
+            throw new IllegalArgumentException("Количество столбцов должно быть больше нуля, получено: " + columnsCount);
         }
 
         rows = new Vector[rowsCount];
@@ -27,8 +31,8 @@ public class Matrix {
     }
 
     public Matrix(int vectorDimension, double[] array) {
-//        if (vectorDimension == 0) {
-//            throw new IllegalArgumentException("Размер матрицы должен быть больше нуля");
+//        if (vectorDimension <= 0) {
+//            throw new IllegalArgumentException("Количество строк должно быть больше нуля, получено: " + rowsCount);
 //        }
 //
 //        int rowsCount = arrays.length;
@@ -98,17 +102,35 @@ public class Matrix {
         return rows.length > 0 ? rows[0].getSize() : 0;
     }
 
-    public Vector getVector(int index) {
+    public Vector getRow(int index) {
+        if (index < 0) {
+            throw new IllegalArgumentException("Индекс массива должен быть больше нуля, получен: " + index);
+        }
+
+        if (rows.length < index) {
+            throw new IllegalArgumentException("Не допустимое значение индекса массива: максимальное значение: " + (rows.length - 1)
+                    + ", полученое: " + index);
+        }
+
         return rows[index];
     }
 
-    public void setVector(Vector vector, int index) {
+    public void setRow(Vector row, int index) {
+        if (index < 0) {
+            throw new IllegalArgumentException("Индекс массива должен быть больше нуля, получен: " + index);
+        }
+
+        if (rows.length < index) {
+            throw new IllegalArgumentException("Не допустимое значение индекса массива: максимальное значение: " + (rows.length - 1)
+                    + ", полученое: " + index);
+        }
+
         int columnsCount = rows[0].getSize();
-        int setRowSize = vector.getSize();
+        int setRowSize = row.getSize();
 
         for (int j = 0; j < columnsCount; ++j) {
             if (setRowSize > j) {
-                rows[index].setElement(j, vector.getElement(j));
+                rows[index].setElement(j, row.getElement(j));
             } else {
                 rows[index].setElement(j, 0);
             }
@@ -116,6 +138,15 @@ public class Matrix {
     }
 
     public Vector getColumn(int columnIndex) {
+        if (columnIndex < 0) {
+            throw new IllegalArgumentException("Значение индекса столбца должен быть неотрицательным, получено: " + columnIndex);
+        }
+
+        if (rows[0].getSize() < columnIndex) {
+            throw new IllegalArgumentException("Не допустимое значение индекса столбца: максимальное значение: " + (rows.length - 1)
+                    + ", получено: " + columnIndex);
+        }
+
         Vector vector = new Vector(rows.length);
 
         for (int i = 0; i < rows.length; ++i) {
@@ -128,22 +159,20 @@ public class Matrix {
     public void transpose() {
         int columnsCount = rows[0].getSize();
 
-        Vector[] transposedVector = new Vector[columnsCount];
+        Vector[] transposedVectors = new Vector[columnsCount];
 
         for (int i = 0; i < columnsCount; ++i) {
-            transposedVector[i] = getColumn(i);
+            transposedVectors[i] = getColumn(i);
         }
 
-        rows = transposedVector;
+        rows = transposedVectors;
     }
 
     public void multiply(double number) {
         int columnsCount = rows[0].getSize();
 
         for (Vector vector : rows) {
-            for (int j = 0; j < columnsCount; ++j) {
-                vector.setElement(j, vector.getElement(j) * number);
-            }
+            vector.multiply(number);
         }
     }
 

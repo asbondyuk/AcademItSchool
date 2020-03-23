@@ -6,6 +6,10 @@ public class Matrix {
     private Vector[] rows;
 
     public Matrix(int rowsCount, int columnsCount) {
+        if (rowsCount == 0) {
+            throw new IllegalArgumentException("Размер матрицы должен быть больше нуля");
+        }
+
         rows = new Vector[rowsCount];
 
         for (int i = 0; i < rowsCount; ++i) {
@@ -23,6 +27,10 @@ public class Matrix {
     }
 
     public Matrix(double[][] arrays) {
+        if (arrays.length == 0) {
+            throw new IllegalArgumentException("Размер матрицы должен быть больше нуля");
+        }
+
         int rowsCount = arrays.length;
         rows = new Vector[rowsCount];
 
@@ -48,6 +56,10 @@ public class Matrix {
     }
 
     public Matrix(Vector[] rows) {
+        if (rows.length == 0) {
+            throw new IllegalArgumentException("Размер матрицы должен быть больше нуля");
+        }
+
         int rowsCount = rows.length;
         this.rows = new Vector[rowsCount];
 

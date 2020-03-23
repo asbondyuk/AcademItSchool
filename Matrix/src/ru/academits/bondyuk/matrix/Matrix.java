@@ -30,33 +30,33 @@ public class Matrix {
         }
     }
 
-    public Matrix(int vectorDimension, double[] array) {
-//        if (vectorDimension <= 0) {
-//            throw new IllegalArgumentException("Количество строк должно быть больше нуля, получено: " + rowsCount);
-//        }
-//
-//        int rowsCount = arrays.length;
-//        rows = new Vector[rowsCount];
-//
-//        int matrixVectorMaxSize = arrays[0].length;
-//
-//        for (int i = 1; i < rowsCount; ++i) {
-//            if (matrixVectorMaxSize < arrays[i].length) {
-//                matrixVectorMaxSize = arrays[i].length;
-//            }
-//        }
-//
-//        for (int i = 0; i < rowsCount; ++i) {
-//            rows[i] = new Vector(arrays[matrixVectorMaxSize]);
-//
-//            for (int j = 0; j < matrixVectorMaxSize; ++j) {
-//                if (arrays[i].length > j) {
-//                    rows[i].setElement(j, arrays[i][j]);
-//                } else {
-//                    rows[i].setElement(j, 0);
-//                }
-//            }
-//        }
+    public Matrix(double[][] arrays) {
+        if (arrays.length <= 0) {
+            throw new IllegalArgumentException("Количество строк должно быть больше нуля, получено: " + arrays.length);
+        }
+
+        int rowsCount = arrays.length;
+        rows = new Vector[rowsCount];
+
+        int matrixVectorMaxSize = arrays[0].length;
+
+        for (int i = 1; i < rowsCount; ++i) {
+            if (matrixVectorMaxSize < arrays[i].length) {
+                matrixVectorMaxSize = arrays[i].length;
+            }
+        }
+
+        for (int i = 0; i < rowsCount; ++i) {
+            rows[i] = new Vector(arrays[matrixVectorMaxSize]);
+
+            for (int j = 0; j < matrixVectorMaxSize; ++j) {
+                if (arrays[i].length > j) {
+                    rows[i].setElement(j, arrays[i][j]);
+                } else {
+                    rows[i].setElement(j, 0);
+                }
+            }
+        }
     }
 
     public Matrix(Vector[] rows) {
@@ -145,8 +145,6 @@ public class Matrix {
     }
 
     public void multiply(double number) {
-        int columnsCount = rows[0].getSize();
-
         for (Vector vector : rows) {
             vector.multiply(number);
         }
@@ -247,46 +245,32 @@ public class Matrix {
         return matrix;
     }
 
-//    public static Matrix multiply(Matrix matrix1, Matrix matrix2) {
-//        int[] matrix1Size = matrix1.getSize();
-//        int[] matrix2Size = matrix2.getSize();
-//
-//        int matrix1RowsCount = matrix1Size[1];
-//        int matrix2ColumnsCount = matrix1Size[0];
-//
-//        if (matrix1RowsCount != matrix2ColumnsCount) {
-//            throw new IllegalArgumentException("Для выполнения умножения число столбцов матрицы 1 должно быть равно числу строк матрицы 2");
-//        }
-//
-//        int multiplyMatrixRowsCount = matrix1Size[1];
-//        int multiplyMatrixColumnsCount = matrix2Size[0];
-//
-//        Matrix multiplyMatrix = new Matrix(multiplyMatrixRowsCount, multiplyMatrixColumnsCount);
-//
-//        for (int i = 0; i < multiplyMatrixRowsCount; ++i) {
-//            for (int j = 0; j < multiplyMatrixColumnsCount; ++j) {
-//                int sum = 0;
-//
-//                for (int k = 0; k < matrix1RowsCount; ++k) {
-//                    double temp1 = 0;
-//                    double temp2 = 0;
-//
-//                    if (matrix1.rows[i].getSize() < k) {
-//                        temp1 = matrix1.rows[i].getElement(k);
-//                    }
-//
-//                    if (matrix2.rows.length < k) {
-//                        temp2 = matrix2.rows[k].getElement(j);
-//                    }
-//
-//                    System.out.println(temp1 + ", " + temp2);
-//                    sum += (temp1 + temp2);
-//                }
-//
-//                multiplyMatrix.rows[i].setElement(j, sum);
-//            }
-//        }
-//
-//        return multiplyMatrix;
-//    }
+    public static Matrix multiply(Matrix matrix1, Matrix matrix2) {
+        int matrix1ColumnsCount = matrix1.getColumnsCount();
+        int matrix2RowsCount = matrix2.getRowsCount();
+
+        if (matrix1ColumnsCount != matrix2RowsCount) {
+            throw new IllegalArgumentException("Для выполнения умножения число столбцов матрицы 1 должно быть равно числу строк матрицы 2. "
+                    + "Получено число столбцов: " + matrix1ColumnsCount + ". Получено число строк: " + matrix2RowsCount);
+        }
+
+        int multiplyMatrixRowsCount = matrix1.getRowsCount();
+        int multiplyMatrixColumnsCount = matrix2.getColumnsCount();
+
+        Matrix multiplyMatrix = new Matrix(multiplyMatrixRowsCount, multiplyMatrixColumnsCount);
+
+        for (int i = 0; i < multiplyMatrixRowsCount; ++i) {
+            for (int j = 0; j < multiplyMatrixColumnsCount; ++j) {
+                int sum = 0;
+
+                for (int k = 0; k < matrix1ColumnsCount; ++k) {
+                    sum += matrix1.rows[i].getElement(k) * matrix2.rows[k].getElement(j);
+                }
+
+                multiplyMatrix.rows[i].setElement(j, sum);
+            }
+        }
+
+        return multiplyMatrix;
+    }
 }

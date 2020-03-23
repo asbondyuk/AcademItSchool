@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix_main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayListHome/ArrayListHome.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/ArrayListHome.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home_main/ArrayListHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home_main/ArrayListHome.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +87,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.Main (5)">
+  <component name="RunManager" selected="Application.Main (6)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.shapes_main.Main" />
       <module name="Shapes" />
@@ -124,19 +127,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.csv_parser_main.Main" />
-      <module name="CSV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.academits.bondyuk.csv_parser_main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.matrix_main.Main" />
       <module name="Matrix" />
@@ -150,12 +140,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.main.Main" />
-      <module name="Matrix" />
+    <configuration name="Main (6)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.array_list_home.Main" />
+      <module name="ArrayListHome" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.academits.bondyuk.main.*" />
+          <option name="PATTERN" value="ru.academits.bondyuk.array_list_home.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -204,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (6)" />
         <item itemvalue="Application.Main (5)" />
         <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Main (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -257,14 +247,7 @@
       <workItem from="1584947435206" duration="3428000" />
       <workItem from="1584987388541" duration="64000" />
       <workItem from="1584987481477" duration="24000" />
-      <workItem from="1584987525690" duration="4717000" />
-    </task>
-    <task id="LOCAL-00024" summary="HardRange: переименование методов (устранение постфикса Range из getUnionRange, getDifferenceRange, getIntersectionRange)">
-      <created>1581907547979</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1581907547979</updated>
+      <workItem from="1584987525690" duration="9257000" />
     </task>
     <task id="LOCAL-00025" summary="HardRange: рефакторинг: форматирование ответов методов">
       <created>1581908882001</created>
@@ -602,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584990374124</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Matrix: &#10;1) переименование в main: vector в row &#10;2) багфикс расчета последнего элемента в add и subtract&#10;3) форматирование transpose">
+      <created>1584992485603</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1584992485603</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -659,9 +649,10 @@
     </state>
     <state x="257" y="30" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1584555729274" />
     <state x="311" y="58" width="800" height="677" key="#Project_Structure/67.27.1299.741@67.27.1299.741" timestamp="1583129779064" />
-    <state x="524" y="109" width="544" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1583130446575">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="481" y="81" width="544" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1584997738667">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="481" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1584997738667" />
     <state x="524" y="109" width="544" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1583130446575" />
     <state x="531" y="251" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584517693010">
       <screen x="0" y="0" width="1366" height="728" />
@@ -698,25 +689,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584556794485" />
-    <state width="1322" height="134" key="GridCell.Tab.0.bottom" timestamp="1584992328403">
+    <state width="1322" height="134" key="GridCell.Tab.0.bottom" timestamp="1585001023298">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="134" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584992328403" />
+    <state width="1322" height="134" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585001023298" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
-    <state width="1322" height="134" key="GridCell.Tab.0.center" timestamp="1584992328403">
+    <state width="1322" height="134" key="GridCell.Tab.0.center" timestamp="1585001023298">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="134" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584992328403" />
+    <state width="1322" height="134" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585001023298" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="134" key="GridCell.Tab.0.left" timestamp="1584992328403">
+    <state width="1322" height="134" key="GridCell.Tab.0.left" timestamp="1585001023298">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="134" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584992328403" />
+    <state width="1322" height="134" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585001023298" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="134" key="GridCell.Tab.0.right" timestamp="1584992328403">
+    <state width="1322" height="134" key="GridCell.Tab.0.right" timestamp="1585001023298">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="134" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584992328403" />
+    <state width="1322" height="134" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585001023298" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
     <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1580830587364">
       <screen x="67" y="27" width="1299" height="741" />
@@ -743,10 +734,10 @@
     </state>
     <state x="145" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584556824157" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1582789486042" />
-    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584952069865">
+    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584992560271">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584952069865" />
+    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584992560271" />
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584417938514" />
     <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1584987527519">
       <screen x="0" y="0" width="1366" height="728" />

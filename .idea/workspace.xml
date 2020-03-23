@@ -4,7 +4,6 @@
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix/Matrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/src/ru/academits/bondyuk/matrix_main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.Main (3)">
+  <component name="RunManager" selected="Application.Main (5)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.shapes_main.Main" />
       <module name="Shapes" />
@@ -204,9 +203,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (5)" />
         <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Main (5)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main (4)" />
       </list>
@@ -253,14 +252,7 @@
       <workItem from="1584556419756" duration="8396000" />
       <workItem from="1584910694090" duration="4837000" />
       <workItem from="1584922110858" duration="3466000" />
-      <workItem from="1584930090871" duration="4399000" />
-    </task>
-    <task id="LOCAL-00020" summary="HardRange: упрощение реализации сравнения объектов">
-      <created>1581592691945</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1581592691945</updated>
+      <workItem from="1584930090871" duration="6424000" />
     </task>
     <task id="LOCAL-00021" summary="HardRange: переименование параметров Triangle">
       <created>1581592803904</created>
@@ -598,7 +590,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584931766622</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Matrix:&#10;1) добавлена обработка поступающих в методы значений (индексов)&#10;2) переименование get/setVector-&gt;get/setRow&#10;3) оптимизация multiply(double number)">
+      <created>1584936624227</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1584936624227</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,7 +617,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CSV : разбор простой формы csv" />
     <MESSAGE value="CSV : оптимизация простой формы csv" />
     <MESSAGE value="CSV : добавлено считывание ячейки с нескольких строк ( при наличии '&quot;' на строке)" />
     <MESSAGE value="CSV : рефакторинг&#10;1) вынос в отдельный метод процесс получения строки&#10;2) перевод разделителя в константу" />
@@ -643,7 +641,8 @@
     <MESSAGE value="Matrix: оптимизация использования геттера внутри методов" />
     <MESSAGE value="Matrix: добавление проверки на размер (&gt;0) матрицы при создании" />
     <MESSAGE value="Matrix:&#10;1) разделение getSize() на отдельные методы: getRowsCount и getColumnsCount()&#10;2) устранение геттера внутренних объектов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Matrix:&#10;1) разделение getSize() на отдельные методы: getRowsCount и getColumnsCount()&#10;2) устранение геттера внутренних объектов" />
+    <MESSAGE value="Matrix:&#10;1) добавлена обработка поступающих в методы значений (индексов)&#10;2) переименование get/setVector-&gt;get/setRow&#10;3) оптимизация multiply(double number)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Matrix:&#10;1) добавлена обработка поступающих в методы значений (индексов)&#10;2) переименование get/setVector-&gt;get/setRow&#10;3) оптимизация multiply(double number)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -680,10 +679,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741@67.27.1299.741" timestamp="1582787061743" />
-    <state x="182" y="0" width="860" height="741" key="CommitChangelistDialog2" timestamp="1584931764920">
+    <state x="182" y="0" width="860" height="741" key="CommitChangelistDialog2" timestamp="1584936621704">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584931764920" />
+    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584936621704" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -739,10 +738,10 @@
     </state>
     <state x="145" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584556824157" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1582789486042" />
-    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584936513057">
+    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584940113846">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584936513057" />
+    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584940113846" />
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584417938514" />
     <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1584930094082">
       <screen x="0" y="0" width="1366" height="728" />

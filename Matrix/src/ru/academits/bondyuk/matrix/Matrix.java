@@ -176,7 +176,13 @@ public class Matrix {
         }
     }
 
+    // ToDo выяснить в чем проблема
     public Vector multiply(Vector vector) {
+        if (rows[0].getSize() != vector.getSize()) {
+            throw new IllegalArgumentException("Для умножени вектора на матрицу число столбцов матрицы должно совпадать с размерностью вектора. Число столбцов: "
+                    + rows[0].getSize() + ", размерность вектора: " + vector.getSize());
+        }
+
         int rowSize = vector.getSize();
         Vector multiplyResult = new Vector(rowSize);
         int matrixColumnsCount = rows[0].getSize();

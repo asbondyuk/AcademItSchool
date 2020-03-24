@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/List/List.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/list/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/list_main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArrayListHome/ArrayListHome.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/ArrayListHome.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home_main/ArrayListHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home_main/ArrayListHome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayList/src/ru/academits/bondyuk/array_list/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayList/src/ru/academits/bondyuk/array_list/ArrayList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,14 +247,7 @@
       <workItem from="1584947435206" duration="3428000" />
       <workItem from="1584987388541" duration="64000" />
       <workItem from="1584987481477" duration="24000" />
-      <workItem from="1584987525690" duration="9257000" />
-    </task>
-    <task id="LOCAL-00025" summary="HardRange: рефакторинг: форматирование ответов методов">
-      <created>1581908882001</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1581908882001</updated>
+      <workItem from="1584987525690" duration="16281000" />
     </task>
     <task id="LOCAL-00026" summary="HardRange: рефакторинг isIntersection">
       <created>1581909191911</created>
@@ -592,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584992485603</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="решение задачи ArrayListHome">
+      <created>1585001255266</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1585001255266</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -612,7 +612,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="HardRange:&#10;форматирование вывода" />
     <MESSAGE value="HardRange:&#10;исправление сигнатуры getIntersection (объект вместо массива объектов)" />
     <MESSAGE value="HardRange : форматирование&#10;1) исправление именований тестов&#10;2) исправление формата вывода (\n -&gt; %n)&#10;3) раскрытие отрицания от скобок" />
     <MESSAGE value="HardRange: исправление отображения массивов (для объединения и разности)" />
@@ -637,7 +636,8 @@
     <MESSAGE value="Matrix: &#10;1) форматирование (перенос static методов после non-static)&#10;2) Расширение описания ошибок&#10;3) Оптимизация методов (устранение лишних переменных)" />
     <MESSAGE value="Matrix: &#10;1) добавлено умножение матрицы&#10;2) откат к старой версии конструктора Matrix(double[][] arrays)" />
     <MESSAGE value="Matrix: &#10;1) переименование в main: vector в row &#10;2) багфикс расчета последнего элемента в add и subtract&#10;3) форматирование transpose" />
-    <option name="LAST_COMMIT_MESSAGE" value="Matrix: &#10;1) переименование в main: vector в row &#10;2) багфикс расчета последнего элемента в add и subtract&#10;3) форматирование transpose" />
+    <MESSAGE value="решение задачи ArrayListHome" />
+    <option name="LAST_COMMIT_MESSAGE" value="решение задачи ArrayListHome" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -675,10 +675,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741@67.27.1299.741" timestamp="1582787061743" />
-    <state x="182" y="0" width="860" height="741" key="CommitChangelistDialog2" timestamp="1584992482523">
+    <state x="182" y="0" width="860" height="741" key="CommitChangelistDialog2" timestamp="1585001253074">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584992482523" />
+    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585001253074" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -734,10 +734,10 @@
     </state>
     <state x="145" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584556824157" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1582789486042" />
-    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584992560271">
+    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1585001259308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584992560271" />
+    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585001259308" />
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584417938514" />
     <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1584987527519">
       <screen x="0" y="0" width="1366" height="728" />
@@ -757,9 +757,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="486" y="264" width="450" height="265" key="git4idea.rebase.GitRebaseDialog/67.27.1299.741@67.27.1299.741" timestamp="1582011498845" />
-    <state x="67" y="27" width="1289" height="741" key="new project wizard" timestamp="1583130311962">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="0" y="0" width="1289" height="741" key="new project wizard" timestamp="1585002490271">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1585002490271" />
     <state x="67" y="27" width="1289" height="741" key="new project wizard/67.27.1299.741@67.27.1299.741" timestamp="1583130311962" />
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1581069916545">
       <screen x="67" y="27" width="1299" height="741" />

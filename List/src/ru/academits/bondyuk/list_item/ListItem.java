@@ -35,8 +35,6 @@ public class ListItem<T> {
 
     @Override
     public String toString() {
-        return "ListItem{" +
-                "data=" + data +
-                '}';
+        return "{" + data + "}";
     }
 }

@@ -8,15 +8,7 @@ public class SinglyLinkedList<T> {
 
     public SinglyLinkedList(T value) {
         head = new ListItem<>(value);
-        count = 1;
-    }
-
-    public ListItem<T> getHead() {
-        return head;
-    }
-
-    public void setHead(ListItem<T> head) {
-        this.head = head;
+        ++count;
     }
 
     public int getCount() {
@@ -100,7 +92,7 @@ public class SinglyLinkedList<T> {
                     + ".%nПолучен: " + index);
         }
 
-        ListItem<T> currentItem = getElement(index);
+        ListItem<T> currentItem = getElement(index - 1);
 
         if (currentItem.hasNext()) {
             ListItem<T> nextItem = currentItem.getNext();
@@ -135,7 +127,7 @@ public class SinglyLinkedList<T> {
         }
 
         ListItem<T> currentItem = head; // 1
-        ListItem<T> previousItem = null;
+        ListItem<T> previousItem;
 
         previousItem = currentItem; // 1
         currentItem = currentItem.getNext(); // 2
@@ -153,6 +145,16 @@ public class SinglyLinkedList<T> {
 
         currentItem.setNext(previousItem);
         head = currentItem;
+    }
+
+    public SinglyLinkedList<T> copy() {
+        SinglyLinkedList<T> newList = new SinglyLinkedList<>(head.getData());
+
+        for (ListItem<T> item = head.getNext(); item != null; item = item.getNext()) {
+            newList.add(item.getData());
+        }
+
+        return newList;
     }
 
     public void add(T value) {

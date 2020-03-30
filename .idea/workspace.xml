@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="List: &#10;1) ListItem исправление toString&#10;2) SinglyLinkedList убратны G/S">
+    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="ArrayList: добавлен итератор">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArrayList/src/ru/academits/bondyuk/array_list/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayList/src/ru/academits/bondyuk/array_list/ArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home_main/ArrayListHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home_main/ArrayListHome.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +84,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.Main (4)">
+  <component name="RunManager" selected="Application.Main (6)">
     <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.hard_range_main.Main" />
       <module name="HardRange" />
@@ -177,8 +178,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (6)" />
+        <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (5)" />
         <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (2)" />
@@ -236,14 +237,7 @@
       <workItem from="1585182415137" duration="9930000" />
       <workItem from="1585247347957" duration="3351000" />
       <workItem from="1585368922868" duration="1189000" />
-      <workItem from="1585597643832" duration="3295000" />
-    </task>
-    <task id="LOCAL-00029" summary="Shape: исправление расчета площади треугольника + &#10;рефакторинг Main (исправление формата переноса строки в выводе)">
-      <created>1581934225851</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1581934225851</updated>
+      <workItem from="1585597643832" duration="5771000" />
     </task>
     <task id="LOCAL-00030" summary="Shape: реализация компораторов отдельными классами (без comparing)">
       <created>1581935044761</created>
@@ -581,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585192225546</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="ArrayList: добавлен итератор">
+      <created>1585604608758</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1585604608759</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -601,7 +602,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Shapes: исправление опечатки в equals Triangle" />
     <MESSAGE value="Matrix:&#10;1) обновление пакета Vector&#10;2) добавление тестов (причесывание main)&#10;3) форматирование именований, изменение сигнатурыы getSize(порядок аргументов)&#10;4) изменение логики статических методов (работают через нестатические)&#10;5) добавление multiply векторов (static)&#10;6) добавление валидации операций (предварительная проверка размерности векторов)" />
     <MESSAGE value="синхронизация структуры проекта" />
     <MESSAGE value="Matrix: &#10;отключение multiply 2-х матриц,&#10;т.е. долг: перемножение матриц + определитель" />
@@ -626,7 +626,8 @@
     <MESSAGE value="List: &#10;1) исправлена структура проекта&#10;2) добавлен ListItem&#10;3) SinglyLinkedList реализация: &#10;- получение размера списка,&#10;- получение значение первого элемента&#10;- получение/изменение значения по указанному индексу.&#10;- Изменение значения по индексу (выдает старое значение)&#10;- удаление элемента по индексу (выдает значение элемента)&#10;- вставка элемента в начало&#10;- вставка элемента по индексу&#10;- удаление узла по значению (выдает true, если элемент был удален)&#10;- удаление первого элемента (выдает значение элемента)" />
     <MESSAGE value="List: &#10;1) исправлена структура проекта&#10;2) добавлен ListItem&#10;3) SinglyLinkedList реализация: &#10;- получение размера списка,&#10;- получение значение первого элемента&#10;- получение/изменение значения по указанному индексу.&#10;- Изменение значения по индексу (выдает старое значение)&#10;- удаление элемента по индексу (выдает значение элемента)&#10;- вставка элемента в начало&#10;- вставка элемента по индексу&#10;- удаление узла по значению (выдает true, если элемент был удален)&#10;- удаление первого элемента (выдает значение элемента)&#10;- разворот" />
     <MESSAGE value="List: &#10;1) ListItem исправление toString&#10;2) SinglyLinkedList убратны G/S&#10;3) SinglyLinkedList Добавлен copy&#10;4) Добавлены тесты" />
-    <option name="LAST_COMMIT_MESSAGE" value="List: &#10;1) ListItem исправление toString&#10;2) SinglyLinkedList убратны G/S&#10;3) SinglyLinkedList Добавлен copy&#10;4) Добавлены тесты" />
+    <MESSAGE value="ArrayList: добавлен итератор" />
+    <option name="LAST_COMMIT_MESSAGE" value="ArrayList: добавлен итератор" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -664,10 +665,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741@67.27.1299.741" timestamp="1582787061743" />
-    <state x="182" y="0" width="860" height="741" key="CommitChangelistDialog2" timestamp="1585192223666">
+    <state x="182" y="0" width="860" height="741" key="CommitChangelistDialog2" timestamp="1585607772855">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585192223666" />
+    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585607772855" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -678,25 +679,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584556794485" />
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1585192396606">
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1585607563027">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585192396606" />
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585607563027" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
-    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1585192396605">
+    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1585607563026">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585192396605" />
+    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585607563026" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1585192396605">
+    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1585607563026">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585192396605" />
+    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585607563026" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1585192396605">
+    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1585607563026">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585192396605" />
+    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585607563026" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
     <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1580830587364">
       <screen x="67" y="27" width="1299" height="741" />

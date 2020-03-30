@@ -13,10 +13,9 @@ public class Main {
 
         // part 1
         String fileName = "input.txt";
-        ArrayListHome arrayListHome = new ArrayListHome(fileName);
 
-        List<String> fileRows = arrayListHome.getFileRows();
-        System.out.println(fileRows);
+        List<String> fileLines = ArrayListHome.getFileLines(fileName);
+        System.out.println("Список из файла: " + fileLines);
 
         // part 2
         List<Integer> numbersList = new ArrayList<>();
@@ -39,7 +38,7 @@ public class Main {
 
         System.out.printf("Список, после удаления четных элементов: %s%n", numbersList);
 
-        // part 3
+        // part 3 version 1
         List<Integer> duplicatedNumberList = new ArrayList<>();
 
         duplicatedNumberList.add(1);
@@ -51,10 +50,33 @@ public class Main {
 
         System.out.printf("Дублированный список: %s%n", duplicatedNumberList);
 
-        Set<Integer> withoutDuplicatedNumberList = new LinkedHashSet<>(duplicatedNumberList);
+        Set<Integer> numberSet = new LinkedHashSet<>(duplicatedNumberList);
         duplicatedNumberList.clear();
-        duplicatedNumberList.addAll(withoutDuplicatedNumberList);
+        duplicatedNumberList.addAll(numberSet);
 
         System.out.printf("Очищенный от дублей список: %s%n", duplicatedNumberList);
+
+        // part 3 version 2
+        duplicatedNumberList.clear();
+        duplicatedNumberList = new ArrayList<>();
+
+        duplicatedNumberList.add(1);
+        duplicatedNumberList.add(5);
+        duplicatedNumberList.add(2);
+        duplicatedNumberList.add(1);
+        duplicatedNumberList.add(3);
+        duplicatedNumberList.add(5);
+
+        System.out.printf("Дублированный список: %s%n", duplicatedNumberList);
+
+        List<Integer> withoutDuplicatedNumberList = new ArrayList<>();
+
+        for (Integer i : duplicatedNumberList) {
+            if (!withoutDuplicatedNumberList.contains(i)) {
+                withoutDuplicatedNumberList.add(i);
+            }
+        }
+
+        System.out.printf("Очищенный от дублей список: %s%n", withoutDuplicatedNumberList);
     }
 }

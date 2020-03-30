@@ -7,23 +7,17 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ArrayListHome {
-    private String fileName;
-    private List<String> rows;
+    public static List<String> getFileLines(String fileName) {
+        List<String> lines = new ArrayList<>();
 
-    public ArrayListHome(String fileName) {
-        this.fileName = fileName;
-        rows = new ArrayList<>();
-    }
-
-    public List<String> getFileRows() {
         try (Scanner scanner = new Scanner(new File(fileName))) {
             while (scanner.hasNextLine()) {
-                rows.add(scanner.nextLine());
+                lines.add(scanner.nextLine());
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.err.println("Не найден файл " + fileName);
         }
 
-        return rows;
+        return lines;
     }
 }

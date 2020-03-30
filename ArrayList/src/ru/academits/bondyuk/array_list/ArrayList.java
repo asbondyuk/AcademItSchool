@@ -1,19 +1,45 @@
 package ru.academits.bondyuk.array_list;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public class ArrayList<E> implements List<E> {
+    private E[] items;
+    private int size;
+    private int modCount; // число изменений
+
+    private class ArrayListIterator implements Iterator<E> {
+        private int currentIndex = -1;
+        private int modCount;
+
+        @Override
+        public boolean hasNext() {
+            return currentIndex + 1 < size;
+        }
+
+        @Override
+        public E next() {
+            if (modCount != ArrayList.this.modCount) {
+                throw new ConcurrentModificationException("Коллекция была изменена до завершения работы итератора");
+            }
+
+            ++currentIndex;
+
+            if (currentIndex == size) {
+                throw new NoSuchElementException("Элементы в списке закончились");
+            }
+
+            return items[currentIndex];
+        }
+    }
+
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     @Override
@@ -23,7 +49,7 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+        return new ArrayListIterator();
     }
 
     @Override

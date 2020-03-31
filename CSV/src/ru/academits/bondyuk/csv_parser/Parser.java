@@ -7,27 +7,44 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Parser {
-    static final char mark = '\"';
     static final String defaultDelimiter = ",";
 
-    private static boolean validateProblem(String line) {
-        return line.indexOf(mark) != -1;
+    private static String handleSpecialCharacter(String string) {
+        string = string.replace(">", "&gt;")
+                .replace("<", "&lt;")
+                .replace("&", "&amp;");
+
+        return string;
     }
 
-    private static String[] splitLine(String line) {
-        line = line.replace(">", "&gt;");
-        line = line.replace("<", "&lt;");
-        line = line.replace("&", "&amp;");
+    private static boolean isRowEnd(String line) {
+        return countQuotes(line) % 2 == 0;
+    }
 
-        if (!validateProblem(line)) {
-            return line.split(defaultDelimiter);
-        } else {
-            boolean lineIsEnded = false;
+    private static int countQuotes(String line) {
+        int quotesCount = 0;
 
-
+        for (int i = 0; i < line.length(); ++i) {
+            if (line.charAt(i) == '"') {
+                ++quotesCount;
+            }
         }
 
-        return null;
+        return quotesCount;
+    }
+
+    // hard-case line, line ended
+    private static String[] splitLine(String line) {
+        int leftDelimiterIndex = line.indexOf(defaultDelimiter);
+        int rightDelimiterIndex = line.lastIndexOf(defaultDelimiter);
+        System.out.println(line);
+
+        String[] splittedLine = {
+                line.substring(0, leftDelimiterIndex),
+                line.substring(leftDelimiterIndex + 1, rightDelimiterIndex),
+                line.substring(rightDelimiterIndex + 1)};
+
+        return splittedLine;
     }
 
     public static void parseCSV(String inputFileName, String outputFileName) {
@@ -38,8 +55,26 @@ public class Parser {
             while (scanner.hasNext()) {
                 printWriter.println("<tr>");
 
-                String[] cellsValues = splitLine(scanner.nextLine());
+                String line = scanner.nextLine();
+                String[] cellsValues;
 
+                if (line.indexOf('"') != -1) {
+                    while (!isRowEnd(line)) {
+                        if (scanner.hasNext()) {
+                            line = line + System.lineSeparator() + scanner.nextLine();
+                        } else {
+                            break;
+                        }
+                    }
+
+                    line = handleSpecialCharacter(line);
+                    cellsValues = splitLine(line);
+                } else {
+                    line = handleSpecialCharacter(line);
+                    cellsValues = line.split(defaultDelimiter);
+                }
+
+                assert cellsValues != null;
                 for (String value : cellsValues) {
                     printWriter.println("<td>" + value + "</td>");
                 }

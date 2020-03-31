@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
+    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="CSV: &#10;1) изменена логика алгоритма разбора&#10;2) добавлена обработка спецсимволов &lt;, &gt;, &amp;">
       <change afterPath="$PROJECT_DIR$/in1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/in2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/Parser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser_main/Main.java" afterDir="false" />
@@ -216,14 +217,7 @@
       <workItem from="1585182415137" duration="9930000" />
       <workItem from="1585247347957" duration="3351000" />
       <workItem from="1585368922868" duration="1189000" />
-      <workItem from="1585597643832" duration="10970000" />
-    </task>
-    <task id="LOCAL-00031" summary="Vector: форматирование">
-      <created>1581994048938</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1581994048938</updated>
+      <workItem from="1585597643832" duration="19453000" />
     </task>
     <task id="LOCAL-00032" summary="Matrix: созданы конструкторы">
       <created>1582011447152</created>
@@ -561,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585607823216</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="CSV: &#10;1) изменена логика алгоритма разбора&#10;2) добавлена обработка спецсимволов &lt;, &gt;, &amp;">
+      <created>1585622649697</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1585622649717</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +582,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="синхронизация структуры проекта" />
     <MESSAGE value="Matrix: &#10;отключение multiply 2-х матриц,&#10;т.е. долг: перемножение матриц + определитель" />
     <MESSAGE value="Matrix: форматирование" />
     <MESSAGE value="Vector: форматирование&#10;1) убран (n) из сообщения в случае ошибок&#10;2) переименованы getAdd, getSubtract в getSum, getDifference&#10;3) Добавлены пустые строк вокруг цикла в getLength&#10;4) переименован multiplyByNumber в multiply&#10;5) убран import static" />
@@ -606,7 +606,8 @@
     <MESSAGE value="List: &#10;1) ListItem исправление toString&#10;2) SinglyLinkedList убратны G/S&#10;3) SinglyLinkedList Добавлен copy&#10;4) Добавлены тесты" />
     <MESSAGE value="ArrayList: добавлен итератор" />
     <MESSAGE value="ArrayListHome: &#10;1) переименование rows в lines&#10;2) вывод сообщения об ошибке вместо stacktrace&#10;3) getFileLines переделан в static&#10;4) withoutDuplicatedNumberList  переименован в numberSet&#10;5) добавлена версия очистки от дублей с помощью ArrayList" />
-    <option name="LAST_COMMIT_MESSAGE" value="ArrayListHome: &#10;1) переименование rows в lines&#10;2) вывод сообщения об ошибке вместо stacktrace&#10;3) getFileLines переделан в static&#10;4) withoutDuplicatedNumberList  переименован в numberSet&#10;5) добавлена версия очистки от дублей с помощью ArrayList" />
+    <MESSAGE value="CSV: &#10;1) изменена логика алгоритма разбора&#10;2) добавлена обработка спецсимволов &lt;, &gt;, &amp;" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSV: &#10;1) изменена логика алгоритма разбора&#10;2) добавлена обработка спецсимволов &lt;, &gt;, &amp;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -644,10 +645,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741@67.27.1299.741" timestamp="1582787061743" />
-    <state x="182" y="0" width="860" height="741" key="CommitChangelistDialog2" timestamp="1585607820471">
+    <state x="182" y="0" width="860" height="741" key="CommitChangelistDialog2" timestamp="1585622645806">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585607820471" />
+    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585622645806" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -658,25 +659,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584556794485" />
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1585621915707">
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1585691877598">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585621915707" />
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585691877598" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
-    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1585621915702">
+    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1585691877597">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585621915702" />
+    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585691877597" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1585621915702">
+    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1585691877597">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585621915702" />
+    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585691877597" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1585621915702">
+    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1585691877597">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585621915702" />
+    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585691877597" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1585620597633">
       <screen x="0" y="0" width="1366" height="728" />

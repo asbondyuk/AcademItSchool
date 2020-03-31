@@ -7,47 +7,41 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Parser {
+    static final char mark = '\"';
     static final String defaultDelimiter = ",";
 
-    private static String getRaw(Scanner scanner) {
-        StringBuilder stringBuilder = new StringBuilder();
-        String line = scanner.nextLine();
+    private static boolean validateProblem(String line) {
+        return line.indexOf(mark) != -1;
+    }
 
-        while (true) {
-            stringBuilder.append(line);
+    private static String[] splitLine(String line) {
+        line = line.replace(">", "&gt;");
+        line = line.replace("<", "&lt;");
+        line = line.replace("&", "&amp;");
 
-            if (line.contains("\"" + defaultDelimiter)) {
-                line = stringBuilder.toString();
-                break;
-            }
+        if (!validateProblem(line)) {
+            return line.split(defaultDelimiter);
+        } else {
+            boolean lineIsEnded = false;
 
-            if (scanner.hasNext()) {
-                line = scanner.nextLine();
-            } else {
-                break;
-            }
 
-            stringBuilder.append(" ");
         }
 
-        return line;
+        return null;
     }
 
     public static void parseCSV(String inputFileName, String outputFileName) {
         try (Scanner scanner = new Scanner(new FileInputStream(inputFileName));
              PrintWriter printWriter = new PrintWriter(new File(outputFileName))) {
-
             printWriter.println("<table>");
 
             while (scanner.hasNext()) {
                 printWriter.println("<tr>");
 
-                String line = getRaw(scanner);
+                String[] cellsValues = splitLine(scanner.nextLine());
 
-                String[] array = line.split(defaultDelimiter);
-
-                for (String string : array) {
-                    printWriter.println("<td>" + string + "</td>");
+                for (String value : cellsValues) {
+                    printWriter.println("<td>" + value + "</td>");
                 }
 
                 printWriter.println("</tr>" + "</br>");
@@ -55,7 +49,7 @@ public class Parser {
 
             printWriter.println("</table>");
         } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         }
     }
 }

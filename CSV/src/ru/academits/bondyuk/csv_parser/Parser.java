@@ -10,11 +10,9 @@ public class Parser {
     static final String defaultDelimiter = ",";
 
     private static String handleSpecialCharacter(String string) {
-        string = string.replace(">", "&gt;")
+        return string.replace(">", "&gt;")
                 .replace("<", "&lt;")
                 .replace("&", "&amp;");
-
-        return string;
     }
 
     private static boolean isRowEnd(String line) {
@@ -33,16 +31,32 @@ public class Parser {
         return quotesCount;
     }
 
+    private static boolean isNeedSeparation(String string) {
+        return string.indexOf("\"") == 0 & string.lastIndexOf("\"") == string.length() - 1;
+    }
+
     // hard-case line, line ended
     private static String[] splitLine(String line) {
         int leftDelimiterIndex = line.indexOf(defaultDelimiter);
         int rightDelimiterIndex = line.lastIndexOf(defaultDelimiter);
-        System.out.println(line);
 
         String[] splittedLine = {
                 line.substring(0, leftDelimiterIndex),
                 line.substring(leftDelimiterIndex + 1, rightDelimiterIndex),
                 line.substring(rightDelimiterIndex + 1)};
+
+        for (int i = 0; i < splittedLine.length; ++i) {
+            if (isNeedSeparation(splittedLine[i])) {
+                splittedLine[i] = splittedLine[i].substring(1, splittedLine[i].length() - 1);
+                --i;
+            }
+        }
+
+        for (int i=0; i< splittedLine.length;++i) {
+            if (splittedLine[i].contains("\"\"")) {
+                splittedLine[i] = splittedLine[i].replace("\"\"", "\"");
+            }
+        }
 
         return splittedLine;
     }
@@ -50,6 +64,27 @@ public class Parser {
     public static void parseCSV(String inputFileName, String outputFileName) {
         try (Scanner scanner = new Scanner(new FileInputStream(inputFileName));
              PrintWriter printWriter = new PrintWriter(new File(outputFileName))) {
+
+            printWriter.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n" +
+                    "<html>\n" +
+                    " <head>\n" +
+                    "  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n" +
+                    "  <title>Таблица</title>\n" +
+                    "  <style type=\"text/css\">\n" +
+                    "   TABLE {\n" +
+                    "    width: 300px; /* Ширина таблицы */\n" +
+                    "    border-collapse: collapse; /* Убираем двойные линии между ячейками */\n" +
+                    "   }\n" +
+                    "   TD, TH {\n" +
+                    "    padding: 3px; /* Поля вокруг содержимого таблицы */\n" +
+                    "    border: 1px solid black; \n" +
+                    "   }\n" +
+                    "   TH {\n" +
+                    "    background: #b0e0e6; \n" +
+                    "   }\n" +
+                    "  </style>\n" +
+                    " </head>\n" +
+                    " <body>");
             printWriter.println("<table>");
 
             while (scanner.hasNext()) {
@@ -69,6 +104,8 @@ public class Parser {
 
                     line = handleSpecialCharacter(line);
                     cellsValues = splitLine(line);
+
+
                 } else {
                     line = handleSpecialCharacter(line);
                     cellsValues = line.split(defaultDelimiter);
@@ -83,6 +120,7 @@ public class Parser {
             }
 
             printWriter.println("</table>");
+            printWriter.println("</body>");
         } catch (FileNotFoundException e) {
             System.err.println(e.getMessage());
         }

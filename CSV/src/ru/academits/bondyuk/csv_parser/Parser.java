@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Parser {
@@ -36,29 +39,56 @@ public class Parser {
     }
 
     // hard-case line, line ended
-    private static String[] splitLine(String line) {
-        int leftDelimiterIndex = line.indexOf(defaultDelimiter);
-        int rightDelimiterIndex = line.lastIndexOf(defaultDelimiter);
+    private static List<String> splitLine(String line) {
+        List<String> strings = new ArrayList<>();
 
-        String[] splittedLine = {
-                line.substring(0, leftDelimiterIndex),
-                line.substring(leftDelimiterIndex + 1, rightDelimiterIndex),
-                line.substring(rightDelimiterIndex + 1)};
+        boolean isContainQuotes = false;
+        int startIndex = 0;
 
-        for (int i = 0; i < splittedLine.length; ++i) {
-            if (isNeedSeparation(splittedLine[i])) {
-                splittedLine[i] = splittedLine[i].substring(1, splittedLine[i].length() - 1);
-                --i;
+        for (int i = 0; i < line.length() - 1; ++i) {
+            if (line.charAt(0) == '"') {
+                isContainQuotes = true;
+                continue;
+            }
+
+            if (line.charAt(i) == '"' & line.charAt(i + 1) == '"' & isContainQuotes) {
+                ++i;
+                continue;
+            }
+
+            if (line.charAt(i) == '"' & line.charAt(i + 1) == ',' & isContainQuotes) {
+                strings.add(line.substring(startIndex, i));
+                startIndex = i + 2;
+                isContainQuotes = false;
+                ++i;
+                continue;
+            }
+
+            if (line.charAt(i) == ',' & line.charAt(i + 1) == '"' & !isContainQuotes) {
+                strings.add(line.substring(startIndex, i));
+                startIndex = i + 2;
+                isContainQuotes = true;
+                ++i;
             }
         }
 
-        for (int i=0; i< splittedLine.length;++i) {
-            if (splittedLine[i].contains("\"\"")) {
-                splittedLine[i] = splittedLine[i].replace("\"\"", "\"");
+        strings.add(line.substring(startIndex));
+
+//        for (int i = 0; i < strings.size(); ++i) {
+//            if (isNeedSeparation(strings.get(i))) {
+//                strings.set(i, strings.get(i).substring(1, strings.get(i).length() - 1));
+//                --i;
+//            }
+//        }
+
+        for (int i = 0; i < strings.size(); ++i) {
+            if (strings.get(i).contains("\"\"")) {
+                strings.set(i, strings.get(i).replace("\"\"", "\""));
+                ++i;
             }
         }
 
-        return splittedLine;
+        return strings;
     }
 
     public static void parseCSV(String inputFileName, String outputFileName) {
@@ -91,7 +121,7 @@ public class Parser {
                 printWriter.println("<tr>");
 
                 String line = scanner.nextLine();
-                String[] cellsValues;
+                List<String> cellsValues;
 
                 if (line.indexOf('"') != -1) {
                     while (!isRowEnd(line)) {
@@ -105,13 +135,13 @@ public class Parser {
                     line = handleSpecialCharacter(line);
                     cellsValues = splitLine(line);
 
+                    System.out.println(cellsValues);
 
                 } else {
                     line = handleSpecialCharacter(line);
-                    cellsValues = line.split(defaultDelimiter);
+                    cellsValues = Arrays.asList(line.split(defaultDelimiter));
                 }
 
-                assert cellsValues != null;
                 for (String value : cellsValues) {
                     printWriter.println("<td>" + value + "</td>");
                 }

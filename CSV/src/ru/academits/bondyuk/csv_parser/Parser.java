@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Parser {
-    static final String defaultDelimiter = ",";
+    static final String defaultDelimiter = ","; // для split в дальнейшем
+    static final char quotationMarks = '\"';
 
     private static String handleSpecialCharacter(String string) {
         return string.replace(">", "&gt;")
@@ -34,36 +35,35 @@ public class Parser {
         return quotesCount;
     }
 
-    // hard-case line, line ended
     private static List<String> splitLine(String line) {
         List<String> strings = new ArrayList<>();
 
-        boolean isContainQuotes = false;
+        boolean isQuotesCell = false;
         int startIndex = 0;
 
         for (int i = 0; i < line.length() - 1; ++i) {
             if (line.charAt(0) == '"') {
-                isContainQuotes = true;
+                isQuotesCell = true;
                 continue;
             }
 
-            if (line.charAt(i) == '"' & line.charAt(i + 1) == '"' & isContainQuotes) {
+            if (line.charAt(i) == '"' & line.charAt(i + 1) == '"' & isQuotesCell) {
                 ++i;
                 continue;
             }
 
-            if (line.charAt(i) == '"' & line.charAt(i + 1) == ',' & isContainQuotes) {
+            if (line.charAt(i) == '"' & line.charAt(i + 1) == ',' & isQuotesCell) {
                 strings.add(line.substring(startIndex, i));
                 startIndex = i + 2;
-                isContainQuotes = false;
+                isQuotesCell = false;
                 ++i;
                 continue;
             }
 
-            if (line.charAt(i) == ',' & line.charAt(i + 1) == '"' & !isContainQuotes) {
+            if (line.charAt(i) == ',' & line.charAt(i + 1) == '"' & !isQuotesCell) {
                 strings.add(line.substring(startIndex, i));
                 startIndex = i + 2;
-                isContainQuotes = true;
+                isQuotesCell = true;
                 ++i;
                 continue;
             }
@@ -72,10 +72,11 @@ public class Parser {
                 strings.add(line.substring(startIndex + 1, line.length() - 2));
                 continue;
             }
-//
-//            if (i + 2 == line.length()& line.charAt(i + 1) != '"') {
-//                strings.add(line.substring(startIndex));
-//            }
+
+            if (!isQuotesCell & line.charAt(i) == ',') {
+                strings.add(line.substring(startIndex, i));
+                startIndex = i + 1;
+            }
         }
 
         if (line.charAt(line.length() - 1) != '"') {
@@ -125,24 +126,18 @@ public class Parser {
                 String line = scanner.nextLine();
                 List<String> cellsValues;
 
-                if (line.indexOf('"') != -1) {
-                    while (!isRowEnd(line)) {
-                        if (scanner.hasNext()) {
-                            line = line + System.lineSeparator() + scanner.nextLine();
-                        } else {
-                            break;
-                        }
+                while (!isRowEnd(line)) {
+                    if (scanner.hasNext()) {
+                        line = line + System.lineSeparator() + scanner.nextLine();
+                    } else {
+                        break;
                     }
-
-                    line = handleSpecialCharacter(line);
-                    cellsValues = splitLine(line);
-
-                    System.out.println(cellsValues);
-
-                } else {
-                    line = handleSpecialCharacter(line);
-                    cellsValues = Arrays.asList(line.split(defaultDelimiter));
                 }
+
+                line = handleSpecialCharacter(line);
+                cellsValues = splitLine(line);
+
+                System.out.println(cellsValues);
 
                 for (String value : cellsValues) {
                     printWriter.println("<td>" + value + "</td>");

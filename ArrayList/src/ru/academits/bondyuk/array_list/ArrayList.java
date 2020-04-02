@@ -8,8 +8,13 @@ public class ArrayList<E> implements List<E> {
     private int modCount; // число изменений
 
     private class ArrayListIterator implements Iterator<E> {
-        private int currentIndex = -1;
+        private int currentIndex;
         private int modCount;
+
+        public ArrayListIterator() {
+            currentIndex = -1;
+            modCount = ArrayList.this.modCount;
+        }
 
         @Override
         public boolean hasNext() {
@@ -44,6 +49,14 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public boolean contains(Object o) {
+        Iterator<E> iterator = new ArrayListIterator();
+
+        while (iterator.hasNext()) {
+            if (iterator.next().equals(o)) {
+                return true;
+            }
+        }
+
         return false;
     }
 
@@ -64,11 +77,13 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public boolean add(E e) {
+        ++modCount;
         return false;
     }
 
     @Override
     public boolean remove(Object o) {
+        ++modCount;
         return false;
     }
 
@@ -79,27 +94,31 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public boolean addAll(Collection<? extends E> c) {
+        ++modCount;
         return false;
     }
 
     @Override
     public boolean addAll(int index, Collection<? extends E> c) {
+        ++modCount;
         return false;
     }
 
     @Override
     public boolean removeAll(Collection<?> c) {
+        ++modCount;
         return false;
     }
 
     @Override
     public boolean retainAll(Collection<?> c) {
+        ++modCount;
         return false;
     }
 
     @Override
     public void clear() {
-
+        ++modCount;
     }
 
     @Override
@@ -114,11 +133,12 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public void add(int index, E element) {
-
+        ++modCount;
     }
 
     @Override
     public E remove(int index) {
+        ++modCount;
         return null;
     }
 

@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Lambda/Lambda.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lambda/src/ru/academits/bondyuk/lambda_main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lambda/src/ru/academits/bondyuk/person/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/in1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/in2.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,13 +89,26 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.csv_parser_main.Main" />
       <module name="CSV" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.academits.bondyuk.csv_parser_main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.lambda_main.Main" />
+      <module name="Lambda" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.academits.bondyuk.lambda_main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,19 +129,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.matrix_main.Main" />
-      <module name="Matrix" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.academits.bondyuk.matrix_main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main (6)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.array_list_home.Main" />
       <module name="ArrayListHome" />
@@ -137,29 +142,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.main.Main" />
-      <module name="HardRange" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.academits.bondyuk.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="out22.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AcademItSchool/out22.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="JavaScript Debug.out22.html" />
         <item itemvalue="Application.Main (6)" />
         <item itemvalue="Application.Main (4)" />
-        <item itemvalue="Application.Main (5)" />
       </list>
     </recent_temporary>
   </component>
@@ -216,14 +208,7 @@
       <workItem from="1585368922868" duration="1189000" />
       <workItem from="1585597643832" duration="25356000" />
       <workItem from="1585725870449" duration="9264000" />
-      <workItem from="1585792488506" duration="5611000" />
-    </task>
-    <task id="LOCAL-00038" summary="Matrix: &#10;исправление add&#10;добавлены статический add, статический difference">
-      <created>1582092298509</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1582092298509</updated>
+      <workItem from="1585792488506" duration="10730000" />
     </task>
     <task id="LOCAL-00039" summary="Range и HardRange: исправление именования пакета, содержащего main">
       <created>1582771441534</created>
@@ -561,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585796924232</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="CSV: форматирование/кодстайл">
+      <created>1585798155411</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1585798155411</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +573,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Range*:&#10;1) inline перемернные intersectionRange в return&#10;2) убран null из ответов (возврат [])&#10;3) Изменение обработки граничных условий для intersection, difference, union" />
     <MESSAGE value="Range*: &#10;1) переименование printRangesArray в getRangesArrayAsString&#10;2) переименование test -методов (порядок слов)&#10;3) убраны лишние проверки в union и difference&#10;4) форматирование вывода" />
     <MESSAGE value="Vector: &#10;1) исправлен метод multiply (расчет результата)&#10;2) оптимизация add, subtract&#10;3) упрощение getSum, getDifference&#10;4) упрощение multiply(int number)" />
     <MESSAGE value="Matrix: оптимизация использования геттера внутри методов" />
@@ -606,22 +597,27 @@
     <MESSAGE value="CSV: закончен черновой вариант - корректно отрабатывает на примере;&#10;требуется рефакторинг" />
     <MESSAGE value="CSV: багфикс пропуска пустой ячейки в конце строки" />
     <MESSAGE value="CSV: оптимизация обработки строки (убрано ветвление по наличию &quot; в строке)" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSV: оптимизация обработки строки (убрано ветвление по наличию &quot; в строке)" />
+    <MESSAGE value="CSV: форматирование/кодстайл" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSV: форматирование/кодстайл" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="311" y="58" width="800" height="677" key="#Auto_Import/67.27.1299.741@67.27.1299.741" timestamp="1581934665042" />
+    <state x="275" y="21" key="#Inspections" timestamp="1585806258852">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="21" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1585806258852" />
     <state x="257" y="30" width="800" height="677" key="#Project_Structure" timestamp="1584555729274">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="257" y="30" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1584555729274" />
     <state x="311" y="58" width="800" height="677" key="#Project_Structure/67.27.1299.741@67.27.1299.741" timestamp="1583129779064" />
-    <state x="481" y="81" width="544" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1585603989352">
+    <state x="481" y="81" width="544" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1585803719022">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="481" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1585603989352" />
+    <state x="481" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1585803719022" />
     <state x="524" y="109" width="544" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1583130446575" />
     <state x="531" y="251" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584517693010">
       <screen x="0" y="0" width="1366" height="728" />
@@ -644,10 +640,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741@67.27.1299.741" timestamp="1582787061743" />
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1585796922541">
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1585798153804">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585796922541" />
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585798153804" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -658,25 +654,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584556794485" />
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1585798115387">
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1585806281445">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585798115387" />
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585806281445" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
-    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1585798115387">
+    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1585806281445">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585798115387" />
+    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585806281445" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1585798115386">
+    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1585806281445">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585798115386" />
+    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585806281445" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1585798115387">
+    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1585806281445">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585798115387" />
+    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585806281445" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1585620597633">
       <screen x="0" y="0" width="1366" height="728" />
@@ -723,10 +719,10 @@
     </state>
     <state x="145" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584556824157" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1582789486042" />
-    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1585607874968">
+    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1585798232354">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585607874968" />
+    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585798232354" />
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584417938514" />
     <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1585792488548">
       <screen x="0" y="0" width="1366" height="728" />
@@ -750,10 +746,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="486" y="264" width="450" height="265" key="git4idea.rebase.GitRebaseDialog/67.27.1299.741@67.27.1299.741" timestamp="1582011498845" />
-    <state x="0" y="0" width="1289" height="741" key="new project wizard" timestamp="1585002490271">
+    <state x="0" y="0" width="1289" height="741" key="new project wizard" timestamp="1585802290564">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1585002490271" />
+    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1585802290564" />
     <state x="67" y="27" width="1289" height="741" key="new project wizard/67.27.1299.741@67.27.1299.741" timestamp="1583130311962" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1585185884839">
       <screen x="0" y="0" width="1366" height="728" />

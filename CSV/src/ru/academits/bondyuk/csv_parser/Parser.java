@@ -34,10 +34,6 @@ public class Parser {
         return quotesCount;
     }
 
-    private static boolean isNeedSeparation(String string) {
-        return string.indexOf("\"") == 0 & string.lastIndexOf("\"") == string.length() - 1;
-    }
-
     // hard-case line, line ended
     private static List<String> splitLine(String line) {
         List<String> strings = new ArrayList<>();
@@ -69,17 +65,19 @@ public class Parser {
                 startIndex = i + 2;
                 isContainQuotes = true;
                 ++i;
+                continue;
+            }
+
+            if (i + 2 == line.length() & line.charAt(i + 1) == '"') {
+                strings.add(line.substring(startIndex + 1, line.length() - 2));
+                continue;
+            }
+
+            if (i + 2 == line.length()) {
+                strings.add(line.substring(startIndex, line.length() - 1));
             }
         }
 
-        strings.add(line.substring(startIndex));
-
-//        for (int i = 0; i < strings.size(); ++i) {
-//            if (isNeedSeparation(strings.get(i))) {
-//                strings.set(i, strings.get(i).substring(1, strings.get(i).length() - 1));
-//                --i;
-//            }
-//        }
 
         for (int i = 0; i < strings.size(); ++i) {
             if (strings.get(i).contains("\"\"")) {

@@ -72,10 +72,14 @@ public class Parser {
                 strings.add(line.substring(startIndex + 1, line.length() - 2));
                 continue;
             }
+//
+//            if (i + 2 == line.length()& line.charAt(i + 1) != '"') {
+//                strings.add(line.substring(startIndex));
+//            }
+        }
 
-            if (i + 2 == line.length()) {
-                strings.add(line.substring(startIndex, line.length() - 1));
-            }
+        if (line.charAt(line.length() - 1) != '"') {
+            strings.add(line.substring(startIndex));
         }
 
 

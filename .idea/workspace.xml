@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="CSV: промежуточные результаты исправления алгоритма - посимвольный проход строки с разбором возможных случаев">
+    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/Parser.java" afterDir="false" />
     </list>
@@ -216,14 +216,7 @@
       <workItem from="1585368922868" duration="1189000" />
       <workItem from="1585597643832" duration="25356000" />
       <workItem from="1585725870449" duration="9264000" />
-      <workItem from="1585792488506" duration="1526000" />
-    </task>
-    <task id="LOCAL-00035" summary="Matrix: добавлено &#10;1) получение вектора-столбца по индексу, &#10;2) транспонирование матрицы,&#10;3) умножение на скаляр">
-      <created>1582030874428</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1582030874428</updated>
+      <workItem from="1585792488506" duration="3417000" />
     </task>
     <task id="LOCAL-00036" summary="Matrix: добавлено умножение на вектор">
       <created>1582032147473</created>
@@ -561,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585736704374</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="CSV: закончен черновой вариант - корректно отрабатывает на примере;&#10;требуется рефакторинг">
+      <created>1585794226227</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1585794226228</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +581,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Vector: рефакторинг&#10;1) обращение к элементам на прямую, вместо g/setComponents, getElements&#10;2) Vector.components.length заменен на использование метода (getSize)&#10;3) Исправлен таст отрицательной размерности вектора" />
     <MESSAGE value="Vector: рефакторинг - оптимизация реализации add() и subtract()" />
     <MESSAGE value="Matrix: экспорт модуля Vector" />
     <MESSAGE value="Range*:&#10;1) inline перемернные intersectionRange в return&#10;2) убран null из ответов (возврат [])&#10;3) Изменение обработки граничных условий для intersection, difference, union" />
@@ -606,7 +605,8 @@
     <MESSAGE value="CSV: минимальная реализация алгоритма под условия &#10;1) выделены методы для определения окончания строки&#10;2) разделение кейсов для различного вида строк (с &quot; и без)" />
     <MESSAGE value="CSV: промежуточные результаты исправления алгоритма" />
     <MESSAGE value="CSV: промежуточные результаты исправления алгоритма - посимвольный проход строки с разбором возможных случаев" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSV: промежуточные результаты исправления алгоритма - посимвольный проход строки с разбором возможных случаев" />
+    <MESSAGE value="CSV: закончен черновой вариант - корректно отрабатывает на примере;&#10;требуется рефакторинг" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSV: закончен черновой вариант - корректно отрабатывает на примере;&#10;требуется рефакторинг" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -658,25 +658,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584556794485" />
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1585794166651">
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1585796045900">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585794166651" />
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585796045900" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
-    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1585794166651">
+    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1585796045900">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585794166651" />
+    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585796045900" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1585794166650">
+    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1585796045900">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585794166650" />
+    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585796045900" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1585794166651">
+    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1585796045900">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585794166651" />
+    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585796045900" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1585620597633">
       <screen x="0" y="0" width="1366" height="728" />

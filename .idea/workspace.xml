@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lambda/src/ru/academits/bondyuk/lambda_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lambda/src/ru/academits/bondyuk/lambda_main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home_main/ArrayListHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayListHome/src/ru/academits/bondyuk/array_list_home_main/ArrayListHome.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,14 +204,7 @@
       <workItem from="1585368922868" duration="1189000" />
       <workItem from="1585597643832" duration="25356000" />
       <workItem from="1585725870449" duration="9264000" />
-      <workItem from="1585792488506" duration="17139000" />
-    </task>
-    <task id="LOCAL-00040" summary="HardRange: &#10;1) исправление именования пакета&#10;2) устранено лишнее использование this&#10;3) добавлен toString">
-      <created>1582771846343</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1582771846343</updated>
+      <workItem from="1585792488506" duration="21176000" />
     </task>
     <task id="LOCAL-00041" summary="Shapes: форматирование">
       <created>1582776833510</created>
@@ -548,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585806353674</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Lambda: пункты Г, Д + форматирование">
+      <created>1585815393050</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1585815393051</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +569,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Vector: &#10;1) исправлен метод multiply (расчет результата)&#10;2) оптимизация add, subtract&#10;3) упрощение getSum, getDifference&#10;4) упрощение multiply(int number)" />
     <MESSAGE value="Matrix: оптимизация использования геттера внутри методов" />
     <MESSAGE value="Matrix: добавление проверки на размер (&gt;0) матрицы при создании" />
     <MESSAGE value="Matrix:&#10;1) разделение getSize() на отдельные методы: getRowsCount и getColumnsCount()&#10;2) устранение геттера внутренних объектов" />
@@ -593,7 +593,8 @@
     <MESSAGE value="CSV: оптимизация обработки строки (убрано ветвление по наличию &quot; в строке)" />
     <MESSAGE value="CSV: форматирование/кодстайл" />
     <MESSAGE value="Lambda: пункты A, Б, В" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lambda: пункты A, Б, В" />
+    <MESSAGE value="Lambda: пункты Г, Д + форматирование" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lambda: пункты Г, Д + форматирование" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -639,10 +640,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585812581233" />
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1585806349522">
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1585815390013">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585806349522" />
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585815390013" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -718,10 +719,10 @@
     </state>
     <state x="145" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584556824157" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1582789486042" />
-    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1585798232354">
+    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1585815399020">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585798232354" />
+    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585815399020" />
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584417938514" />
     <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1585792488548">
       <screen x="0" y="0" width="1366" height="728" />

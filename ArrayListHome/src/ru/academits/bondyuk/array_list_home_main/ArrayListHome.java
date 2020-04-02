@@ -7,15 +7,18 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ArrayListHome {
-    public static List<String> getFileLines(String fileName) {
+    private ArrayListHome() {
+    }
+
+    public static List<String> getFileLines(String filePath) {
         List<String> lines = new ArrayList<>();
 
-        try (Scanner scanner = new Scanner(new File(fileName))) {
+        try (Scanner scanner = new Scanner(new File(filePath))) {
             while (scanner.hasNextLine()) {
                 lines.add(scanner.nextLine());
             }
         } catch (FileNotFoundException e) {
-            System.err.println("Не найден файл " + fileName);
+            System.err.println("Не найден файл " + filePath);
         }
 
         return lines;

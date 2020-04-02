@@ -12,9 +12,9 @@ public class Main {
         System.out.println("Задача ArrayListHome");
 
         // part 1
-        String fileName = "input.txt";
+        String filePath = "input.txt";
 
-        List<String> fileLines = ArrayListHome.getFileLines(fileName);
+        List<String> fileLines = ArrayListHome.getFileLines(filePath);
         System.out.println("Список из файла: " + fileLines);
 
         // part 2
@@ -39,44 +39,44 @@ public class Main {
         System.out.printf("Список, после удаления четных элементов: %s%n", numbersList);
 
         // part 3 version 1
-        List<Integer> duplicatedNumberList = new ArrayList<>();
+        List<Integer> duplicatedNumbersList = new ArrayList<>();
 
-        duplicatedNumberList.add(1);
-        duplicatedNumberList.add(5);
-        duplicatedNumberList.add(2);
-        duplicatedNumberList.add(1);
-        duplicatedNumberList.add(3);
-        duplicatedNumberList.add(5);
+        duplicatedNumbersList.add(1);
+        duplicatedNumbersList.add(5);
+        duplicatedNumbersList.add(2);
+        duplicatedNumbersList.add(1);
+        duplicatedNumbersList.add(3);
+        duplicatedNumbersList.add(5);
 
-        System.out.printf("Дублированный список: %s%n", duplicatedNumberList);
+        System.out.printf("Дублированный список: %s%n", duplicatedNumbersList);
 
-        Set<Integer> numberSet = new LinkedHashSet<>(duplicatedNumberList);
-        duplicatedNumberList.clear();
-        duplicatedNumberList.addAll(numberSet);
+        Set<Integer> numberSet = new LinkedHashSet<>(duplicatedNumbersList);
+        duplicatedNumbersList.clear();
+        duplicatedNumbersList.addAll(numberSet);
 
-        System.out.printf("Очищенный от дублей список: %s%n", duplicatedNumberList);
+        System.out.printf("Очищенный от дублей список: %s%n", duplicatedNumbersList);
 
         // part 3 version 2
-        duplicatedNumberList.clear();
-        duplicatedNumberList = new ArrayList<>();
+        duplicatedNumbersList.clear();
+        duplicatedNumbersList = new ArrayList<>();
 
-        duplicatedNumberList.add(1);
-        duplicatedNumberList.add(5);
-        duplicatedNumberList.add(2);
-        duplicatedNumberList.add(1);
-        duplicatedNumberList.add(3);
-        duplicatedNumberList.add(5);
+        duplicatedNumbersList.add(1);
+        duplicatedNumbersList.add(5);
+        duplicatedNumbersList.add(2);
+        duplicatedNumbersList.add(1);
+        duplicatedNumbersList.add(3);
+        duplicatedNumbersList.add(5);
 
-        System.out.printf("Дублированный список: %s%n", duplicatedNumberList);
+        System.out.printf("Дублированный список: %s%n", duplicatedNumbersList);
 
-        List<Integer> withoutDuplicatedNumberList = new ArrayList<>();
+        List<Integer> withoutDuplicatedNumbersList = new ArrayList<>();
 
-        for (Integer i : duplicatedNumberList) {
-            if (!withoutDuplicatedNumberList.contains(i)) {
-                withoutDuplicatedNumberList.add(i);
+        for (Integer number : duplicatedNumbersList) {
+            if (!withoutDuplicatedNumbersList.contains(number)) {
+                withoutDuplicatedNumbersList.add(number);
             }
         }
 
-        System.out.printf("Очищенный от дублей список: %s%n", withoutDuplicatedNumberList);
+        System.out.printf("Очищенный от дублей список: %s%n", withoutDuplicatedNumbersList);
     }
 }

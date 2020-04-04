@@ -4,8 +4,8 @@
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Temperature/Temperature.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lambda/src/ru/academits/bondyuk/lambda_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lambda/src/ru/academits/bondyuk/lambda_main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +86,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.Main (6)">
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.csv_parser_main.Main" />
       <module name="CSV" />
@@ -144,9 +144,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (6)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="JavaScript Debug.out22.html" />
       </list>
@@ -207,14 +207,7 @@
       <workItem from="1585725870449" duration="9264000" />
       <workItem from="1585792488506" duration="23336000" />
       <workItem from="1585876036015" duration="5394000" />
-      <workItem from="1585970240721" duration="619000" />
-    </task>
-    <task id="LOCAL-00043" summary="CSV : разбор простой формы csv">
-      <created>1582790770471</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1582790770471</updated>
+      <workItem from="1585970240721" duration="1312000" />
     </task>
     <task id="LOCAL-00044" summary="CSV : оптимизация простой формы csv">
       <created>1582795496470</created>
@@ -552,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585828527748</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="ArrayListHome: исправление состава пакетов">
+      <created>1585971705849</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1585971705849</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +572,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Matrix:&#10;1) разделение getSize() на отдельные методы: getRowsCount и getColumnsCount()&#10;2) устранение геттера внутренних объектов" />
     <MESSAGE value="Matrix:&#10;1) добавлена обработка поступающих в методы значений (индексов)&#10;2) переименование get/setVector-&gt;get/setRow&#10;3) оптимизация multiply(double number)" />
     <MESSAGE value="Matrix: Добавление валидации multiply(Vector vector)" />
     <MESSAGE value="Matrix: &#10;1) форматирование (перенос static методов после non-static)&#10;2) Расширение описания ошибок&#10;3) Оптимизация методов (устранение лишних переменных)" />
@@ -597,7 +596,8 @@
     <MESSAGE value="Lambda: пункты Г, Д + форматирование" />
     <MESSAGE value="ArrayListHome: &#10;1) fileName переименован в filePath&#10;2) добавлен приватный пустой конструктор для ArrayListHome&#10;3) форматирование" />
     <MESSAGE value="ArrayList: &#10;1) добавлен конструктор итератора&#10;2) добавлена учет изменений в методах" />
-    <option name="LAST_COMMIT_MESSAGE" value="ArrayList: &#10;1) добавлен конструктор итератора&#10;2) добавлена учет изменений в методах" />
+    <MESSAGE value="ArrayListHome: исправление состава пакетов" />
+    <option name="LAST_COMMIT_MESSAGE" value="ArrayListHome: исправление состава пакетов" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -643,10 +643,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585812581233" />
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1585828526102">
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1585971702812">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585828526102" />
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585971702812" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -657,25 +657,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584556794485" />
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1585909279909">
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1585972149570">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585909279909" />
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585972149570" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
-    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1585909279909">
+    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1585972149570">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585909279909" />
+    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585972149570" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1585909279909">
+    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1585972149570">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585909279909" />
+    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585972149570" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1585909279909">
+    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1585972149570">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585909279909" />
+    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585972149570" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1585620597633">
       <screen x="0" y="0" width="1366" height="728" />
@@ -722,10 +722,10 @@
     </state>
     <state x="145" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584556824157" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1582789486042" />
-    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1585827517777">
+    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1585971714959">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585827517777" />
+    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585971714959" />
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584417938514" />
     <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1585970241359">
       <screen x="0" y="0" width="1366" height="728" />

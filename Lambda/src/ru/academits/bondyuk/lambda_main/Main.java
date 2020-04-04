@@ -62,18 +62,16 @@ public class Main {
 
         // Д - получение имен людей в порядке убывания возраста, возраст которых от 20 до 45
         List<String> sortedByAgeNames = personList.stream()
-                .filter(person -> person.getAge() < 45)
-                .filter(person -> person.getAge() > 20)
-                .sorted(Comparator.comparingInt(Person::getAge))
+                .filter(person -> person.getAge() < 45 & person.getAge() > 20)
+                .sorted(Comparator.comparingInt(Person::getAge).reversed())
                 .map(Person::getName)
                 .collect(Collectors.toList());
 
-        System.out.printf("Имена лиц от 20 до 45 лет в порядке убывания возраста до 18 лет: %s%n%n", sortedByAgeNames);
+        System.out.printf("Имена лиц от 20 до 45 лет в порядке убывания возраста: %s%n%n", sortedByAgeNames);
 
         List<Person> sortedByAgeNameChecker = personList.stream()
-                .filter(person -> person.getAge() < 45)
-                .filter(person -> person.getAge() > 20)
-                .sorted(Comparator.comparingInt(Person::getAge))
+                .filter(person -> person.getAge() < 45 & person.getAge() > 20)
+                .sorted(Comparator.comparingInt(Person::getAge).reversed())
                 .collect(Collectors.toList());
 
         System.out.printf("Персоны от 20 до 45: %s", sortedByAgeNameChecker);

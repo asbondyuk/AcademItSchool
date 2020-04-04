@@ -1,4 +1,4 @@
-package ru.academits.bondyuk.array_list_home_main;
+package ru.academits.bondyuk.array_list_home;
 
 import java.io.File;
 import java.io.FileNotFoundException;

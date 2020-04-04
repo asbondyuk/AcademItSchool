@@ -1,6 +1,6 @@
-package ru.academits.bondyuk.array_list_home;
+package ru.academits.bondyuk.array_list_home_main;
 
-import ru.academits.bondyuk.array_list_home_main.ArrayListHome;
+import ru.academits.bondyuk.array_list_home.ArrayListHome;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;

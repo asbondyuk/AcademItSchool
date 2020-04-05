@@ -27,32 +27,32 @@ public class Main {
         System.out.printf("После разворота: %s%n%n", integers);
 
 
-        int value = 3;
+        int data = 3;
         integers.remove(3);
-        System.out.printf("Удаление по значению %d: %s%n", value, integers);
+        System.out.printf("Удаление по значению %d: %s%n", data, integers);
         System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
-        integers.addElementToStart(value);
-        System.out.printf("Добавление в начало значения %d: %s%n", value, integers);
+        integers.addElementToStart(data);
+        System.out.printf("Добавление в начало значения %d: %s%n", data, integers);
         System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
-        int addedValue = -1;
+        int addedData = -1;
         int i = 5;
-        integers.add(i, addedValue);
-        System.out.printf("Добавление по индексу %d значения %d: %s%n", i, addedValue, integers);
+        integers.add(i, addedData);
+        System.out.printf("Добавление по индексу %d значения %d: %s%n", i, addedData, integers);
         System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
-        Integer deletedValue1 = 15;
-        System.out.printf("Удаление по значению %d: %b%n", deletedValue1, integers.remove(deletedValue1));
+        Integer deletedData1 = 15;
+        System.out.printf("Удаление по значению %d: %b%n", deletedData1, integers.remove(deletedData1));
         System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
-        Integer deletedValue2 = 2;
-        System.out.printf("Удаление по значению %d: %b%n", deletedValue2, integers.remove(deletedValue2));
+        Integer deletedData2 = 2;
+        System.out.printf("Удаление по значению %d: %b%n", deletedData2, integers.remove(deletedData2));
         System.out.printf("Текущий список: %s%n", integers);
         System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
-        int deletedValue3 = 1;
-        System.out.printf("Удаление по индексу %d, старое значение %d%n", deletedValue3, integers.remove(deletedValue3));
+        int deletedDataIndex = 1;
+        System.out.printf("Удаление по индексу %d, старое значение %d%n", deletedDataIndex, integers.remove(deletedDataIndex));
         System.out.printf("Текущий список: %s%n", integers);
         System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
@@ -60,9 +60,9 @@ public class Main {
         System.out.printf("Текущий список: %s%n", integers);
         System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
-        int insertedIndex = 2;
-        int insertedValue = 99;
-        System.out.printf("Вставка элемента %s, по индексу %d. Старое значение %s%n", insertedValue, insertedIndex, integers.setElement(insertedIndex, insertedValue));
+        int setDataIndex = 2;
+        int setData = 99;
+        System.out.printf("Установка элемента со значением %s, по индексу %d. Старое значение %s%n", setData, setDataIndex, integers.setElement(setDataIndex, setData));
         System.out.printf("Текущий список: %s%n", integers);
         System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
@@ -71,8 +71,8 @@ public class Main {
         SinglyLinkedList<Integer> integers2 = integers.copy();
 
         int index2 = 2;
-        integers.add(index2, addedValue);
-        System.out.printf("Добавление по индексу %d значения %d: %s%n", index2, addedValue, integers);
+        integers.add(index2, addedData);
+        System.out.printf("Добавление по индексу %d значения %d: %s%n", index2, addedData, integers);
         System.out.printf("Обновленный список: %s%n", integers);
         System.out.printf("Скопированный список: %s%n", integers2);
 

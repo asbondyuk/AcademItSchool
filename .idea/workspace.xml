@@ -221,14 +221,7 @@
       <workItem from="1585792488506" duration="23336000" />
       <workItem from="1585876036015" duration="5394000" />
       <workItem from="1585970240721" duration="2585000" />
-      <workItem from="1586065371186" duration="16943000" />
-    </task>
-    <task id="LOCAL-00047" summary="HardRange : &#10;1)исправление логики isIntersection&#10;2) убраны методы типов пересечения (isIntersectionInternal/External/Nested)">
-      <created>1583122385485</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1583122385485</updated>
+      <workItem from="1586065371186" duration="18052000" />
     </task>
     <task id="LOCAL-00048" summary="HardRange:&#10;форматирование вывода">
       <created>1583123439676</created>
@@ -566,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586120639493</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="List:&#10;1) add (index, data)  - внутреннее форматирование + возможность добавления элемента в конец&#10;2) оптимизация remove&#10;3) оптимизация reverse + доп обработка пустого List&#10;4) оптимизация copy (копирование за линейное время)&#10;5) toString  обработка пустого List">
+      <created>1586127717067</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1586127717067</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +586,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Matrix: &#10;1) добавлено умножение матрицы&#10;2) откат к старой версии конструктора Matrix(double[][] arrays)" />
     <MESSAGE value="Matrix: &#10;1) переименование в main: vector в row &#10;2) багфикс расчета последнего элемента в add и subtract&#10;3) форматирование transpose" />
     <MESSAGE value="решение задачи ArrayListHome" />
     <MESSAGE value="каркас задачи List" />
@@ -611,7 +610,8 @@
     <MESSAGE value="Lambda: Пункт Д:&#10;1) объединение фильтрации &#10;2) фильтрация по границам включительно&#10;3) исправление порядка сортировки&#10;4) исправление текста выводимого сообщения" />
     <MESSAGE value="Temperature: черновой вариант логики и GUI (без связи)" />
     <MESSAGE value="List:&#10;1) Исправление состава пакетов (перенос ListItem к SinglyLinkedList), видимости ListItem&#10;2) SinglyLinkedList добавлен конструктор без аргументов&#10;3) value переименован в data&#10;4) переименование getFirstElement и removeElementFromStart на getFirst и removeFirst&#10;5) изменение возвращаемого значения getFirstElement, removeElementFromStart, getElement с ListItem&lt;T&gt; на T&#10;6) добавлен вспомогательный метод получения узла (вместо getElement ранее) getListItem &#10;7) добавлена обработка пустых списков для getFirst и removeFirst&#10;8) verifyArrayIndex переименован в isIndexCorrect; исправлено условие (&amp; -&gt; &amp;&amp;), изменение возврата с boolean на void (для проброса исключения сразу)&#10;9) испрвление выводимых сообщений" />
-    <option name="LAST_COMMIT_MESSAGE" value="List:&#10;1) Исправление состава пакетов (перенос ListItem к SinglyLinkedList), видимости ListItem&#10;2) SinglyLinkedList добавлен конструктор без аргументов&#10;3) value переименован в data&#10;4) переименование getFirstElement и removeElementFromStart на getFirst и removeFirst&#10;5) изменение возвращаемого значения getFirstElement, removeElementFromStart, getElement с ListItem&lt;T&gt; на T&#10;6) добавлен вспомогательный метод получения узла (вместо getElement ранее) getListItem &#10;7) добавлена обработка пустых списков для getFirst и removeFirst&#10;8) verifyArrayIndex переименован в isIndexCorrect; исправлено условие (&amp; -&gt; &amp;&amp;), изменение возврата с boolean на void (для проброса исключения сразу)&#10;9) испрвление выводимых сообщений" />
+    <MESSAGE value="List:&#10;1) add (index, data)  - внутреннее форматирование + возможность добавления элемента в конец&#10;2) оптимизация remove&#10;3) оптимизация reverse + доп обработка пустого List&#10;4) оптимизация copy (копирование за линейное время)&#10;5) toString  обработка пустого List" />
+    <option name="LAST_COMMIT_MESSAGE" value="List:&#10;1) add (index, data)  - внутреннее форматирование + возможность добавления элемента в конец&#10;2) оптимизация remove&#10;3) оптимизация reverse + доп обработка пустого List&#10;4) оптимизация copy (копирование за линейное время)&#10;5) toString  обработка пустого List" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -658,10 +658,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585812581233" />
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586127501238">
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586128893887">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586127501238" />
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586128893887" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />

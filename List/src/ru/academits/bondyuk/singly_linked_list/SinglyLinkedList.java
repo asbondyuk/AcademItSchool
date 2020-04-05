@@ -126,7 +126,6 @@ public class SinglyLinkedList<T> {
             return;
         }
 
-
         ListItem<T> previousItem = head;
         ListItem<T> currentItem = head.getNext();
 
@@ -198,7 +197,6 @@ public class SinglyLinkedList<T> {
         }
 
         stringBuilder.append(item.getData());
-
         stringBuilder.append("]");
 
         return stringBuilder.toString();

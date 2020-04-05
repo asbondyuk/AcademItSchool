@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
+    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="Lambda: Пункт Д:&#10;1) объединение фильтрации &#10;2) фильтрация по границам включительно&#10;3) исправление порядка сортировки&#10;4) исправление текста выводимого сообщения">
       <change afterPath="$PROJECT_DIR$/Temperature/Temperature.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/model/TemperatureService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/model/TemperatureTypes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lambda/src/ru/academits/bondyuk/lambda_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lambda/src/ru/academits/bondyuk/lambda_main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +36,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -86,7 +88,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.Main (2)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.csv_parser_main.Main" />
       <module name="CSV" />
@@ -118,7 +120,7 @@
       <module name="Temperature" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.academits.bondyuk.*" />
+          <option name="PATTERN" value="ru.academits.bondyuk.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,9 +146,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Main (6)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="JavaScript Debug.out22.html" />
       </list>
@@ -207,14 +208,8 @@
       <workItem from="1585725870449" duration="9264000" />
       <workItem from="1585792488506" duration="23336000" />
       <workItem from="1585876036015" duration="5394000" />
-      <workItem from="1585970240721" duration="1312000" />
-    </task>
-    <task id="LOCAL-00044" summary="CSV : оптимизация простой формы csv">
-      <created>1582795496470</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1582795496470</updated>
+      <workItem from="1585970240721" duration="2585000" />
+      <workItem from="1586065371186" duration="6443000" />
     </task>
     <task id="LOCAL-00045" summary="CSV : добавлено считывание ячейки с нескольких строк ( при наличии '&quot;' на строке)">
       <created>1582796598380</created>
@@ -552,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585971705849</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Lambda: Пункт Д:&#10;1) объединение фильтрации &#10;2) фильтрация по границам включительно&#10;3) исправление порядка сортировки&#10;4) исправление текста выводимого сообщения">
+      <created>1585972329909</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1585972329909</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +574,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Matrix:&#10;1) добавлена обработка поступающих в методы значений (индексов)&#10;2) переименование get/setVector-&gt;get/setRow&#10;3) оптимизация multiply(double number)" />
     <MESSAGE value="Matrix: Добавление валидации multiply(Vector vector)" />
     <MESSAGE value="Matrix: &#10;1) форматирование (перенос static методов после non-static)&#10;2) Расширение описания ошибок&#10;3) Оптимизация методов (устранение лишних переменных)" />
     <MESSAGE value="Matrix: &#10;1) добавлено умножение матрицы&#10;2) откат к старой версии конструктора Matrix(double[][] arrays)" />
@@ -597,26 +598,27 @@
     <MESSAGE value="ArrayListHome: &#10;1) fileName переименован в filePath&#10;2) добавлен приватный пустой конструктор для ArrayListHome&#10;3) форматирование" />
     <MESSAGE value="ArrayList: &#10;1) добавлен конструктор итератора&#10;2) добавлена учет изменений в методах" />
     <MESSAGE value="ArrayListHome: исправление состава пакетов" />
-    <option name="LAST_COMMIT_MESSAGE" value="ArrayListHome: исправление состава пакетов" />
+    <MESSAGE value="Lambda: Пункт Д:&#10;1) объединение фильтрации &#10;2) фильтрация по границам включительно&#10;3) исправление порядка сортировки&#10;4) исправление текста выводимого сообщения" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lambda: Пункт Д:&#10;1) объединение фильтрации &#10;2) фильтрация по границам включительно&#10;3) исправление порядка сортировки&#10;4) исправление текста выводимого сообщения" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="311" y="58" width="800" height="677" key="#Auto_Import/67.27.1299.741@67.27.1299.741" timestamp="1581934665042" />
-    <state x="275" y="21" key="#Inspections" timestamp="1585806258852">
+    <state x="275" y="21" key="#Inspections" timestamp="1586070212664">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="21" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1585806258852" />
+    <state x="275" y="21" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1586070212664" />
     <state x="257" y="30" width="800" height="677" key="#Project_Structure" timestamp="1584555729274">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="257" y="30" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1584555729274" />
     <state x="311" y="58" width="800" height="677" key="#Project_Structure/67.27.1299.741@67.27.1299.741" timestamp="1583129779064" />
-    <state x="481" y="81" width="544" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1585827885725">
+    <state x="481" y="81" width="544" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1586067631224">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="481" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1585827885725" />
+    <state x="481" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586067631224" />
     <state x="524" y="109" width="544" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1583130446575" />
     <state x="531" y="251" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584517693010">
       <screen x="0" y="0" width="1366" height="728" />
@@ -635,18 +637,19 @@
     </state>
     <state x="122" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1584929431612" />
     <state x="183" y="27" width="1056" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1299.741@67.27.1299.741" timestamp="1582782870148" />
-    <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582787061743">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="402" y="116" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586069575712">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="402" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586069575712" />
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741@67.27.1299.741" timestamp="1582787061743" />
     <state x="413" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1585812581233">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585812581233" />
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1585971702812">
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586071906168">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585971702812" />
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586071906168" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -657,25 +660,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584556794485" />
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1585972149570">
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1586071868044">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585972149570" />
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586071868044" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
-    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1585972149570">
+    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1586071868044">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585972149570" />
+    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586071868044" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1585972149570">
+    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1586071868044">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585972149570" />
+    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586071868044" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1585972149570">
+    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1586071868044">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585972149570" />
+    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586071868044" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1585620597633">
       <screen x="0" y="0" width="1366" height="728" />
@@ -717,25 +720,25 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="302" y="95" width="819" height="602" key="NewModule_or_Project.wizard/67.27.1299.741@67.27.1299.741" timestamp="1581145488827" />
-    <state x="145" y="0" width="1024" height="741" key="SettingsEditor" timestamp="1584556824157">
+    <state x="145" y="0" width="1024" height="741" key="SettingsEditor" timestamp="1586065481458">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="145" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584556824157" />
+    <state x="145" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586065481458" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1582789486042" />
-    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1585971714959">
+    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1585972637122">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585971714959" />
+    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585972637122" />
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584417938514" />
-    <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1585970241359">
+    <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1586065372168">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="323" y="180" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585970241359" />
+    <state x="323" y="180" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586065372168" />
     <state x="374" y="210" width="688" height="344" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1584419150525" />
-    <state x="439" y="284" width="478" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584911408222">
+    <state x="439" y="284" width="478" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586065382061">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="439" y="284" width="478" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1584911408222" />
+    <state x="439" y="284" width="478" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1586065382061" />
     <state x="484" y="316" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1299.741@67.27.1299.741" timestamp="1582818541613" />
     <state x="413" y="118" key="extract.method.dialog" timestamp="1585797870980">
       <screen x="0" y="0" width="1366" height="728" />
@@ -754,14 +757,14 @@
     </state>
     <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1585828751649" />
     <state x="67" y="27" width="1289" height="741" key="new project wizard/67.27.1299.741@67.27.1299.741" timestamp="1583130311962" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1585185884839">
+    <state x="339" y="157" key="run.anything.popup" timestamp="1586071090043">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1585185884839" />
-    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup" timestamp="1585620749750">
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586071090043" />
+    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup" timestamp="1586070685916">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585620749750" />
+    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586070685916" />
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1581069916545" />
   </component>
 </project>

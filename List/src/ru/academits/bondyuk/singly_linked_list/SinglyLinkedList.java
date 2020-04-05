@@ -1,43 +1,57 @@
 package ru.academits.bondyuk.singly_linked_list;
 
-import ru.academits.bondyuk.list_item.ListItem;
-
 public class SinglyLinkedList<T> {
     private ListItem<T> head;
     private int count;
 
-    public SinglyLinkedList(T value) {
-        head = new ListItem<>(value);
+    public SinglyLinkedList(T data) {
+        head = new ListItem<>(data);
         ++count;
+    }
+
+    public SinglyLinkedList() {
+        count = 0;
+    }
+
+    private void isIndexCorrect(int index) {
+        if ((0 <= index) && (index < count)) {
+            throw new ArrayIndexOutOfBoundsException("Некорректный индекс списка, должно быть значение от 0 до " + (count - 1)
+                    + ". Получен: " + index);
+        }
     }
 
     public int getCount() {
         return count;
     }
 
-    public ListItem<T> getFirstElement() {
-        return head;
+    public T getFirst() {
+        if (count == 0) {
+            throw new ArrayIndexOutOfBoundsException("Список пустой");
+        }
+
+        return head.getData();
     }
 
-    public void addElementToStart(T value) {
-        head = new ListItem<>(value, head);
+    public void addElementToStart(T data) {
+        head = new ListItem<>(data, head);
         ++count;
     }
 
-    public ListItem<T> removeElementFromStart() {
-        ListItem<T> deletedItem = head;
+    public T removeFirst() {
+        if (count == 0) {
+            throw new ArrayIndexOutOfBoundsException("Список пустой");
+        }
+
+        T deletedItemData = head.getData();
 
         head = head.getNext();
         --count;
 
-        return deletedItem;
+        return deletedItemData;
     }
 
-    public ListItem<T> getElement(int index) {
-        if (!verifyArrayIndex(index)) {
-            throw new ArrayIndexOutOfBoundsException("Некорретный индекс массива, должно быть значение от 0 до " + (count - 1)
-                    + ". Получен: " + index);
-        }
+    public T getElement(int index) {
+        isIndexCorrect(index);
 
         ListItem<T> item = head;
 
@@ -45,33 +59,27 @@ public class SinglyLinkedList<T> {
             item = item.getNext();
         }
 
-        return item;
+        return item.getData();
     }
 
-    public T setElement(int index, T value) {
-        if (!verifyArrayIndex(index)) {
-            throw new ArrayIndexOutOfBoundsException("Некорретный индекс массива, должно быть значение от 0 до " + (count - 1)
-                    + ".%nПолучен: " + index);
-        }
+    public T setElement(int index, T data) {
+        isIndexCorrect(index);
 
-        ListItem<T> element = getElement(index);
-        T oldValue = element.getData();
-        element.setData(value);
+        ListItem<T> element = getListItem(index);
+        T oldData = getElement(index);
+        element.setData(data);
 
-        return oldValue;
+        return oldData;
     }
 
     public T remove(int index) {
-        if (!verifyArrayIndex(index)) {
-            throw new ArrayIndexOutOfBoundsException("Некорретный индекс массива, должно быть значение от 0 до " + (count - 1)
-                    + ".%nПолучен: " + index);
-        }
+        isIndexCorrect(index);
 
         if (index == 0) {
-            removeElementFromStart();
+            removeFirst();
         }
 
-        ListItem<T> previousItem = getElement(index - 1);
+        ListItem<T> previousItem = getListItem(index - 1);
         ListItem<T> deletedItem = previousItem.getNext();
 
         if (deletedItem.hasNext()) {
@@ -86,31 +94,28 @@ public class SinglyLinkedList<T> {
         return deletedItem.getData();
     }
 
-    public void add(int index, T value) {
-        if (!verifyArrayIndex(index)) {
-            throw new ArrayIndexOutOfBoundsException("Некорретный индекс массива, должно быть значение от 0 до " + (count - 1)
-                    + ".%nПолучен: " + index);
-        }
+    public void add(int index, T data) {
+        isIndexCorrect(index);
 
-        ListItem<T> currentItem = getElement(index - 1);
+        ListItem<T> currentItem = getListItem(index - 1);
 
         if (currentItem.hasNext()) {
             ListItem<T> nextItem = currentItem.getNext();
-            ListItem<T> newItem = new ListItem<>(value, nextItem);
+            ListItem<T> newItem = new ListItem<>(data, nextItem);
             currentItem.setNext(newItem);
         } else {
-            ListItem<T> newItem = new ListItem<>(value);
+            ListItem<T> newItem = new ListItem<>(data);
             currentItem.setNext(newItem);
         }
 
         ++count;
     }
 
-    public boolean remove(T value) {
+    public boolean remove(T data) {
         int index = 0;
 
         for (ListItem<T> item = head; item != null; item = item.getNext()) {
-            if (item.getData().equals(value)) {
+            if (item.getData().equals(data)) {
                 remove(index);
                 return true;
             } else {
@@ -157,14 +162,14 @@ public class SinglyLinkedList<T> {
         return newList;
     }
 
-    public void add(T value) {
+    public void add(T data) {
         ListItem<T> item = head;
 
         while (item.hasNext()) {
             item = item.getNext();
         }
 
-        ListItem<T> addedItem = new ListItem<>(value);
+        ListItem<T> addedItem = new ListItem<>(data);
         item.setNext(addedItem);
 
         ++count;
@@ -194,7 +199,13 @@ public class SinglyLinkedList<T> {
         return stringBuilder.toString();
     }
 
-    private boolean verifyArrayIndex(int index) {
-        return (0 <= index) & (index < count);
+    private ListItem<T> getListItem(int index) {
+        ListItem<T> item = head;
+
+        for (int i = 0; i < index; ++i) {
+            item = item.getNext();
+        }
+
+        return item;
     }
 }

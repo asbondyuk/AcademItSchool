@@ -16,7 +16,7 @@ public class Main {
         integers.add(6);
 
         System.out.printf("Текущий список: %s%n%n", integers);
-        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirstElement(), integers.getCount());
+        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
         int index = 2;
         System.out.printf("Получение элемента по индексу %d: %s%n%n", index, integers.getElement(index));
@@ -29,41 +29,41 @@ public class Main {
         int value = 3;
         integers.remove(3);
         System.out.printf("Удаление по значению %d: %s%n", value, integers);
-        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirstElement(), integers.getCount());
+        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
         integers.addElementToStart(value);
         System.out.printf("Добавление в начало значения %d: %s%n", value, integers);
-        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirstElement(), integers.getCount());
+        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
         int addedValue = -1;
         int i = 5;
         integers.add(i, addedValue);
         System.out.printf("Добавление по индексу %d значения %d: %s%n", i, addedValue, integers);
-        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirstElement(), integers.getCount());
+        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
         Integer deletedValue1 = 15;
         System.out.printf("Удаление по значению %d: %b%n", deletedValue1, integers.remove(deletedValue1));
-        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirstElement(), integers.getCount());
+        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
         Integer deletedValue2 = 2;
         System.out.printf("Удаление по значению %d: %b%n", deletedValue2, integers.remove(deletedValue2));
         System.out.printf("Текущий список: %s%n", integers);
-        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirstElement(), integers.getCount());
+        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
         int deletedValue3 = 1;
         System.out.printf("Удаление по индексу %d, старое значение %d%n", deletedValue3, integers.remove(deletedValue3));
         System.out.printf("Текущий список: %s%n", integers);
-        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirstElement(), integers.getCount());
+        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
-        System.out.printf("Удаление первого элемента, старое значение %s%n", integers.removeElementFromStart());
+        System.out.printf("Удаление первого элемента, старое значение %s%n", integers.removeFirst());
         System.out.printf("Текущий список: %s%n", integers);
-        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirstElement(), integers.getCount());
+        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
         int insertedIndex = 2;
         int insertedValue = 99;
         System.out.printf("Вставка элемента %s, по индексу %d. Старое значение %s%n", insertedValue, insertedIndex, integers.setElement(insertedIndex, insertedValue));
         System.out.printf("Текущий список: %s%n", integers);
-        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirstElement(), integers.getCount());
+        System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
 
         System.out.printf("Текущий список: %s%n", integers);

@@ -14,6 +14,7 @@ public class Main {
         integers.add(4);
         integers.add(5);
         integers.add(6);
+//        integers.add(null);
 
         System.out.printf("Текущий список: %s%n%n", integers);
         System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
@@ -74,5 +75,16 @@ public class Main {
         System.out.printf("Добавление по индексу %d значения %d: %s%n", index2, addedValue, integers);
         System.out.printf("Обновленный список: %s%n", integers);
         System.out.printf("Скопированный список: %s%n", integers2);
+
+        integers.add(null);
+        integers.add(6,13);
+        System.out.printf("Текущий список: %s%n", integers);
+
+        System.out.println(integers.getElement(5));
+        System.out.println(integers.getElement(6));
+
+//        integers.remove(null);
+//        System.out.printf("Текущий список: %s%n", integers);
+
     }
 }

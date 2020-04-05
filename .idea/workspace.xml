@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/list_item/ListItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/singly_linked_list/ListItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/singly_linked_list/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/singly_linked_list/SinglyLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/singly_linked_list_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/singly_linked_list_main/Main.java" afterDir="false" />
     </list>
@@ -87,7 +86,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (3)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.csv_parser_main.Main" />
       <module name="CSV" />
@@ -107,6 +106,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.academits.bondyuk.lambda_main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.singly_linked_list_main.Main" />
+      <module name="List" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.academits.bondyuk.singly_linked_list_main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,6 +157,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
@@ -208,14 +221,7 @@
       <workItem from="1585792488506" duration="23336000" />
       <workItem from="1585876036015" duration="5394000" />
       <workItem from="1585970240721" duration="2585000" />
-      <workItem from="1586065371186" duration="9747000" />
-    </task>
-    <task id="LOCAL-00046" summary="CSV : рефакторинг&#10;1) вынос в отдельный метод процесс получения строки&#10;2) перевод разделителя в константу">
-      <created>1582797425192</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1582797425192</updated>
+      <workItem from="1586065371186" duration="16943000" />
     </task>
     <task id="LOCAL-00047" summary="HardRange : &#10;1)исправление логики isIntersection&#10;2) убраны методы типов пересечения (isIntersectionInternal/External/Nested)">
       <created>1583122385485</created>
@@ -553,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586071956932</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="List:&#10;1) Исправление состава пакетов (перенос ListItem к SinglyLinkedList), видимости ListItem&#10;2) SinglyLinkedList добавлен конструктор без аргументов&#10;3) value переименован в data&#10;4) переименование getFirstElement и removeElementFromStart на getFirst и removeFirst&#10;5) изменение возвращаемого значения getFirstElement, removeElementFromStart, getElement с ListItem&lt;T&gt; на T&#10;6) добавлен вспомогательный метод получения узла (вместо getElement ранее) getListItem &#10;7) добавлена обработка пустых списков для getFirst и removeFirst&#10;8) verifyArrayIndex переименован в isIndexCorrect; исправлено условие (&amp; -&gt; &amp;&amp;), изменение возврата с boolean на void (для проброса исключения сразу)&#10;9) испрвление выводимых сообщений">
+      <created>1586120639493</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1586120639493</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +586,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Matrix: &#10;1) форматирование (перенос static методов после non-static)&#10;2) Расширение описания ошибок&#10;3) Оптимизация методов (устранение лишних переменных)" />
     <MESSAGE value="Matrix: &#10;1) добавлено умножение матрицы&#10;2) откат к старой версии конструктора Matrix(double[][] arrays)" />
     <MESSAGE value="Matrix: &#10;1) переименование в main: vector в row &#10;2) багфикс расчета последнего элемента в add и subtract&#10;3) форматирование transpose" />
     <MESSAGE value="решение задачи ArrayListHome" />
@@ -598,7 +610,8 @@
     <MESSAGE value="ArrayListHome: исправление состава пакетов" />
     <MESSAGE value="Lambda: Пункт Д:&#10;1) объединение фильтрации &#10;2) фильтрация по границам включительно&#10;3) исправление порядка сортировки&#10;4) исправление текста выводимого сообщения" />
     <MESSAGE value="Temperature: черновой вариант логики и GUI (без связи)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Temperature: черновой вариант логики и GUI (без связи)" />
+    <MESSAGE value="List:&#10;1) Исправление состава пакетов (перенос ListItem к SinglyLinkedList), видимости ListItem&#10;2) SinglyLinkedList добавлен конструктор без аргументов&#10;3) value переименован в data&#10;4) переименование getFirstElement и removeElementFromStart на getFirst и removeFirst&#10;5) изменение возвращаемого значения getFirstElement, removeElementFromStart, getElement с ListItem&lt;T&gt; на T&#10;6) добавлен вспомогательный метод получения узла (вместо getElement ранее) getListItem &#10;7) добавлена обработка пустых списков для getFirst и removeFirst&#10;8) verifyArrayIndex переименован в isIndexCorrect; исправлено условие (&amp; -&gt; &amp;&amp;), изменение возврата с boolean на void (для проброса исключения сразу)&#10;9) испрвление выводимых сообщений" />
+    <option name="LAST_COMMIT_MESSAGE" value="List:&#10;1) Исправление состава пакетов (перенос ListItem к SinglyLinkedList), видимости ListItem&#10;2) SinglyLinkedList добавлен конструктор без аргументов&#10;3) value переименован в data&#10;4) переименование getFirstElement и removeElementFromStart на getFirst и removeFirst&#10;5) изменение возвращаемого значения getFirstElement, removeElementFromStart, getElement с ListItem&lt;T&gt; на T&#10;6) добавлен вспомогательный метод получения узла (вместо getElement ранее) getListItem &#10;7) добавлена обработка пустых списков для getFirst и removeFirst&#10;8) verifyArrayIndex переименован в isIndexCorrect; исправлено условие (&amp; -&gt; &amp;&amp;), изменение возврата с boolean на void (для проброса исключения сразу)&#10;9) испрвление выводимых сообщений" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -645,10 +658,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585812581233" />
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586071951182">
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586127501238">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586071951182" />
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586127501238" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -659,25 +672,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584556794485" />
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1586071868044">
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1586127546837">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586071868044" />
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586127546837" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
-    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1586071868044">
+    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1586127546837">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586071868044" />
+    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586127546837" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1586071868044">
+    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1586127546837">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586071868044" />
+    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586127546837" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1586071868044">
+    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1586127546837">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586071868044" />
+    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586127546837" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1585620597633">
       <screen x="0" y="0" width="1366" height="728" />
@@ -724,10 +737,10 @@
     </state>
     <state x="145" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586065481458" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1582789486042" />
-    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586071959161">
+    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586127572986">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586071959161" />
+    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586127572986" />
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584417938514" />
     <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1586065372168">
       <screen x="0" y="0" width="1366" height="728" />
@@ -760,10 +773,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586071090043" />
-    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup" timestamp="1586070685916">
+    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup" timestamp="1586120741778">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586070685916" />
+    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586120741778" />
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1581069916545" />
   </component>
 </project>

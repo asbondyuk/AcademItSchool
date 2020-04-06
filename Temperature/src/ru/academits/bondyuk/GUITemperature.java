@@ -9,7 +9,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GUITemperature {
-    public void createUI() {
+    private GUITemperature() {
+    }
+
+    public static void createUI() {
         try {
             UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
         } catch (Exception e) {
@@ -20,7 +23,7 @@ public class GUITemperature {
             @Override
             public void run() {
                 JFrame frame = new JFrame("Конвертер температур");
-                frame.setSize(300, 200);
+                frame.setSize(500, 200);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
                 JLabel fromText = new JLabel("Начальная шкала");
@@ -35,16 +38,16 @@ public class GUITemperature {
                 JTextField inputValue = new JTextField(5);
 
                 JLabel resultText = new JLabel("Результат перевода");
-                JLabel result = new JLabel("123");
-//                result.setVisible(false);
+                JLabel result = new JLabel("     ");
+
 
                 JButton convertButton = new JButton("Перевести");
-
                 convertButton.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
-                        double r = Controller.getTemperature(inputValue,from,to);
+                        double r = Controller.getTemperature(inputValue, from, to);
                         result.setText(String.valueOf(r));
                         frame.add(result);
+//                        frame.repaint();
                     }
                 });
 
@@ -58,6 +61,7 @@ public class GUITemperature {
                 frame.add(inputValue);
                 frame.add(convertButton);
                 frame.add(resultText);
+                frame.add(result);
 
                 frame.setVisible(true);
             }

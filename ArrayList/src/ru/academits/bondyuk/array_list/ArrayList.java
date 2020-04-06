@@ -7,6 +7,11 @@ public class ArrayList<E> implements List<E> {
     private int size;
     private int modCount; // число изменений
 
+    public ArrayList() {
+        size = 0;
+        modCount = 0;
+    }
+
     private class ArrayListIterator implements Iterator<E> {
         private int currentIndex;
         private int modCount;
@@ -67,17 +72,31 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public Object[] toArray() {
-        return new Object[0];
+        Object[] objects = new Object[size];
+
+        for (int i = 0; i < size; ++i) {
+            objects[i] = items[i];
+        }
+
+        return objects;
     }
 
     @Override
     public <T> T[] toArray(T[] a) {
+//        E[] array = items;
+//
+//        for (int i = 0; i < size; ++i) {
+//            objects[i] = items[i];
+//        }
+
         return null;
     }
 
     @Override
     public boolean add(E e) {
         ++modCount;
+
+
         return false;
     }
 
@@ -123,7 +142,7 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public E get(int index) {
-        return null;
+        return items[index];
     }
 
     @Override

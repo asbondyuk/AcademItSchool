@@ -1,4 +1,4 @@
-package ru.academits.bondyuk.model;
+package ru.academits.bondyuk;
 
 public enum TemperatureTypes {
     CELSIUS,

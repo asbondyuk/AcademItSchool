@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
+    <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="List: clean code Main - исправление именования переменных">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/singly_linked_list/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/singly_linked_list/SinglyLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/singly_linked_list_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/singly_linked_list_main/Main.java" afterDir="false" />
@@ -221,14 +221,8 @@
       <workItem from="1585792488506" duration="23336000" />
       <workItem from="1585876036015" duration="5394000" />
       <workItem from="1585970240721" duration="2585000" />
-      <workItem from="1586065371186" duration="18052000" />
-    </task>
-    <task id="LOCAL-00048" summary="HardRange:&#10;форматирование вывода">
-      <created>1583123439676</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1583123439676</updated>
+      <workItem from="1586065371186" duration="22822000" />
+      <workItem from="1586196014920" duration="1971000" />
     </task>
     <task id="LOCAL-00049" summary="HardRange:&#10;исправление сигнатуры getIntersection (объект вместо массива объектов)">
       <created>1583123826866</created>
@@ -566,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586127717067</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="List: clean code Main - исправление именования переменных">
+      <created>1586128895981</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1586128895981</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +587,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Matrix: &#10;1) переименование в main: vector в row &#10;2) багфикс расчета последнего элемента в add и subtract&#10;3) форматирование transpose" />
     <MESSAGE value="решение задачи ArrayListHome" />
     <MESSAGE value="каркас задачи List" />
     <MESSAGE value="List: &#10;1) исправлена структура проекта&#10;2) добавлен ListItem&#10;3) SinglyLinkedList реализация: &#10;- получение размера списка,&#10;- получение значение первого элемента&#10;- получение/изменение значения по указанному индексу.&#10;- Изменение значения по индексу (выдает старое значение)&#10;- удаление элемента по индексу (выдает значение элемента)&#10;- вставка элемента в начало&#10;- вставка элемента по индексу&#10;- удаление узла по значению (выдает true, если элемент был удален)&#10;- удаление первого элемента (выдает значение элемента)" />
@@ -611,7 +611,8 @@
     <MESSAGE value="Temperature: черновой вариант логики и GUI (без связи)" />
     <MESSAGE value="List:&#10;1) Исправление состава пакетов (перенос ListItem к SinglyLinkedList), видимости ListItem&#10;2) SinglyLinkedList добавлен конструктор без аргументов&#10;3) value переименован в data&#10;4) переименование getFirstElement и removeElementFromStart на getFirst и removeFirst&#10;5) изменение возвращаемого значения getFirstElement, removeElementFromStart, getElement с ListItem&lt;T&gt; на T&#10;6) добавлен вспомогательный метод получения узла (вместо getElement ранее) getListItem &#10;7) добавлена обработка пустых списков для getFirst и removeFirst&#10;8) verifyArrayIndex переименован в isIndexCorrect; исправлено условие (&amp; -&gt; &amp;&amp;), изменение возврата с boolean на void (для проброса исключения сразу)&#10;9) испрвление выводимых сообщений" />
     <MESSAGE value="List:&#10;1) add (index, data)  - внутреннее форматирование + возможность добавления элемента в конец&#10;2) оптимизация remove&#10;3) оптимизация reverse + доп обработка пустого List&#10;4) оптимизация copy (копирование за линейное время)&#10;5) toString  обработка пустого List" />
-    <option name="LAST_COMMIT_MESSAGE" value="List:&#10;1) add (index, data)  - внутреннее форматирование + возможность добавления элемента в конец&#10;2) оптимизация remove&#10;3) оптимизация reverse + доп обработка пустого List&#10;4) оптимизация copy (копирование за линейное время)&#10;5) toString  обработка пустого List" />
+    <MESSAGE value="List: clean code Main - исправление именования переменных" />
+    <option name="LAST_COMMIT_MESSAGE" value="List: clean code Main - исправление именования переменных" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -644,10 +645,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="484" y="226" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/67.27.1299.741@67.27.1299.741" timestamp="1581912958788" />
-    <state x="122" y="0" width="1056" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584929431612">
+    <state x="122" y="0" width="1056" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586197840002">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="122" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1584929431612" />
+    <state x="122" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1586197840002" />
     <state x="183" y="27" width="1056" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1299.741@67.27.1299.741" timestamp="1582782870148" />
     <state x="402" y="116" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586069575712">
       <screen x="0" y="0" width="1366" height="728" />
@@ -658,10 +659,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585812581233" />
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586128893887">
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586197979286">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586128893887" />
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586197979286" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -672,25 +673,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584556794485" />
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1586127546837">
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1586197898475">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586127546837" />
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586197898475" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
-    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1586127546837">
+    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1586197898475">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586127546837" />
+    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586197898475" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1586127546837">
+    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1586197898475">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586127546837" />
+    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586197898475" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1586127546837">
+    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1586197898475">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586127546837" />
+    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586197898475" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1585620597633">
       <screen x="0" y="0" width="1366" height="728" />
@@ -737,15 +738,15 @@
     </state>
     <state x="145" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586065481458" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1582789486042" />
-    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586127572986">
+    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586128906224">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586127572986" />
+    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586128906224" />
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584417938514" />
-    <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1586065372168">
+    <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1586196015041">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="323" y="180" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586065372168" />
+    <state x="323" y="180" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586196015041" />
     <state x="374" y="210" width="688" height="344" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1584419150525" />
     <state x="439" y="284" width="478" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586065382061">
       <screen x="0" y="0" width="1366" height="728" />
@@ -773,10 +774,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586071090043" />
-    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup" timestamp="1586120741778">
+    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup" timestamp="1586132070159">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586120741778" />
+    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586132070159" />
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1581069916545" />
   </component>
 </project>

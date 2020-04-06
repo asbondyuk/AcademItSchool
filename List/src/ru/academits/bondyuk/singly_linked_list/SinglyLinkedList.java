@@ -72,7 +72,7 @@ public class SinglyLinkedList<T> {
         return oldData;
     }
 
-    public T remove(int index) {
+    public T removeByIndex(int index) {
         isIndexCorrect(index);
 
         if (index == 0) {
@@ -107,15 +107,11 @@ public class SinglyLinkedList<T> {
     }
 
     public boolean remove(T data) {
-        int index = 0;
+        int deletedDataIndex = getIndex(data);
 
-        for (ListItem<T> item = head; item.hasNext(); item = item.getNext()) {
-            if (item.getData().equals(data)) {
-                remove(index);
-                return true;
-            } else {
-                ++index;
-            }
+        if (deletedDataIndex != -1) {
+            removeByIndex(deletedDataIndex);
+            return true;
         }
 
         return false;
@@ -134,10 +130,10 @@ public class SinglyLinkedList<T> {
         ListItem<T> tmp;
 
         while (currentItem.hasNext()) {
-            tmp = previousItem; //2
-            previousItem = currentItem; // 2
-            currentItem = currentItem.getNext(); // 3
-            previousItem.setNext(tmp); //
+            tmp = previousItem;
+            previousItem = currentItem;
+            currentItem = currentItem.getNext();
+            previousItem.setNext(tmp);
         }
 
         currentItem.setNext(previousItem);
@@ -173,6 +169,37 @@ public class SinglyLinkedList<T> {
         item.setNext(addedItem);
 
         ++count;
+    }
+
+    public int getIndex(T data) {
+        if (count == 0) {
+            return -1;
+        }
+
+        boolean isNull = false;
+        if (data == null) {
+            isNull = true;
+        }
+
+        int index = 0;
+
+        for (ListItem<T> item = head; item.hasNext(); item = item.getNext()) {
+            if (isNull) {
+                if (item.getData() == null) {
+                    return index;
+                } else {
+                    ++index;
+                }
+            } else {
+                if (item.getData().equals(data)) {
+                    return index;
+                } else {
+                    ++index;
+                }
+            }
+        }
+
+        return -1;
     }
 
     @Override

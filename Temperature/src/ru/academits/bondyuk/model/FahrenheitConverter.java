@@ -1,6 +1,4 @@
-package ru.academits.bondyuk.utils;
-
-import ru.academits.bondyuk.TemperatureTypes;
+package ru.academits.bondyuk.model;
 
 public class FahrenheitConverter {
     private FahrenheitConverter() {

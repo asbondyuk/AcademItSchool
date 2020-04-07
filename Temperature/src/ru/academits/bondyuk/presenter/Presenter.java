@@ -1,11 +1,12 @@
-package ru.academits.bondyuk;
+package ru.academits.bondyuk.presenter;
 
-import ru.academits.bondyuk.utils.DefaultTemperatureService;
-import ru.academits.bondyuk.utils.TemperatureService;
+import ru.academits.bondyuk.model.TemperatureTypes;
+import ru.academits.bondyuk.model.DefaultTemperatureService;
+import ru.academits.bondyuk.model.TemperatureService;
 
 import javax.swing.*;
 
-public class Controller {
+public class Presenter {
     public static double getTemperature(JTextField text, JComboBox from, JComboBox to) {
         String inputText = text.getText();
 

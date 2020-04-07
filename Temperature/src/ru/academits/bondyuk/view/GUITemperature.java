@@ -7,6 +7,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GUITemperature extends JFrame {
+    private JComboBox<String> from;
+    private JComboBox<String> to;
+    private JTextField inputValue;
+    private JLabel result;
 
     public void createUI() {
         try {
@@ -17,35 +21,25 @@ public class GUITemperature extends JFrame {
 
         JFrame frame = new JFrame("Конвертер температур");
         frame.setLayout(new FlowLayout(FlowLayout.CENTER));
-        frame.setSize(300, 200);
+        int height = 200;
+        int width = 300;
+        frame.setSize(width, height);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JLabel fromText = new JLabel("Начальная шкала");
-        JComboBox from = new JComboBox(TemperatureTypes.values());
+        from = new JComboBox(TemperatureTypes.values());
 
         JLabel toText = new JLabel("Конечная шкала");
-        JComboBox to = new JComboBox(TemperatureTypes.values());
+        to = new JComboBox(TemperatureTypes.values());
 
         JLabel inputValueText = new JLabel("Значение для перевода");
-        JTextField inputValue = new JTextField(5);
+        inputValue = new JTextField(5);
 
         JLabel resultText = new JLabel("Результат перевода");
-        JLabel result = new JLabel("     ");
+        result = new JLabel("     ");
 
         JButton convertButton = new JButton("Перевести");
-        convertButton.addActionListener(e -> {
-            if (!InputTextValidator.validate(inputValue.getText())) {
-                JOptionPane.showMessageDialog(GUITemperature.this,
-                        "Для перевода нужно ввести число! Получено: " + inputValue.getText(),
-                        "Предупреждение",
-                        JOptionPane.ERROR_MESSAGE);
-
-                return;
-            }
-
-            double r = Presenter.getTemperature(inputValue, from, to);
-            result.setText(ResultTemplate.getResult(r));
-        });
+        convertButton.addActionListener(e -> convert());
 
         frame.add(fromText);
         frame.add(from);
@@ -58,5 +52,19 @@ public class GUITemperature extends JFrame {
         frame.add(result);
 
         frame.setVisible(true);
+    }
+
+    private void convert() {
+        if (!InputTextValidator.isNumeric(inputValue.getText())) {
+            JOptionPane.showMessageDialog(GUITemperature.this,
+                    "Для перевода нужно ввести число! Получено: " + inputValue.getText(),
+                    "Предупреждение",
+                    JOptionPane.ERROR_MESSAGE);
+
+            return;
+        }
+
+        double r = Presenter.getTemperature(inputValue, from, to);
+        result.setText(ResultTemplate.getResult(r));
     }
 }

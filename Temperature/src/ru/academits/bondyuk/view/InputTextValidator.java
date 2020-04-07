@@ -4,9 +4,9 @@ public class InputTextValidator {
     private InputTextValidator() {
     }
 
-    public static boolean validate(String inputText) {
+    public static boolean isNumeric(String inputText) {
         try {
-            double value = Double.parseDouble(inputText);
+            Double.parseDouble(inputText);
         } catch (NumberFormatException | NullPointerException e) {
             return false;
         }

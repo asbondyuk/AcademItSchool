@@ -7,7 +7,7 @@ import ru.academits.bondyuk.model.TemperatureService;
 import javax.swing.*;
 
 public class Presenter {
-    public static double getTemperature(JTextField text, JComboBox from, JComboBox to) {
+    public static double getTemperature(JTextField text, JComboBox<String> from, JComboBox<String> to) {
         String inputText = text.getText();
 
         double value = Double.parseDouble(inputText);

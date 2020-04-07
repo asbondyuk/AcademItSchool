@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/view/InputTextValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/view/ResultTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/GUITemperature.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/view/GUITemperature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/TemperatureTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/model/TemperatureTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/utils/CelsiusConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/model/CelsiusConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/utils/DefaultTemperatureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/model/DefaultTemperatureService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/utils/FahrenheitConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/model/FahrenheitConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/utils/KelvinConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/model/KelvinConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/utils/TemperatureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/model/TemperatureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/presenter/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/view/GUITemperature.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/view/GUITemperature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/view/InputTextValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/view/InputTextValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,14 +228,7 @@
       <workItem from="1585876036015" duration="5394000" />
       <workItem from="1585970240721" duration="2585000" />
       <workItem from="1586065371186" duration="22822000" />
-      <workItem from="1586196014920" duration="19394000" />
-    </task>
-    <task id="LOCAL-00052" summary="HardRange: исправление логики объединения для пересекающихся по одной границе диапазонов">
-      <created>1583203401866</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1583203401867</updated>
+      <workItem from="1586196014920" duration="20797000" />
     </task>
     <task id="LOCAL-00053" summary="Shapes: исправление опечатки в equals Triangle">
       <created>1583204081632</created>
@@ -581,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586213443076</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Temperature: &#10;1) разнесение по пакетам&#10;2) добавлена валидация ввода&#10;3) добавлено форматирование вывода (результирующее значение&#10;4) переименование Controller в Presenter&#10;5) форматирование">
+      <created>1586218760077</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1586218760077</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -601,7 +593,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="List: &#10;1) исправлена структура проекта&#10;2) добавлен ListItem&#10;3) SinglyLinkedList реализация: &#10;- получение размера списка,&#10;- получение значение первого элемента&#10;- получение/изменение значения по указанному индексу.&#10;- Изменение значения по индексу (выдает старое значение)&#10;- удаление элемента по индексу (выдает значение элемента)&#10;- вставка элемента в начало&#10;- вставка элемента по индексу&#10;- удаление узла по значению (выдает true, если элемент был удален)&#10;- удаление первого элемента (выдает значение элемента)&#10;- разворот" />
     <MESSAGE value="List: &#10;1) ListItem исправление toString&#10;2) SinglyLinkedList убратны G/S&#10;3) SinglyLinkedList Добавлен copy&#10;4) Добавлены тесты" />
     <MESSAGE value="ArrayList: добавлен итератор" />
     <MESSAGE value="ArrayListHome: &#10;1) переименование rows в lines&#10;2) вывод сообщения об ошибке вместо stacktrace&#10;3) getFileLines переделан в static&#10;4) withoutDuplicatedNumberList  переименован в numberSet&#10;5) добавлена версия очистки от дублей с помощью ArrayList" />
@@ -626,7 +617,8 @@
     <MESSAGE value="List: &#10;1) добавлен вспомогательный метод getIndex(T data) для получения индекса элемента&#10;2) удаление по индексу переименовано в removeByIndex (из-за совпадения названия и сигнатуры с remove(T data) для int-ового List)&#10;3) добавлена обработка null в remove (T data)" />
     <MESSAGE value="Temperature: &#10;1) исправлена модель&#10;2) связан UI с моделью&#10;&#10;т.е. есть некое mvp - нажатие работает разово + требует проработки UI, и разнесения по слоям" />
     <MESSAGE value="Temperature: исправлен баг с отображением значения результата расчета" />
-    <option name="LAST_COMMIT_MESSAGE" value="Temperature: исправлен баг с отображением значения результата расчета" />
+    <MESSAGE value="Temperature: &#10;1) разнесение по пакетам&#10;2) добавлена валидация ввода&#10;3) добавлено форматирование вывода (результирующее значение&#10;4) переименование Controller в Presenter&#10;5) форматирование" />
+    <option name="LAST_COMMIT_MESSAGE" value="Temperature: &#10;1) разнесение по пакетам&#10;2) добавлена валидация ввода&#10;3) добавлено форматирование вывода (результирующее значение&#10;4) переименование Controller в Presenter&#10;5) форматирование" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -673,10 +665,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585812581233" />
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586218722867">
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586220071264">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586218722867" />
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586220071264" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -687,25 +679,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584556794485" />
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1586218723073">
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1586220071280">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586218723073" />
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586220071280" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
-    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1586218723073">
+    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1586220071279">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586218723073" />
+    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586220071279" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1586218723073">
+    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1586220071279">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586218723073" />
+    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586220071279" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1586218723073">
+    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1586220071280">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586218723073" />
+    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586220071280" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1585620597633">
       <screen x="0" y="0" width="1366" height="728" />

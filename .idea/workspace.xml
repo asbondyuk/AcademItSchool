@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/view/GUITemperature.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/view/GUITemperature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/view/InputTextValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature/src/ru/academits/bondyuk/view/InputTextValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lambda/src/ru/academits/bondyuk/lambda_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lambda/src/ru/academits/bondyuk/lambda_main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +90,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.csv_parser_main.Main" />
       <module name="CSV" />
@@ -163,9 +161,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (3)" />
-        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="JavaScript Debug.out22.html" />
       </list>
@@ -228,14 +226,11 @@
       <workItem from="1585876036015" duration="5394000" />
       <workItem from="1585970240721" duration="2585000" />
       <workItem from="1586065371186" duration="22822000" />
-      <workItem from="1586196014920" duration="20797000" />
-    </task>
-    <task id="LOCAL-00053" summary="Shapes: исправление опечатки в equals Triangle">
-      <created>1583204081632</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1583204081632</updated>
+      <workItem from="1586196014920" duration="21732000" />
+      <workItem from="1586286965168" duration="4425000" />
+      <workItem from="1586325910672" duration="1712000" />
+      <workItem from="1586514925856" duration="148000" />
+      <workItem from="1586813984145" duration="271000" />
     </task>
     <task id="LOCAL-00054" summary="Matrix:&#10;1) обновление пакета Vector&#10;2) добавление тестов (причесывание main)&#10;3) форматирование именований, изменение сигнатурыы getSize(порядок аргументов)&#10;4) изменение логики статических методов (работают через нестатические)&#10;5) добавление multiply векторов (static)&#10;6) добавление валидации операций (предварительная проверка размерности векторов)">
       <created>1583226801269</created>
@@ -573,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586218760077</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Temperature: форматирование">
+      <created>1586220115856</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1586220115856</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,7 +595,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="List: &#10;1) ListItem исправление toString&#10;2) SinglyLinkedList убратны G/S&#10;3) SinglyLinkedList Добавлен copy&#10;4) Добавлены тесты" />
     <MESSAGE value="ArrayList: добавлен итератор" />
     <MESSAGE value="ArrayListHome: &#10;1) переименование rows в lines&#10;2) вывод сообщения об ошибке вместо stacktrace&#10;3) getFileLines переделан в static&#10;4) withoutDuplicatedNumberList  переименован в numberSet&#10;5) добавлена версия очистки от дублей с помощью ArrayList" />
     <MESSAGE value="CSV: &#10;1) изменена логика алгоритма разбора&#10;2) добавлена обработка спецсимволов &lt;, &gt;, &amp;" />
@@ -618,7 +619,8 @@
     <MESSAGE value="Temperature: &#10;1) исправлена модель&#10;2) связан UI с моделью&#10;&#10;т.е. есть некое mvp - нажатие работает разово + требует проработки UI, и разнесения по слоям" />
     <MESSAGE value="Temperature: исправлен баг с отображением значения результата расчета" />
     <MESSAGE value="Temperature: &#10;1) разнесение по пакетам&#10;2) добавлена валидация ввода&#10;3) добавлено форматирование вывода (результирующее значение&#10;4) переименование Controller в Presenter&#10;5) форматирование" />
-    <option name="LAST_COMMIT_MESSAGE" value="Temperature: &#10;1) разнесение по пакетам&#10;2) добавлена валидация ввода&#10;3) добавлено форматирование вывода (результирующее значение&#10;4) переименование Controller в Presenter&#10;5) форматирование" />
+    <MESSAGE value="Temperature: форматирование" />
+    <option name="LAST_COMMIT_MESSAGE" value="Temperature: форматирование" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -665,10 +667,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585812581233" />
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586220071264">
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586220112733">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586220071264" />
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586220112733" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -679,25 +681,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584556794485" />
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1586220071280">
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1586814245360">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586220071280" />
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586814245360" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
-    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1586220071279">
+    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1586814245359">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586220071279" />
+    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586814245359" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1586220071279">
+    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1586814245359">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586220071279" />
+    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586814245359" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1586220071280">
+    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1586814245359">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586220071280" />
+    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586814245359" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1585620597633">
       <screen x="0" y="0" width="1366" height="728" />
@@ -744,15 +746,15 @@
     </state>
     <state x="145" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586065481458" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1582789486042" />
-    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586208342785">
+    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586220115706">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586208342785" />
+    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586220115706" />
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584417938514" />
-    <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1586196015041">
+    <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1586514929651">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="323" y="180" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586196015041" />
+    <state x="323" y="180" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586514929651" />
     <state x="374" y="210" width="688" height="344" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1584419150525" />
     <state x="439" y="284" width="478" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586065382061">
       <screen x="0" y="0" width="1366" height="728" />
@@ -771,10 +773,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="486" y="264" width="450" height="265" key="git4idea.rebase.GitRebaseDialog/67.27.1299.741@67.27.1299.741" timestamp="1582011498845" />
-    <state x="0" y="0" width="1289" height="741" key="new project wizard" timestamp="1585828751649">
+    <state x="0" y="0" width="1289" height="741" key="new project wizard" timestamp="1586515079193">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1585828751649" />
+    <state x="0" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1586515079193" />
     <state x="67" y="27" width="1289" height="741" key="new project wizard/67.27.1299.741@67.27.1299.741" timestamp="1583130311962" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1586071090043">
       <screen x="0" y="0" width="1366" height="728" />

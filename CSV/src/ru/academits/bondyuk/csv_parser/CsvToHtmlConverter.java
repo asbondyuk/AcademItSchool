@@ -8,57 +8,57 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Parser {
-    static final char defaultDelimiter = ',';
-    static final char quotationMarks = '"';
+// ToDo: 7,8,9,10,11,12,13,15,16,
+public class CsvToHtmlConverter {
+    private static final char DEFAULT_DELIMITER = ',';
+    private static final char QUOTATION_MARKS = '"';
 
     public static void parseCSV(String inputFileName, String outputFileName) {
         try (Scanner scanner = new Scanner(new FileInputStream(inputFileName));
              PrintWriter printWriter = new PrintWriter(new File(outputFileName))) {
-            printWriter.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n" +
-                    "<html>\n" +
-                    " <head>\n" +
-                    "  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n" +
-                    "  <title>Таблица</title>\n" +
-                    "  <style type=\"text/css\">\n" +
-                    "   TABLE {\n" +
-                    "    width: 300px; /* Ширина таблицы */\n" +
-                    "    border-collapse: collapse; /* Убираем двойные линии между ячейками */\n" +
-                    "   }\n" +
-                    "   TD, TH {\n" +
-                    "    padding: 3px; /* Поля вокруг содержимого таблицы */\n" +
-                    "    border: 1px solid black; \n" +
-                    "   }\n" +
-                    "   TH {\n" +
-                    "    background: #b0e0e6; \n" +
-                    "   }\n" +
-                    "  </style>\n" +
-                    " </head>\n" +
-                    " <body>");
+            printWriter.printf("<!DOCTYPE html>%n" +
+                    "<html>%n" +
+                    " <head>%n" +
+                    "  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">%n" +
+                    "  <title>Таблица</title>%n" +
+                    "  <style type=\"text/css\">%n" +
+                    "   table {%n" +
+                    "    width: 300px;%n" +
+                    "    border-collapse: collapse;%n" +
+                    "   }%n" +
+                    "   td, th {%n" +
+                    "    padding: 3px;%n" +
+                    "    border: 1px solid black; %n" +
+                    "   }%n" +
+                    "   th {%n" +
+                    "    background: #b0e0e6;%n" +
+                    "   }%n" +
+                    "  </style>%n" +
+                    " </head>%n" +
+                    " <body>%n");
             printWriter.println("<table>");
 
             while (scanner.hasNext()) {
                 printWriter.println("<tr>");
 
-                String line = scanner.nextLine();
+                String line = handleSpecialCharacter(scanner.nextLine());
                 List<String> cellsValues;
 
                 while (!isRowEnd(line)) {
                     if (scanner.hasNext()) {
-                        line = line + System.lineSeparator() + scanner.nextLine();
+                        line = line + "<br>" + handleSpecialCharacter(scanner.nextLine());
                     } else {
                         break;
                     }
                 }
 
-                line = handleSpecialCharacter(line);
                 cellsValues = splitLine(line);
 
                 for (String value : cellsValues) {
                     printWriter.println("<td>" + value + "</td>");
                 }
 
-                printWriter.println("</tr>" + "</br>");
+                printWriter.println("</tr>");
             }
 
             printWriter.println("</table>");
@@ -76,7 +76,7 @@ public class Parser {
         int quotesCount = 0;
 
         for (int i = 0; i < line.length(); ++i) {
-            if (line.charAt(i) == quotationMarks) {
+            if (line.charAt(i) == QUOTATION_MARKS) {
                 ++quotesCount;
             }
         }
@@ -85,9 +85,9 @@ public class Parser {
     }
 
     private static String handleSpecialCharacter(String string) {
-        return string.replace(">", "&gt;")
-                .replace("<", "&lt;")
-                .replace("&", "&amp;");
+        return string.replace("&", "&amp;")
+                .replace(">", "&gt;")
+                .replace("<", "&lt;");
     }
 
     private static List<String> splitLine(String line) {
@@ -98,17 +98,17 @@ public class Parser {
 
         // провека разделителей
         for (int i = 0; i < line.length() - 1; ++i) {
-            if (line.charAt(0) == quotationMarks) {
+            if (line.charAt(0) == QUOTATION_MARKS) {
                 isQuotesCell = true;
                 continue;
             }
 
-            if (isQuotesCell & line.charAt(i) == quotationMarks & line.charAt(i + 1) == quotationMarks) {
+            if (isQuotesCell && line.charAt(i) == QUOTATION_MARKS && line.charAt(i + 1) == QUOTATION_MARKS) {
                 ++i;
                 continue;
             }
 
-            if (isQuotesCell & line.charAt(i) == quotationMarks & line.charAt(i + 1) == defaultDelimiter) {
+            if (isQuotesCell && line.charAt(i) == QUOTATION_MARKS && line.charAt(i + 1) == DEFAULT_DELIMITER) {
                 strings.add(line.substring(startIndex, i));
 
                 startIndex = i + 2;
@@ -117,7 +117,7 @@ public class Parser {
                 continue;
             }
 
-            if (line.charAt(i) == defaultDelimiter & line.charAt(i + 1) == quotationMarks & !isQuotesCell) {
+            if (line.charAt(i) == DEFAULT_DELIMITER && line.charAt(i + 1) == QUOTATION_MARKS && !isQuotesCell) {
                 strings.add(line.substring(startIndex, i));
 
                 startIndex = i + 2;
@@ -126,13 +126,13 @@ public class Parser {
                 continue;
             }
 
-            if (i + 2 == line.length() & line.charAt(i + 1) == quotationMarks) {
+            if (i + 2 == line.length() && line.charAt(i + 1) == QUOTATION_MARKS) {
                 strings.add(line.substring(startIndex + 1, line.length() - 2));
 
                 continue;
             }
 
-            if (!isQuotesCell & line.charAt(i) == ',') {
+            if (!isQuotesCell && line.charAt(i) == ',') {
                 strings.add(line.substring(startIndex, i));
 
                 startIndex = i + 1;
@@ -140,7 +140,7 @@ public class Parser {
         }
 
         // добавляем последюю ячейку, без разделителя
-        if (line.charAt(line.length() - 1) != quotationMarks) {
+        if (line.charAt(line.length() - 1) != QUOTATION_MARKS) {
             strings.add(line.substring(startIndex));
         }
 

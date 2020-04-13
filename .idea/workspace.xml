@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/in1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/in2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lambda/src/ru/academits/bondyuk/lambda_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lambda/src/ru/academits/bondyuk/lambda_main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/CsvToHtmlConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser_main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +93,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.Main (2)">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.csv_parser_main.Main" />
       <module name="CSV" />
@@ -161,10 +164,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (3)" />
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="JavaScript Debug.out22.html" />
       </list>
     </recent_temporary>
@@ -230,14 +233,7 @@
       <workItem from="1586286965168" duration="4425000" />
       <workItem from="1586325910672" duration="1712000" />
       <workItem from="1586514925856" duration="148000" />
-      <workItem from="1586813984145" duration="271000" />
-    </task>
-    <task id="LOCAL-00054" summary="Matrix:&#10;1) обновление пакета Vector&#10;2) добавление тестов (причесывание main)&#10;3) форматирование именований, изменение сигнатурыы getSize(порядок аргументов)&#10;4) изменение логики статических методов (работают через нестатические)&#10;5) добавление multiply векторов (static)&#10;6) добавление валидации операций (предварительная проверка размерности векторов)">
-      <created>1583226801269</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1583226801269</updated>
+      <workItem from="1586813984145" duration="2143000" />
     </task>
     <task id="LOCAL-00055" summary="синхронизация структуры проекта">
       <created>1583227178149</created>
@@ -575,7 +571,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586220115856</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="Lambda: исправление условий в Д(&amp; -&gt; &amp;&amp;, порядок проверок, граничные условия)">
+      <created>1586814334083</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1586814334084</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -595,7 +598,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ArrayList: добавлен итератор" />
     <MESSAGE value="ArrayListHome: &#10;1) переименование rows в lines&#10;2) вывод сообщения об ошибке вместо stacktrace&#10;3) getFileLines переделан в static&#10;4) withoutDuplicatedNumberList  переименован в numberSet&#10;5) добавлена версия очистки от дублей с помощью ArrayList" />
     <MESSAGE value="CSV: &#10;1) изменена логика алгоритма разбора&#10;2) добавлена обработка спецсимволов &lt;, &gt;, &amp;" />
     <MESSAGE value="CSV: минимальная реализация алгоритма под условия &#10;1) выделены методы для определения окончания строки&#10;2) разделение кейсов для различного вида строк (с &quot; и без)" />
@@ -620,7 +622,8 @@
     <MESSAGE value="Temperature: исправлен баг с отображением значения результата расчета" />
     <MESSAGE value="Temperature: &#10;1) разнесение по пакетам&#10;2) добавлена валидация ввода&#10;3) добавлено форматирование вывода (результирующее значение&#10;4) переименование Controller в Presenter&#10;5) форматирование" />
     <MESSAGE value="Temperature: форматирование" />
-    <option name="LAST_COMMIT_MESSAGE" value="Temperature: форматирование" />
+    <MESSAGE value="Lambda: исправление условий в Д(&amp; -&gt; &amp;&amp;, порядок проверок, граничные условия)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lambda: исправление условий в Д(&amp; -&gt; &amp;&amp;, порядок проверок, граничные условия)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -667,10 +670,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585812581233" />
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586220112733">
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586814329002">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586220112733" />
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586814329002" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -681,25 +684,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584556794485" />
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1586814245360">
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1586815753400">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586814245360" />
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586815753400" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
-    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1586814245359">
+    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1586815753400">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586814245359" />
+    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586815753400" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1586814245359">
+    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1586815753400">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586814245359" />
+    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586815753400" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1586814245359">
+    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1586815753400">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586814245359" />
+    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586815753400" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1585620597633">
       <screen x="0" y="0" width="1366" height="728" />
@@ -746,10 +749,10 @@
     </state>
     <state x="145" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586065481458" />
     <state x="205" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1582789486042" />
-    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586220115706">
+    <state x="257" y="103" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586814374806">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586220115706" />
+    <state x="257" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586814374806" />
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584417938514" />
     <state x="323" y="180" width="688" height="344" key="com.intellij.ide.util.TipDialog" timestamp="1586514929651">
       <screen x="0" y="0" width="1366" height="728" />

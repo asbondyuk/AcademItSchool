@@ -32,7 +32,7 @@ public class Main {
         System.out.printf("Удаление по значению %d: %s%n", data, integers);
         System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
-        integers.addElementToStart(data);
+        integers.addFirst(data);
         System.out.printf("Добавление в начало значения %d: %s%n", data, integers);
         System.out.printf("Головной элемент: %s,%nКоличество элементов: %d%n%n", integers.getFirst(), integers.getCount());
 
@@ -76,8 +76,15 @@ public class Main {
         System.out.printf("Обновленный список: %s%n", integers);
         System.out.printf("Скопированный список: %s%n", integers2);
 
+        System.out.printf("Обновленный список: %s%n", integers);
         integers.add(null);
         integers.add(6, 13);
+        System.out.printf("Текущий список: %s%n", integers);
+
+        System.out.println(integers.getCount());
+        integers.add(integers.getCount(), 14);
+
+        integers.add(7, 15);
         System.out.printf("Текущий список: %s%n", integers);
 
         System.out.println("null находится на " + integers.getIndex(null) + " позиции");
@@ -91,5 +98,16 @@ public class Main {
         int deletedData = 4;
         integers.remove(deletedData);
         System.out.printf("Текущий список после удаления %d: %s%n", deletedData, integers);
+
+        integers.removeByIndex(0);
+        integers.removeByIndex(0);
+        integers.removeByIndex(0);
+        integers.removeByIndex(0);
+        integers.removeByIndex(0);
+        integers.removeByIndex(0);
+        integers.removeByIndex(0);
+        System.out.printf("Текущий список после удаления %d: %s%n", deletedData, integers);
+
+        System.out.printf("Скопированный список: %s%n", integers.copy());
     }
 }

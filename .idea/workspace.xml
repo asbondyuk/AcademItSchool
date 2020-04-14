@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81b5a592-a8bd-465e-8810-a306f716cd84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/in1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/in2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/in3.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser/CsvToHtmlConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSV/src/ru/academits/bondyuk/csv_parser_main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/singly_linked_list/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/singly_linked_list/SinglyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/singly_linked_list_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/List/src/ru/academits/bondyuk/singly_linked_list_main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +93,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main (3)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.academits.bondyuk.csv_parser_main.Main" />
       <module name="CSV" />
@@ -164,10 +164,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (3)" />
         <item itemvalue="JavaScript Debug.out22.html" />
       </list>
     </recent_temporary>
@@ -233,14 +233,7 @@
       <workItem from="1586286965168" duration="4425000" />
       <workItem from="1586325910672" duration="1712000" />
       <workItem from="1586514925856" duration="148000" />
-      <workItem from="1586813984145" duration="2143000" />
-    </task>
-    <task id="LOCAL-00055" summary="синхронизация структуры проекта">
-      <created>1583227178149</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1583227178149</updated>
+      <workItem from="1586813984145" duration="10459000" />
     </task>
     <task id="LOCAL-00056" summary="Matrix: &#10;отключение multiply 2-х матриц,&#10;т.е. долг: перемножение матриц + определитель">
       <created>1583228552705</created>
@@ -578,7 +571,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586814334084</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="CSV: &#10;1) исправление отображение переноса строк&#10;2) замена настроек выходного файла (doctype html5)&#10;3) приведение отображние в соответствие с тз (убраны br между строками)&#10;4) добавлена обработка переноса строки внутри ячейки&#10;5) багфикс обработки спецсимволов&#10;6) имена тегов css в нижнем регистре&#10;7) приведение полей к кодстайлу&#10;8) замена &amp; на &amp;&amp; в условиях&#10;9) переименование Parser в CsvToHtmlConverte">
+      <created>1586816414767</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1586816414767</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,7 +598,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ArrayListHome: &#10;1) переименование rows в lines&#10;2) вывод сообщения об ошибке вместо stacktrace&#10;3) getFileLines переделан в static&#10;4) withoutDuplicatedNumberList  переименован в numberSet&#10;5) добавлена версия очистки от дублей с помощью ArrayList" />
     <MESSAGE value="CSV: &#10;1) изменена логика алгоритма разбора&#10;2) добавлена обработка спецсимволов &lt;, &gt;, &amp;" />
     <MESSAGE value="CSV: минимальная реализация алгоритма под условия &#10;1) выделены методы для определения окончания строки&#10;2) разделение кейсов для различного вида строк (с &quot; и без)" />
     <MESSAGE value="CSV: промежуточные результаты исправления алгоритма" />
@@ -623,7 +622,8 @@
     <MESSAGE value="Temperature: &#10;1) разнесение по пакетам&#10;2) добавлена валидация ввода&#10;3) добавлено форматирование вывода (результирующее значение&#10;4) переименование Controller в Presenter&#10;5) форматирование" />
     <MESSAGE value="Temperature: форматирование" />
     <MESSAGE value="Lambda: исправление условий в Д(&amp; -&gt; &amp;&amp;, порядок проверок, граничные условия)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lambda: исправление условий в Д(&amp; -&gt; &amp;&amp;, порядок проверок, граничные условия)" />
+    <MESSAGE value="CSV: &#10;1) исправление отображение переноса строк&#10;2) замена настроек выходного файла (doctype html5)&#10;3) приведение отображние в соответствие с тз (убраны br между строками)&#10;4) добавлена обработка переноса строки внутри ячейки&#10;5) багфикс обработки спецсимволов&#10;6) имена тегов css в нижнем регистре&#10;7) приведение полей к кодстайлу&#10;8) замена &amp; на &amp;&amp; в условиях&#10;9) переименование Parser в CsvToHtmlConverte" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSV: &#10;1) исправление отображение переноса строк&#10;2) замена настроек выходного файла (doctype html5)&#10;3) приведение отображние в соответствие с тз (убраны br между строками)&#10;4) добавлена обработка переноса строки внутри ячейки&#10;5) багфикс обработки спецсимволов&#10;6) имена тегов css в нижнем регистре&#10;7) приведение полей к кодстайлу&#10;8) замена &amp; на &amp;&amp; в условиях&#10;9) переименование Parser в CsvToHtmlConverte" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Auto_Import" timestamp="1581934665042">
@@ -670,10 +670,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585812581233" />
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586814329002">
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2" timestamp="1586816412116">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586814329002" />
+    <state x="182" y="0" width="1122" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586816412116" />
     <state x="240" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584424948809" />
     <state x="105" y="96" width="1099" height="543" key="DiffContextDialog" timestamp="1584923314966">
       <screen x="0" y="0" width="1366" height="728" />
@@ -684,25 +684,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584556794485" />
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1586815753400">
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom" timestamp="1586824575340">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586815753400" />
+    <state width="1322" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586824575340" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
-    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1586815753400">
+    <state width="1322" height="136" key="GridCell.Tab.0.center" timestamp="1586824575339">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586815753400" />
+    <state width="1322" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586824575339" />
     <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1586815753400">
+    <state width="1322" height="136" key="GridCell.Tab.0.left" timestamp="1586824575339">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586815753400" />
+    <state width="1322" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586824575339" />
     <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584424447885" />
-    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1586815753400">
+    <state width="1322" height="136" key="GridCell.Tab.0.right" timestamp="1586824575339">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586815753400" />
+    <state width="1322" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586824575339" />
     <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584424447886" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1585620597633">
       <screen x="0" y="0" width="1366" height="728" />
@@ -759,6 +759,10 @@
     </state>
     <state x="323" y="180" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586514929651" />
     <state x="374" y="210" width="688" height="344" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1584419150525" />
+    <state x="329" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586821346825">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="329" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1586821346825" />
     <state x="439" y="284" width="478" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586065382061">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -785,10 +789,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586071090043" />
-    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup" timestamp="1586132070159">
+    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup" timestamp="1586820091738">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586132070159" />
+    <state x="328" y="61" width="707" height="667" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586820091738" />
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1581069916545" />
   </component>
 </project>

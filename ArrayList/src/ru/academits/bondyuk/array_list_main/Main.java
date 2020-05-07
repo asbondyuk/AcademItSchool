@@ -45,6 +45,7 @@ public class Main {
 
     public static boolean testRemoveByIndex() {
         int index = 2;
+        createArrayList().remove(index).equals("b");
         return createArrayList().remove(index).equals("b");
     }
 
@@ -68,6 +69,26 @@ public class Main {
         String expected = "[a, null, b, c, d]";
 
         return Objects.equals(Arrays.toString(list.toArray()), expected);
+    }
+
+    public static boolean testTypedToArray1() {
+        ArrayList<String> list = createArrayList();
+        String[] strings = new String[6];
+
+        String actual = Arrays.toString(list.toArray(strings));
+        String expected = "[a, null, b, c, d, null, null, null, null, null]";
+
+        return Objects.equals(actual, expected);
+    }
+
+    public static boolean testTypedToArray2() {
+        ArrayList<String> list = createArrayList();
+        String[] strings = new String[2];
+
+        String actual = Arrays.toString(list.toArray(strings));
+        String expected = "[a, null, b, c, d, null, null, null, null, null]";
+
+        return Objects.equals(actual, expected);
     }
 
     public static boolean testContainsContainingElement() {
@@ -228,6 +249,8 @@ public class Main {
         System.out.printf("%b : Проверка ensureCapacity%n", testEnsureCapacity());
         System.out.printf("%b : Проверка trimToSize%n", testTrimToSize());
         System.out.printf("%b : Проверка ToArray%n", testToArray());
+        System.out.printf("%b : Проверка ToArray(T[] array)%n", testTypedToArray1());
+        System.out.printf("%b : Проверка расширяемости переданного массива в ToArray(T[] array)%n", testTypedToArray2());
         System.out.printf("%b : Проверка contains (содержит)%n", testContainsContainingElement());
         System.out.printf("%b : Проверка contains (не содержит)%n", testContainNotContainingElement());
         System.out.printf("%b : Проверка indexOf (содержит)%n", testIndexOfContainingElement());

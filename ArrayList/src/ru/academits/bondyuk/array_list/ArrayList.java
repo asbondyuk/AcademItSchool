@@ -1,8 +1,9 @@
 package ru.academits.bondyuk.array_list;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
-// ToDo 5, 10, 12, 13, 14, 17, 18
+// ToDo 10, 12, 13, 14,
 public class ArrayList<E> implements List<E> {
     private static final int DEFAULT_CAPACITY = 10;
 
@@ -55,15 +56,13 @@ public class ArrayList<E> implements List<E> {
             return items[currentIndex];
         }
 
-
-        // ToDo переделать на схлопывание списка
         @Override
         public void remove() {
             if (currentIndex == -1) {
                 throw new IllegalStateException("Метод next не был вызван или remote() был вызван после последнего вызова next");
             }
 
-            items[currentIndex] = null;
+            System.arraycopy(items, currentIndex + 1, items, currentIndex, size - currentIndex);
         }
     }
 
@@ -97,21 +96,20 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     @SuppressWarnings("unchecked")
-//    смысл данного метода не ясен
     public <T> T[] toArray(T[] array) {
-        T[] intersectionArray = (T[]) new Object[array.length];
-        int intersectionCount = 0;
-
-        for (E item : items) {
-            for (T t : array) {
-                if (Objects.equals(item, t)) {
-                    intersectionArray[intersectionCount++] = t;
-                    break;
-                }
-            }
+        if (array.length < items.length) {
+            array = (T[]) Array.newInstance(Object.class, items.length);
         }
 
-        return intersectionArray;
+        try {
+            for (int i = 0; i < items.length; ++i) {
+                array[i] = (T) items[i];
+            }
+        } catch (ClassCastException e) {
+            System.err.printf("Невозможно привести %s к %s", items.getClass(), array.getClass());
+        }
+
+        return array;
     }
 
     public void ensureCapacity(int minCapacity) {
@@ -154,14 +152,14 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public boolean remove(Object o) {
-        for (int i = 0; i < items.length; ++i) {
-            if (Objects.equals(items[i], o)) {
-                items[i] = null;
-                ++modCount;
-                --size;
+        int index = indexOf(o);
 
-                return true;
-            }
+        if (index != -1) {
+            System.arraycopy(items, index + 1, items, index, size - index);
+            ++modCount;
+            --size;
+
+            return true;
         }
 
         return false;
@@ -278,7 +276,7 @@ public class ArrayList<E> implements List<E> {
         checkIndex(index);
 
         E oldValue = items[index];
-        items[index] = null;
+        System.arraycopy(items, index + 1, items, index, size - index);
 
         return oldValue;
     }

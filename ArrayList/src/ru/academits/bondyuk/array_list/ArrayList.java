@@ -2,6 +2,7 @@ package ru.academits.bondyuk.array_list;
 
 import java.util.*;
 
+// ToDo 5, 10, 12, 13, 14, 17, 18
 public class ArrayList<E> implements List<E> {
     private static final int DEFAULT_CAPACITY = 10;
 
@@ -45,17 +46,23 @@ public class ArrayList<E> implements List<E> {
                 throw new ConcurrentModificationException("Коллекция была изменена до завершения работы итератора");
             }
 
-            ++currentIndex;
-
-            if (currentIndex == size) {
+            if (!this.hasNext()) {
                 throw new NoSuchElementException("Элементы в списке закончились");
             }
+
+            ++currentIndex;
 
             return items[currentIndex];
         }
 
+
+        // ToDo переделать на схлопывание списка
         @Override
         public void remove() {
+            if (currentIndex == -1) {
+                throw new IllegalStateException("Метод next не был вызван или remote() был вызван после последнего вызова next");
+            }
+
             items[currentIndex] = null;
         }
     }
@@ -72,13 +79,7 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public boolean contains(Object o) {
-        for (E item : items) {
-            if (Objects.equals(item, o)) {
-                return true;
-            }
-        }
-
-        return false;
+        return indexOf(o) != -1;
     }
 
     @Override
@@ -156,13 +157,12 @@ public class ArrayList<E> implements List<E> {
         for (int i = 0; i < items.length; ++i) {
             if (Objects.equals(items[i], o)) {
                 items[i] = null;
+                ++modCount;
+                --size;
 
                 return true;
             }
         }
-
-        ++modCount;
-        --size;
 
         return false;
     }
@@ -234,7 +234,7 @@ public class ArrayList<E> implements List<E> {
 
     private void checkIndex(int index) {
         if ((index < 0) && (index >= size)) {
-            throw new ArrayIndexOutOfBoundsException("Некорректный индекс списка, должно быть значение от 0 до " + (size - 1)
+            throw new NoSuchElementException("Некорректный индекс списка, должно быть значение от 0 до " + (size - 1)
                     + ". Получен: " + index);
         }
     }

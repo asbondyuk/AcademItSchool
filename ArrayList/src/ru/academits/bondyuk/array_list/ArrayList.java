@@ -12,30 +12,26 @@ public class ArrayList<E> implements List<E> {
     @SuppressWarnings("unchecked")
     public ArrayList() {
         items = (E[]) new Object[DEFAULT_CAPACITY];
-        size = 0;
-        modCount = 0;
     }
 
     public ArrayList(E[] array) {
-        items = array;
+        ensureCapacity(array.length);
+        System.arraycopy(array, 0, items, 0, array.length);
         size = array.length;
-        modCount = 0;
     }
 
     @SuppressWarnings("unchecked")
     public ArrayList(int capacity) {
         items = (E[]) new Object[capacity];
-        size = 0;
-        modCount = 0;
     }
 
     private class ArrayListIterator implements Iterator<E> {
         private int currentIndex;
-        private int modCount;
+        private final int startModCount;
 
         public ArrayListIterator() {
             currentIndex = -1;
-            modCount = ArrayList.this.modCount;
+            startModCount = modCount;
         }
 
         @Override
@@ -45,7 +41,7 @@ public class ArrayList<E> implements List<E> {
 
         @Override
         public E next() {
-            if (modCount != ArrayList.this.modCount) {
+            if (startModCount != modCount) {
                 throw new ConcurrentModificationException("Коллекция была изменена до завершения работы итератора");
             }
 
@@ -76,10 +72,8 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public boolean contains(Object o) {
-        Iterator<E> iterator = new ArrayListIterator();
-
-        while (iterator.hasNext()) {
-            if (Objects.equals(iterator.next(), o)) {
+        for (E item : items) {
+            if (Objects.equals(item, o)) {
                 return true;
             }
         }
@@ -121,18 +115,23 @@ public class ArrayList<E> implements List<E> {
 
     public void ensureCapacity(int minCapacity) {
         if (items.length < minCapacity) {
-            int increasingCoefficient = (int) Math.ceil((double) minCapacity / items.length);
-            items = Arrays.copyOf(items, items.length * increasingCoefficient);
+            items = Arrays.copyOf(items, minCapacity);
         }
     }
 
+    @SuppressWarnings("unchecked")
     public void increaseCapacity() {
-        items = Arrays.copyOf(items, items.length * 2);
+        if (items.length == 0) {
+            items = (E[]) new Object[DEFAULT_CAPACITY];
+        } else {
+            items = Arrays.copyOf(items, items.length * 2);
+        }
+
         ++modCount;
     }
 
     public void trimToSize() {
-        if (size < items.length - 1) {
+        if (size < items.length) {
             items = Arrays.copyOf(items, size);
         }
 
@@ -154,11 +153,9 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public boolean remove(Object o) {
-        Iterator<E> iterator = iterator();
-
-        while (iterator.hasNext()) {
-            if (Objects.equals(iterator.next(), o)) {
-                iterator.remove();
+        for (int i = 0; i < items.length; ++i) {
+            if (Objects.equals(items[i], o)) {
+                items[i] = null;
 
                 return true;
             }
@@ -183,13 +180,11 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public boolean addAll(Collection<? extends E> c) {
-        int newListSize = size + c.size();
-        if (newListSize >= items.length) {
-            ensureCapacity(newListSize);
-        }
+        ensureCapacity(size + c.size());
 
         for (E e : c) {
-            add(e);
+            items[size + 1] = e;
+            ++size;
         }
 
         ++modCount;
@@ -198,15 +193,14 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public boolean addAll(int index, Collection<? extends E> c) {
-        int newListSize = size + c.size();
-        if (newListSize >= items.length) {
-            ensureCapacity(newListSize);
-        }
+        ensureCapacity(size + c.size());
 
-        int addedPosition = index;
+        System.arraycopy(items, index, items, index + c.size(), size - index);
+
         for (E e : c) {
-            add(addedPosition, e);
-            ++addedPosition;
+            items[index] = e;
+            ++size;
+            ++index;
         }
 
         ++modCount;
@@ -226,13 +220,8 @@ public class ArrayList<E> implements List<E> {
     @Override
     public boolean retainAll(Collection<?> c) {
         removeIf(e -> !c.contains(e));
-//        оптимизация idea периодически пугает. Первоначальный код:
-//        while (iterator.hasNext()) {
-//            if (!c.contains(iterator.next())) {
-//                iterator.remove();
-//            }
-//        }
         ++modCount;
+
         return true;
     }
 

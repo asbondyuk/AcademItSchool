@@ -53,7 +53,7 @@ public class Main {
         ArrayList<String> list = createArrayList();
         list.ensureCapacity(capacity);
 
-        return list.toString().equals("[a, null, b, c, d, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]");
+        return list.toString().equals("[a, null, b, c, d, null, null, null, null, null, null, null, null, null, null]");
     }
 
     public static boolean testTrimToSize() {
@@ -150,7 +150,7 @@ public class Main {
 
         list.addAll(collection);
 
-        return list.toString().equals("[a, null, b, c, d, d, f, null, null, null]");
+        return list.toString().equals("[a, null, b, c, d, null, d, f, null, null]");
     }
 
     public static boolean testAddAllByIndex() {
